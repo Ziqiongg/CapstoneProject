@@ -78,5 +78,5 @@ public class AppUser {
     public List<IndividualPurchase> getBasket() {
         return basket;
     }
-    
+
 }

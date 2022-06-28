@@ -1,24 +1,39 @@
 package com.ecommerce.capstone_back.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Product {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Enum category;
-    private Double price;
-    private List<IndividualPurchase> basket;
+    private double price;
 
-    public Product() {}
+    private int stock;
 
-    public Product(Long id, String name, Enum category, Double price, List<IndividualPurchase> basket) {
+    @OneToMany(mappedBy = "product")
+    @JsonManagedReference(value = "product")
+    private ArrayList <IndividualPurchase> basket;
+
+
+    public Product () {
+    }
+
+    public Product(Long id, String name, Enum category, Double price, ArrayList<IndividualPurchase> basket, int stock) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.price = price;
         this.basket = basket;
+        this.stock = stock;
     }
 
     public Long getId() {
@@ -53,11 +68,15 @@ public class Product {
         this.price = price;
     }
 
-    public List<IndividualPurchase> getBasket() {
+    public ArrayList<IndividualPurchase> getBasket() {
         return basket;
     }
 
-    public void setBasket(List<IndividualPurchase> basket) {
+    public void setBasket(ArrayList<IndividualPurchase> basket) {
         this.basket = basket;
     }
 }
+
+
+
+
