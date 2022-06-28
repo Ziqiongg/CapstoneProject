@@ -28,13 +28,11 @@ public class IndividualPurchaseService {
 
 
     // get customer basket
-    public static List<IndividualPurchase> getBasket(AppUser user) {
 
-    
     public List<IndividualPurchase> getBasket(Long AppUserId) {
 
 
-        return IndividualPurchaseRepository.getBasketById(user.getId());
+        return individualPurchaseRepository.getBasketById(AppUserId);
     }
     
     
@@ -69,5 +67,5 @@ public class IndividualPurchaseService {
 
 
 
-}
+
 

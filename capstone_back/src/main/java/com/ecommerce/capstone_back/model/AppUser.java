@@ -36,8 +36,7 @@ public class AppUser {
         this.userPassword = userPassword;
         this.basket = new ArrayList<>();
 
-<<<<<<< HEAD
-=======
+
     }
 
     public String getUserFirstName() {
@@ -54,26 +53,14 @@ public class AppUser {
 
     public void setUserLastName(String userLastName) {
         this.userLastName = userLastName;
->>>>>>> d0cfacf21469387f7d1c9de22330585185a024b7
+
     }
 
-    public String getUserFirstName() {
-        return userFirstName;
-    }
 
-    public void setUserFirstName(String userFirstName) {
-        this.userFirstName = userFirstName;
-    }
 
-    public String getUserLastName() {
-        return userLastName;
-    }
 
-    public void setUserLastName(String userLastName) {
-        this.userLastName = userLastName;
-    }
 
-    public AppUser getId() {
+    public Long getId() {
         return id;
     }
 

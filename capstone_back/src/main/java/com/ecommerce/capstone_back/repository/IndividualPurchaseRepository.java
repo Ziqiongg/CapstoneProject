@@ -19,7 +19,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
             value="SELECT * FROM IndividualPurchase WHERE AppUser_id = ?1 AND purchased = FALSE",
             nativeQuery = true
     )
-     List<IndividualPurchase> getBasketById(AppUser user);
+     List<IndividualPurchase> getBasketById(Long AppUserId);
 
     //    Add to basket query
 //    USER, PRODUCT, QUANTITY, PURCHASED
