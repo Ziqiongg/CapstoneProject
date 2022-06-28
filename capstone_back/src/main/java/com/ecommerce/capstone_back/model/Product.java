@@ -22,13 +22,13 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     @JsonManagedReference(value = "product")
-    private ArrayList<IndividualPurchase> basket;
+    private List<IndividualPurchase> basket;
 
 
     public Product () {
     }
 
-    public Product(Long id, String name, Category category, Double price, ArrayList<IndividualPurchase> basket, int stock) {
+    public Product(Long id, String name, Category category, Double price, List<IndividualPurchase> basket, int stock) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -69,7 +69,7 @@ public class Product {
         this.price = price;
     }
 
-    public ArrayList<IndividualPurchase> getBasket() {
+    public List<IndividualPurchase> getBasket() {
         return basket;
     }
 
