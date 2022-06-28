@@ -21,7 +21,7 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     @JsonManagedReference(value = "product")
-    private ArrayList <IndividualPurchase> basket;
+    private ArrayList<IndividualPurchase> basket;
 
 
     public Product () {
@@ -75,6 +75,21 @@ public class Product {
     public void setBasket(ArrayList<IndividualPurchase> basket) {
         this.basket = basket;
     }
+
+    //reduce stock
+
+    public int reduceStock(int purchaseAmount) {
+        stock -= purchaseAmount;
+        return stock;
+    }
+
+    //increase stock
+    public int increaseStock(int deleteFromBasket){
+        stock += deleteFromBasket;
+        return stock;
+    }
+
+
 }
 
 
