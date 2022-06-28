@@ -1,5 +1,6 @@
 package com.ecommerce.capstone_back.controllers;
 
+import com.ecommerce.capstone_back.Category;
 import com.ecommerce.capstone_back.model.Product;
 import com.ecommerce.capstone_back.repository.ProductRepository;
 import com.ecommerce.capstone_back.service.ProductService;
@@ -56,7 +57,7 @@ public class ProductController {
 
     ////get products by category
     @GetMapping("/product/{category}")
-    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String category) {
+    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable Category category) {
         List<Product> productsByCategory = productService.getByCategory(category);
         return ResponseEntity
                 .ok()
