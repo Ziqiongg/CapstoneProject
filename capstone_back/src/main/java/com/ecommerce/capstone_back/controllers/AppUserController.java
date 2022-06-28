@@ -31,19 +31,16 @@ public class AppUserController {
         return this.appUserRepository.findById(id);
    }
 
-<<<<<<< HEAD
 //   @GetMapping({"/users/wallet/{wallet}"})
 //   public Optional<AppUser> getUserWallet(@PathVariable double wallet){
 //        return this.appUserRepository.findBy(wallet);
 //   }
-=======
 
    @GetMapping({"/users/wallet/{id}/{wallet}"})
    public double getUserWallet(@PathVariable Long id, @PathVariable double wallet) {
         AppUser user = appUserRepository.findById(id).get();
        return user.getWallet();
    }
->>>>>>> 84c63e494e8188eb957e47a1aa9d51723b718cbd
 
 //   get Wallet
 
