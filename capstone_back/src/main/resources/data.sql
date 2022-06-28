@@ -10,11 +10,11 @@ insert into product (product_name, category, price, stock) values ('Bigger Boat'
 insert into product (product_name, category, price, stock) values ('Thicc Oats', OATS, 5.99, 1000)
 insert into product (product_name, category, price, stock) values ('Special Goat', GOATS, 79.33, 57)
 
-insert into basket (quantity, purchased, product_id, user_id) values (5, True, 1, 1)
-insert into basket (quantity, purchased, product_id, user_id) values (5, True, 1, 1)
-insert into basket (quantity, purchased, product_id, user_id) values (5, False, 3, 2)
-insert into basket (quantity, purchased, product_id, user_id) values (5, False, 2, 2)
-insert into basket (quantity, purchased, product_id, user_id) values (5, True, 1, 2)
+insert into individual_purchase (quantity, purchased, product_id, user_id) values (5, True, 1, 1)
+insert into individual_purchase (quantity, purchased, product_id, user_id) values (5, True, 1, 1)
+insert into individual_purchase (quantity, purchased, product_id, user_id) values (5, False, 3, 2)
+insert into individual_purchase (quantity, purchased, product_id, user_id) values (5, False, 2, 2)
+insert into individual_purchase (quantity, purchased, product_id, user_id) values (5, True, 1, 2)
 
 
 
