@@ -1,8 +1,8 @@
-insert into user (first_name, last_name, user_address, user_password, user_wallet) values ('Alex', 'Leaver Hernandez', 'Cambridge', '123', 1000);
-insert into user (first_name, last_name, user_address, user_password, user_wallet) values ('Peace', 'Akib', 'London', '123', 1000);
-insert into user (first_name, last_name, user_address, user_password, user_wallet) values ('Carol', 'Ziqiong', 'Bristol', '123', 1000);
-insert into user (first_name, last_name, user_address, user_password, user_wallet) values ('Joseph', 'Sutherland', 'London', '123', 1000);
-insert into user (first_name, last_name, user_address, user_password, user_wallet) values ('Michelle', 'Tambi', 'London', '123', 1000);
+insert into appuser (first_name, last_name, user_address, user_password, user_wallet) values ('Alex', 'Leaver Hernandez', 'Cambridge', '123', 1000);
+insert into appuser (first_name, last_name, user_address, user_password, user_wallet) values ('Peace', 'Akib', 'London', '123', 1000);
+insert into appuser (first_name, last_name, user_address, user_password, user_wallet) values ('Carol', 'Ziqiong', 'Bristol', '123', 1000);
+insert into appuser (first_name, last_name, user_address, user_password, user_wallet) values ('Joseph', 'Sutherland', 'London', '123', 1000);
+insert into appuser (first_name, last_name, user_address, user_password, user_wallet) values ('Michelle', 'Tambi', 'London', '123', 1000);
 
 insert into product (product_name, category, price, stock) values ('Big Boi Hat', HATS, 99.99, 200)
 insert into product (product_name, category, price, stock) values ('Little Boat', BOATS, 2590.56, 30)

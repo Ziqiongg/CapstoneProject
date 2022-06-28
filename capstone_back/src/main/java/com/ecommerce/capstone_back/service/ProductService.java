@@ -41,8 +41,8 @@ public class ProductService {
 
 
     //get product by category
-    public List<Product> getByCategory(Category categoryName){
-        return productRepository.findAllByCategoryContainingIgnoreCase(categoryName);
+    public List<Product> getByCategory(String categoryName){
+        return productRepository.findAllByCategory(categoryName);
     }
 
 }

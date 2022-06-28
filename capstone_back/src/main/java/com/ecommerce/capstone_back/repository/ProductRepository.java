@@ -18,6 +18,6 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
 
 
     //get by category
-    List<Product> findAllByCategoryContainingIgnoreCase(Category category);
+    List<Product> findAllByCategory(String category);
 
 }

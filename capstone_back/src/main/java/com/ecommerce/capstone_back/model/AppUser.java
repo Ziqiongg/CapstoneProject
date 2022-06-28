@@ -18,8 +18,8 @@ public class AppUser {
     private String userAddress;
     private String userPassword;
 
-    @OneToMany(mappedBy = "user")
-    @JsonManagedReference(value = "user")
+    @OneToMany(mappedBy = "appuser")
+    @JsonManagedReference(value = "appuser")
     private List<IndividualPurchase> basket;
 
 

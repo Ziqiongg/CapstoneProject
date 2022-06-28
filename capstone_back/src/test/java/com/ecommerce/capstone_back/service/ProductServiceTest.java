@@ -1,25 +1,25 @@
-package com.ecommerce.capstone_back.service;
-
-import com.ecommerce.capstone_back.model.Product;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.List;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-@SpringBootTest
-class ProductServiceTest {
-
-    @Autowired
-    private ProductService productService;
-
-    //test get all products
-    void testAll(){
-        List<Product> timetables= productService.getAll();
-        assertEquals(100, timetables.size());
-    }
+//package com.ecommerce.capstone_back.service;
+//
+//import com.ecommerce.capstone_back.model.Product;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//import java.util.List;
+//import java.util.Optional;
+//
+//import static org.junit.jupiter.api.Assertions.*;
+//
+//@SpringBootTest
+//class ProductServiceTest {
+//
+//    @Autowired
+//    private ProductService productService;
+//
+//    //test get all products
+//    void testAll(){
+//        List<Product> timetables= productService.getAll();
+//        assertEquals(100, timetables.size());
+//    }
 
 
 
@@ -48,6 +48,6 @@ class ProductServiceTest {
 
 
 
-
-
-}
+//
+//
+//}
