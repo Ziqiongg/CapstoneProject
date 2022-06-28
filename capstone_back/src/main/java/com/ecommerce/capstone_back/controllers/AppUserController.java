@@ -31,10 +31,11 @@ public class AppUserController {
         return this.appUserRepository.findById(id);
    }
 
+
    @GetMapping({"/users/wallet/{id}/{wallet}"})
-   public double getUserWallet(@PathVariable Long id, @PathVariable double wallet){
+   public double getUserWallet(@PathVariable Long id, @PathVariable double wallet) {
         AppUser user = appUserRepository.findById(id).get();
-        return user.getWallet();
+       return user.getWallet();
    }
 
 //   get Wallet

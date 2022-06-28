@@ -20,21 +20,22 @@ public class AppUser {
 
     @OneToMany(mappedBy = "user")
     @JsonManagedReference(value = "user")
-    private ArrayList<IndividualPurchase> basket;
+    private List<IndividualPurchase> basket;
 
 
     public AppUser() {
     }
 
     public AppUser(Long id, double wallet, String userFirstName,
-                   String userLastName, String userAddress, String userPassword) {
+                   String userLastName, String userAddress, String userPassword, List<IndividualPurchase> basket) {
         this.id = id;
         this.wallet = wallet;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userAddress = userAddress;
         this.userPassword = userPassword;
-        this.basket = new ArrayList<>();
+        this.basket = basket;
+
 
     }
 
@@ -52,7 +53,12 @@ public class AppUser {
 
     public void setUserLastName(String userLastName) {
         this.userLastName = userLastName;
+
     }
+
+
+
+
 
     public Long getId() {
         return id;
