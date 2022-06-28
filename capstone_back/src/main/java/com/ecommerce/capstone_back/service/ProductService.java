@@ -2,8 +2,9 @@ package com.ecommerce.capstone_back.service;
 
 import com.ecommerce.capstone_back.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Autowired
+@Service
 public class ProductService {
 
     public final ProductRepository productRepository;
