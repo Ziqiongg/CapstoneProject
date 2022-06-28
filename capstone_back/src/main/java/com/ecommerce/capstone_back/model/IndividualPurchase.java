@@ -1,19 +1,38 @@
 package com.ecommerce.capstone_back.model;
 
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
+
+@Entity
 public class IndividualPurchase {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userId;
-    private Long productId;
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @JsonBackReference(value = "user")
+    private AppUser user;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    @JsonBackReference(value = "product")
+    private Product product;
     private int quantity;
     private boolean purchased;
+
+
     public IndividualPurchase(){
     }
 
-    public IndividualPurchase(Long id, Long userId, Long productId, int quantity, boolean purchased){
+    public IndividualPurchase(Long id, AppUser user, Product product, int quantity, boolean purchased) {
         this.id = id;
-        this.userId = userId;
-        this.productId = productId;
+        this.user = user;
+        this.product = product;
         this.quantity = quantity;
         this.purchased = purchased;
     }
@@ -26,20 +45,20 @@ public class IndividualPurchase {
         this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public AppUser getUser() {
+        return user;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUser(AppUser user) {
+        this.user = user;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public int getQuantity() {
@@ -57,6 +76,7 @@ public class IndividualPurchase {
     public void setPurchased(boolean purchased) {
         this.purchased = purchased;
     }
+
     //  if purchase is successful, return true and change purchased to true, else return false.
     public boolean makePurchase(Product product, AppUser user, int total){
         if (user.checkWallet(total)){

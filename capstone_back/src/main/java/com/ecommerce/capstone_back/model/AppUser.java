@@ -1,16 +1,25 @@
 package com.ecommerce.capstone_back.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class AppUser {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double wallet;
     private String userFirstName;
     private String userLastName;
     private String userAddress;
     private String userPassword;
+
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference(value = "user")
     private ArrayList<IndividualPurchase> basket;
 
 
@@ -81,9 +90,6 @@ public class AppUser {
         return basket;
     }
 
-<<<<<<< HEAD
-}
-=======
     //  if the total (the total amount in basket) is less than or equal to the amount in wallet, return true
     public boolean checkWallet(int total){
 
@@ -96,4 +102,4 @@ public class AppUser {
     }
 
 }
->>>>>>> main
+
