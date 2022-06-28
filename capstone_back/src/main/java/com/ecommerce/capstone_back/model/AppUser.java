@@ -7,8 +7,8 @@ public class AppUser {
 
     private Long id;
     private double wallet;
-    private String name;
-    private String userName;
+    private String userFirstName;
+    private String userLastName;
     private String userAddress;
     private String userPassword;
     private ArrayList<IndividualPurchase> basket;
@@ -17,14 +17,32 @@ public class AppUser {
     public AppUser() {
     }
 
-    public AppUser(Long id, double wallet, String name, String userName, String userAddress, String userPassword) {
+    public AppUser(Long id, double wallet, String userFirstName,
+                   String userLastName, String userAddress, String userPassword) {
         this.id = id;
         this.wallet = wallet;
-        this.name = name;
-        this.userName = userName;       
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
         this.userAddress = userAddress;
         this.userPassword = userPassword;
-       
+        this.basket = new ArrayList<>();
+
+    }
+
+    public String getUserFirstName() {
+        return userFirstName;
+    }
+
+    public void setUserFirstName(String userFirstName) {
+        this.userFirstName = userFirstName;
+    }
+
+    public String getUserLastName() {
+        return userLastName;
+    }
+
+    public void setUserLastName(String userLastName) {
+        this.userLastName = userLastName;
     }
 
     public Long getId() {
@@ -41,22 +59,6 @@ public class AppUser {
 
     public void setWallet(double wallet) {
         this.wallet = wallet;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getUserAddress() {
@@ -79,4 +81,19 @@ public class AppUser {
         return basket;
     }
 
+<<<<<<< HEAD
 }
+=======
+    //  if the total (the total amount in basket) is less than or equal to the amount in wallet, return true
+    public boolean checkWallet(int total){
+
+        if (total <= wallet) {
+            wallet -= total;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}
+>>>>>>> main
