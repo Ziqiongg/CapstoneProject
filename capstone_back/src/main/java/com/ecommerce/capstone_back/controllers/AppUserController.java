@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.annotation.Repeatable;
 import java.util.Optional;
 
 @RestController
@@ -30,6 +31,13 @@ public class AppUserController {
         return this.appUserRepository.findById(id);
    }
 
+   @GetMapping({"/users/wallet/{wallet}"})
+   public Optional<AppUser> getUserWallet(@PathVariable double wallet){
+        return this.appUserRepository.findBy(wallet);
+   }
+
+//   get Wallet
+
    @PutMapping(
            value = {"/users/wallet/{wallet}"},
            produces = {"application/json"}
@@ -49,9 +57,44 @@ public class AppUserController {
         }
    }
 
+   @PatchMapping("/users/{id}/{lastName}")
+    public ResponseEntity<AppUser> updateUserLastName(@PathVariable Long id, @PathVariable String lastName){
+        try{
+            AppUser user = appUserRepository.findById(id).get();
+            user.setUserLastName(lastName);
+            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+        } catch(Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+   }
 
+   @PatchMapping("/users/{id}/{address}")
+    public ResponseEntity<AppUser> updateUserAddress(@PathVariable Long id, @PathVariable String address){
+        try{
+            AppUser user = appUserRepository.findById(id).get();
+            user.setUserAddress(address);
+            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+        } catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+   }
 
+   @PatchMapping("/users/{id}/{address}")
+    public ResponseEntity<AppUser> updateUserPassword(@PathVariable Long id, @PathVariable String password){
+        try{
+            AppUser user = appUserRepository.findById(id).get();
+            user.setUserPassword(password);
+            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+        } catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+   }
 
+   @DeleteMapping("/users/delete/{id}/{delete}")
+   public void deleteUser(@PathVariable Long id){
+        this.appUserRepository.deleteById(id);
+
+}
 
 
 }
