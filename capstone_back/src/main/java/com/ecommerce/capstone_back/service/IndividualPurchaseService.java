@@ -23,10 +23,10 @@ public class IndividualPurchaseService {
         this.individualPurchaseRepository = individualPurchaseRepository;
     }
     
-    public List<IndividualPurchase> getBasket(Long AppUserId) {
-
-        return IndividualPurchaseRepository.getBasket(AppUserId);
-    }
+//    public List<IndividualPurchase> getBasket(Long AppUserId) {
+//
+//        return IndividualPurchaseRepository.getBasket(AppUserId);
+//    }
     
     
 
