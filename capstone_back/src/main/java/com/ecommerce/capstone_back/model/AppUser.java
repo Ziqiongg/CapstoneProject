@@ -20,7 +20,7 @@ public class AppUser {
     @JsonIgnore
     private String userPassword;
 
-    @OneToMany(mappedBy = "appuser")
+    @OneToMany(mappedBy = "appUser")
     @JsonManagedReference(value = "appuser")
     private List<IndividualPurchase> basket;
 
