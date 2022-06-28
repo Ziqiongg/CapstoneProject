@@ -15,6 +15,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 //Get basket query
 
     @Query(
+
             value="SELECT * FROM IndividualPurchase WHERE AppUser_id = ?1 AND purchased = FALSE",
             nativeQuery = true
     )
@@ -57,7 +58,11 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     Integer BasketUpdate();
 // need to add arguments being passed through ^^
 
+    @Query( value = "SELECT * FROM individual_purchase WHERE AppUser_id = ?1 AND purchased = FALSE",
+                nativeQuery = true
+        )
+     List<IndividualPurchase> getCustomerBasket(Long appUserId);
+
+    }
 
 
-
-}

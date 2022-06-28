@@ -26,11 +26,18 @@ public class IndividualPurchaseService {
         this.individualPurchaseRepository = individualPurchaseRepository;
     }
 
+
     // get customer basket
     public static List<IndividualPurchase> getBasket(AppUser user) {
 
+    
+    public List<IndividualPurchase> getBasket(Long AppUserId) {
+
+
         return IndividualPurchaseRepository.getBasketById(user.getId());
     }
+    
+    
 
 //    get customer purchase
 //public static List<IndividualPurchase> getPurchase(AppUser user) {
@@ -55,5 +62,12 @@ public class IndividualPurchaseService {
 //update basket (quantity change)
 
 
+
     // add to basket
     }
+
+
+
+
+}
+

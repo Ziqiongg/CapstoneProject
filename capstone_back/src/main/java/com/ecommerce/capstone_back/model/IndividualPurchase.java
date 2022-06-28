@@ -15,11 +15,15 @@ public class IndividualPurchase {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+<<<<<<< HEAD
 
     @JsonBackReference(value = "appuser")
 
     @JsonBackReference(value = "user")
 
+=======
+    @JsonBackReference(value = "user")
+>>>>>>> d0cfacf21469387f7d1c9de22330585185a024b7
     private AppUser user;
 
     @ManyToOne
@@ -90,8 +94,14 @@ public class IndividualPurchase {
             return false;
         }
     }
+<<<<<<< HEAD
 
 
 
 }
+=======
+
+
+
+>>>>>>> d0cfacf21469387f7d1c9de22330585185a024b7
 }
