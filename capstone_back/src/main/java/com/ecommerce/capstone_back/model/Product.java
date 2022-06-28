@@ -1,5 +1,6 @@
 package com.ecommerce.capstone_back.model;
 
+import com.ecommerce.capstone_back.Category;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -14,7 +15,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Enum category;
+    private Category category;
     private double price;
 
     private int stock;
@@ -27,7 +28,7 @@ public class Product {
     public Product () {
     }
 
-    public Product(Long id, String name, Enum category, Double price, ArrayList<IndividualPurchase> basket, int stock) {
+    public Product(Long id, String name, Category category, Double price, ArrayList<IndividualPurchase> basket, int stock) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -52,11 +53,11 @@ public class Product {
         this.name = name;
     }
 
-    public Enum getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(Enum category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
