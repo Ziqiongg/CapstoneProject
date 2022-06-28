@@ -27,8 +27,8 @@ public class InvidualPurchaseController {
     @GetMapping("/AppUser/get_basket/{customer_id}")
     public ResponseEntity getCustomerBasket(@PathVariable Long AppUser_id) {
         try {
-            List<IndividualPurchase> basket = IndividualPurchaseService.getCustomerBasket(AppUser_id);
-            return ResponseEntity.status(HttpStatus.OK).body(basket;
+            List<IndividualPurchase> basket = IndividualPurchaseService.getBasket(AppUser_id);
+            return ResponseEntity.status(HttpStatus.OK).body(basket);
         }
         catch (RuntimeException re) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
@@ -37,9 +37,9 @@ public class InvidualPurchaseController {
 
 // Add to basket
 //need to get user id, product id
+
 //    @PostMapping("/AppUser_basket/additem")
 //    public ResponseEntity addToBasket()
-//
 //
 //    }
 

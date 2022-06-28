@@ -18,7 +18,10 @@ public class IndividualPurchaseService {
         this.individualPurchaseRepository = individualPurchaseRepository;
     }
 
-    public  List<IndividualPurchase> getCustomerBasket(Long AppUserId) {}
+    public List<IndividualPurchase> getBasket(Long AppUserId) {
+
+        return IndividualPurchaseRepository.getBasket(AppUserId);
+    }
 
 
 
