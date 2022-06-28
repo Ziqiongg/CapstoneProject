@@ -14,8 +14,8 @@ public class IndividualPurchase {
 
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonBackReference(value = "user")
+    @JoinColumn(name = "appuser_id")
+    @JsonBackReference(value = "appuser")
 
 
     private AppUser user;
