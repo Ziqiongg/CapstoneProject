@@ -2,7 +2,7 @@ package com.ecommerce.capstone_back.controllers;
 
 
 import com.ecommerce.capstone_back.model.AppUser;
-import com.ecommerce.capstone_back.repository.UserRepository;
+import com.ecommerce.capstone_back.repository.AppUserRepository;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,8 +40,8 @@ public class AppUserController {
     public ResponseEntity<AppUser> updateUserFirstName(@PathVariable Long id, @PathVariable String firstName){
         try{
             AppUser user =  appUserRepository.findById(id).get();
-            user.setFirstName(firstName);
-            return new ResponseEntity<UserApp>(appUserRepository.save(user), HttpStatus.OK);
+            user.setUserFirstName(firstName);
+            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
         } catch(Exception e){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
