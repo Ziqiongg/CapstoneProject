@@ -1,5 +1,6 @@
 package com.ecommerce.capstone_back.repository;
 
+import com.ecommerce.capstone_back.Category;
 import com.ecommerce.capstone_back.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -17,6 +18,6 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
 
 
     //get by category
-    List<Product> findAllByCategoryContainingIgnoreCase(String category);
+    List<Product> findAllByCategoryContainingIgnoreCase(Category category);
 
 }
