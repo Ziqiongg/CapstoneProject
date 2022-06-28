@@ -1,5 +1,6 @@
 package com.ecommerce.capstone_back.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ public class AppUser {
     private String userFirstName;
     private String userLastName;
     private String userAddress;
+    @JsonIgnore
     private String userPassword;
 
     @OneToMany(mappedBy = "appuser")

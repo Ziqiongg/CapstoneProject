@@ -3,6 +3,7 @@ package com.ecommerce.capstone_back.controllers;
 
 import com.ecommerce.capstone_back.model.AppUser;
 import com.ecommerce.capstone_back.repository.AppUserRepository;
+import com.ecommerce.capstone_back.service.AppUserService;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,20 +16,17 @@ import java.util.Optional;
 @RestController
 public class AppUserController {
 
-//    testing
+    public final AppUserService appUserService;
 
-
-
-    @Autowired
-    private final AppUserRepository appUserRepository;
-
-    public AppUserController(AppUserRepository appUserRepository) {
-        this.appUserRepository = appUserRepository;
+    public AppUserController(AppUserService appUserService) {
+        this.appUserService = appUserService;
     }
 
+
     @GetMapping({"/users/id/{id}"})
-    public Optional<AppUser> getUserById(@PathVariable Long id){
-        return this.appUserRepository.findById(id);
+    public ResponseEntity<AppUser> getUserById(@PathVariable Long id) throws Exception {
+        AppUser appUser = appUserService.getUserById(id);
+        return ResponseEntity.ok().body(appUser);
    }
 
 //   @GetMapping({"/users/wallet/{wallet}"})
