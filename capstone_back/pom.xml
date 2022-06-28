@@ -12,7 +12,7 @@
 	<artifactId>capstone_back</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>capstone_back</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Totally not ripping off amazon</description>
 	<properties>
 		<java.version>18</java.version>
 	</properties>
