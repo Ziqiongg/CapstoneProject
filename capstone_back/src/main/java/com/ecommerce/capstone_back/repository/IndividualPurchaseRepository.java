@@ -40,7 +40,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
             value = "INSERT into individual_purchase (app_user_id, product_id, quantity, purchased) VALUES (:appuserid, :productid, :quantity, FALSE)",
             nativeQuery = true)
 
-    void insertPurchase(@Param("appuserid") Long appuserid, @Param("productid") Long productid, @Param("quantity") Integer quantity);
+    void addItemToBasket(@Param("appuserid") Long appuserid, @Param("productid") Long productid, @Param("quantity") Integer quantity);
 
 //    value =
 //    "insert into Users (name, age, email, status) values (:name, :age, :email, :status)",
@@ -51,7 +51,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
 
 
-    List<IndividualPurchase> addItemToBasket(Long AppUserId, Long ProductId, Integer quantity);
+//    List<IndividualPurchase> addItemToBasket(Long AppUserId, Long ProductId, Integer quantity);
 
     //    Delete from basket query
     @Modifying
