@@ -21,6 +21,7 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
 
 
     //get by category
-    List<Product> findAllByCategory(String category);
+    @Query(value = "SELECT * FROM PRODUCT WHERE LOWER(CATEGORY) LIKE %:category%", nativeQuery = true)
+    List<Product> findProductsByCategory(@Param("category") String category);
 
 }
