@@ -14,11 +14,9 @@ public class IndividualPurchase {
 
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonBackReference(value = "user")
-
-
-    private AppUser user;
+    @JoinColumn(name = "app_user_id")
+    @JsonBackReference(value = "appUser")
+    private AppUser appUser;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
@@ -31,9 +29,9 @@ public class IndividualPurchase {
     public IndividualPurchase(){
     }
 
-    public IndividualPurchase(Long id, AppUser user, Product product, int quantity, boolean purchased) {
+    public IndividualPurchase(Long id, AppUser appUser, Product product, int quantity, boolean purchased) {
         this.id = id;
-        this.user = user;
+        this.appUser = appUser;
         this.product = product;
         this.quantity = quantity;
         this.purchased = purchased;
@@ -47,12 +45,12 @@ public class IndividualPurchase {
         this.id = id;
     }
 
-    public AppUser getUser() {
-        return user;
+    public AppUser getAppUser() {
+        return appUser;
     }
 
-    public void setUser(AppUser user) {
-        this.user = user;
+    public void setAppUser(AppUser appUser) {
+        this.appUser = appUser;
     }
 
     public Product getProduct() {

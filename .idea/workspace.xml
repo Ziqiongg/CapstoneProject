@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="peace" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +51,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
 
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
 
@@ -75,6 +78,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CapstoneBackApplication" />
+        <item itemvalue="Application.CapstoneBackApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +104,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="peace_branch" />
+                        <option value="peace" />
                       </list>
                     </value>
                   </entry>

@@ -1,5 +1,6 @@
 package com.ecommerce.capstone_back.service;
 
+import com.ecommerce.capstone_back.Category;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 import com.ecommerce.capstone_back.model.Product;
 import com.ecommerce.capstone_back.repository.ProductRepository;
@@ -41,7 +42,7 @@ public class ProductService {
 
     //get product by category
     public List<Product> getByCategory(String categoryName){
-        return productRepository.findAllByCategoryContainingIgnoreCase(categoryName);
+        return productRepository.findAllByCategory(categoryName);
     }
 
 }

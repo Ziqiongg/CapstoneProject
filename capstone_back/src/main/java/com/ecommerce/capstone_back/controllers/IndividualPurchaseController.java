@@ -25,7 +25,7 @@ public class IndividualPurchaseController {
 
 //  Get basket
 
-    @GetMapping("/AppUser/get_basket/{customer_id}")
+    @GetMapping("/AppUser/get_basket/{appuser_id}")
     public ResponseEntity getCustomerBasket(@PathVariable Long AppUserId) {
         try {
             List<IndividualPurchase> basket = individualPurchaseService.getBasket(AppUserId);
@@ -36,7 +36,7 @@ public class IndividualPurchaseController {
 
     }
 // Get purchases
-    @GetMapping("/AppUser/get_purchases/{customer_id}")
+    @GetMapping("/AppUser/get_purchases/{appuser_id}")
     public ResponseEntity getCustomerPurchase(@PathVariable Long AppUserId) {
         try {
             List<IndividualPurchase> basket = individualPurchaseService.getPurchase(AppUserId);
