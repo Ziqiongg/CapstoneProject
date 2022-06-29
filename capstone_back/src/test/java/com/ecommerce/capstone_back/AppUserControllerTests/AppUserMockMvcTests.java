@@ -26,9 +26,19 @@
 //                MockMvcRequestBuilders.get("/user/id/1", new Object[0]))
 //                .andDo(MockMvcResultHandlers.print())
 //                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("")));
+//                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Alex")))
+//                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Leaver Hernandez")));
 //
 //}
+//
+//    @Test
+//    public void shouldReturnUserWalletById() throws Exception{
+//        this.mvc.perform(
+//                MockMvcRequestBuilders.get("/users/wallet/{id}", new Object[0]))
+//                        .andDo(MockMvcResultHandlers.print())
+//                        .andExpect(MockMvcResultMatchers.status().isOk())
+//                        .andExpect(MockMvcResultMatchers.jsonPath("$.wallet").value(1000));
+//    }
 //
 //
 //
