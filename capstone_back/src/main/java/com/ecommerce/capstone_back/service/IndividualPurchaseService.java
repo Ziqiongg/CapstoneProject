@@ -38,15 +38,15 @@ public class IndividualPurchaseService {
 
 //    get customer purchase
     public  List<IndividualPurchase> getPurchase(Long AppUserId) {
-
         return individualPurchaseRepository.viewPurchaseById(AppUserId);
     }
 
 //    add to user basket,
     // needs to check wallet, check price, check stock and adjust
 
-    public List<IndividualPurchase> addToUserBasket(Long AppUserId, Long ProductId, Integer quantity){
-        return individualPurchaseRepository.addItemToBasket(AppUserId, ProductId, quantity);
+    public void addToUserBasket(Long AppUserId, Long ProductId, Integer quantity){
+        individualPurchaseRepository.addItemToBasket(AppUserId, ProductId, quantity);
+
     }
 
 

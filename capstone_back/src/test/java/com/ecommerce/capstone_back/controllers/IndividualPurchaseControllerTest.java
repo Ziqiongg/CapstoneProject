@@ -44,9 +44,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
         @Test
         void addToMyBasket(){
-            individualPurchaseRepository.addItemToBasket(2L, 1L, 5);
-            List<IndividualPurchase> newItems = individualPurchaseRepository.getBasketById(1L);
-            assertEquals(3,newItems.size() );
+            individualPurchaseRepository.addItemToBasket(3L, 1L, 5);
+            List<IndividualPurchase> newItems = individualPurchaseRepository.getBasketById(3L);
+            assertEquals(1,newItems.size() );
         }
 
         @Test

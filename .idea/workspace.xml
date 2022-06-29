@@ -4,28 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/AppUserFirstNamePasswordDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
     </list>
-
-
-    <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="" />
-
-    <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/AppUserFirstNamePasswordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
-    </list>
-
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,11 +32,8 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-
         <entry key="$PROJECT_DIR$" value="main" />
-
         <entry key="$PROJECT_DIR$" value="Authentication-M" />
-
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,22 +53,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
 
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
 
-    "last_opened_file_path": "/Users/peacebnta/coursework/week_12/Capstone/CapstoneProject",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    &quot;last_opened_file_path&quot;: &quot;/Users/peacebnta/coursework/week_12/Capstone/CapstoneProject&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -90,13 +76,8 @@
       <recent name="com.ecommerce.capstone_back.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IndividualPurchaseControllerTest.addToMyBasket">
+  <component name="RunManager" selected="JUnit.IndividualPurchaseControllerTest">
     <configuration name="IndividualPurchaseControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-  <component name="RunManager">
-    <configuration name="CapstoneBackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.CapstoneBackApplication" />
->>>>>>> bf1916a4873b6edf73d1407dd6fb74c3f5d50f88
       <module name="capstone_back" />
       <extension name="coverage">
         <pattern>
@@ -177,20 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-
-        <item itemvalue="JUnit.IndividualPurchaseControllerTest.addToMyBasket" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest.addToMyBasket" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest.getUserPurchases" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest.updateUserBasket" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest.getUserBasket" />
-
-        <item itemvalue="Application.CapstoneBackApplication" />
-        <item itemvalue="Application.CapstoneBackApplication" />
-        <item itemvalue="Application.CapstoneBackApplication" />
-
-        <item itemvalue="Application.CapstoneBackApplication" />
-
-
       </list>
     </recent_temporary>
   </component>
