@@ -50,7 +50,7 @@ public class ProductController {
     }
 
     //get products by name
-    @GetMapping("/product/name/{name}")
+    @GetMapping("/products/name/{name}")
     public ResponseEntity<List<Product>> getProductsByName(@PathVariable String name) {
         List<Product> productsByName = productService.getByName(name);
         return ResponseEntity
@@ -62,7 +62,7 @@ public class ProductController {
 
 
     ////get products by category
-    @GetMapping("/product/category/{category}")
+    @GetMapping("/products/category/{category}")
     public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String category) {
         List<Product> productsByCategory = productService.getByCategory(category);
         return ResponseEntity

@@ -36,7 +36,7 @@ public class ProductService {
     //get product by name
 
     public List<Product> getByName(String name){
-        return productRepository.findAllByNameLikeIgnoreCase(name);
+        return productRepository.findByName(name);
     }
 
 
