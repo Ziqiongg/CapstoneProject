@@ -37,17 +37,18 @@ public class AppUserController {
        return ResponseEntity.ok().body(appUser.getWallet());
    }
 
-//   get Wallet
-
-   @PutMapping(
-           value = {"/users/wallet/{wallet}"},
-           produces = {"application/json"}
-   )
-    public ResponseEntity<Double> updateWallet(@RequestBody AppUser appUser, @PathVariable double wallet){
-        appUser.setWallet(wallet);
-        appUserService.updateAppUser(appUser);
-        return ResponseEntity.ok().body(appUser.getWallet());
-   }
+//   not needed
+//
+//   @PutMapping(
+//           value = {"/users/wallet/{id}"},
+//           produces = {"application/json"}
+//   )
+//    public ResponseEntity<Double> updateWallet(@RequestBody double wallet, @PathVariable Long id) throws Exception {
+//        AppUser appUser = appUserService.getAppUserById(id);
+//        appUser.setWallet(wallet);
+//        appUserService.updateAppUser(appUser);
+//        return ResponseEntity.ok().body(appUser.getWallet());
+//   }
 
    // Super update all things as needed --- Does not work, keeping as extension later on
 //    @PatchMapping("/users/{id}")
