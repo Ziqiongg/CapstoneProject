@@ -2,6 +2,7 @@ package com.ecommerce.capstone_back.controllers;
 
 
 import com.ecommerce.capstone_back.model.AppUser;
+import com.ecommerce.capstone_back.repository.AppUserRepository;
 import com.ecommerce.capstone_back.service.AppUserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,10 +26,6 @@ public class AppUserController {
         return ResponseEntity.ok().body(appUser);
    }
 
-//   @GetMapping({"/users/wallet/{wallet}"})
-//   public Optional<AppUser> getUserWallet(@PathVariable double wallet){
-//        return this.appUserRepository.findBy(wallet);
-//   }
 
     // Why not just get user by ID then take wallet at frontend? Why dies this have a double in that it never uses?
    @GetMapping({"/users/wallet/{id}/{wallet}"})
@@ -64,47 +61,7 @@ public class AppUserController {
         return ResponseEntity.ok().body(appUser);
     }
 
-//    @PatchMapping("/users/{id}/{firstName}")
-//    public ResponseEntity<AppUser> updateUserFirstName(@PathVariable Long id, @PathVariable String firstName) throws Exception {
-//        AppUser appUser =  appUserService.getAppUserById(id);
-//        appUser.setUserFirstName(firstName);
-//        appUserService.updateAppUser(appUser);
-//        return ResponseEntity.ok().body(appUser);
-//   }
-//
-//   @PatchMapping("/users/{id}/{lastName}")
-//    public ResponseEntity<AppUser> updateUserLastName(@PathVariable Long id, @PathVariable String lastName){
-//        try{
-//            AppUser user = appUserRepository.findById(id).get();
-//            user.setUserLastName(lastName);
-//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-//        } catch(Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//   }
-//
-//   @PatchMapping("/users/{id}/{address}")
-//    public ResponseEntity<AppUser> updateUserAddress(@PathVariable Long id, @PathVariable String address){
-//        try{
-//            AppUser user = appUserRepository.findById(id).get();
-//            user.setUserAddress(address);
-//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-//        } catch(Exception e){
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//   }
-//
-//   @PatchMapping("/users/{id}/{address}")
-//    public ResponseEntity<AppUser> updateUserPassword(@PathVariable Long id, @PathVariable String password){
-//        try{
-//            AppUser user = appUserRepository.findById(id).get();
-//            user.setUserPassword(password);
-//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-//        } catch(Exception e){
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//   }
-//
+
 
    @DeleteMapping("/users/{id}")
    public void deleteAppUser(@PathVariable Long id) throws Exception {
