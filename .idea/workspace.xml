@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/AppUserMockMvcTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/AppUserMockMvcTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="peace" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,6 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CapstoneBackApplication" />
+        <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
       </list>
