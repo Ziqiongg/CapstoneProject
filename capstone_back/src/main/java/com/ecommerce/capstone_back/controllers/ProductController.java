@@ -19,12 +19,9 @@ public class ProductController {
     @Autowired
     private final ProductService productService;
 
-    @Autowired
-    private final ProductRepository productRepository;
 
-    public ProductController(ProductService productService, ProductRepository productRepository) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
-        this.productRepository = productRepository;
     }
 
 
@@ -43,7 +40,7 @@ public class ProductController {
     //get products by id
     @GetMapping("/products/id/{id}")
     public ResponseEntity<Optional<Product>> getProductsById(@PathVariable Long id){
-        Optional<Product> productsById = Optional.ofNullable(productRepository.findProductById(id));
+        Optional<Product> productsById = productService.getById(id);
         return ResponseEntity
                 .ok()
                 .body(productsById);

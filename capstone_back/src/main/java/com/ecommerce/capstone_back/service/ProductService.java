@@ -29,9 +29,9 @@ public class ProductService {
     }
 
     //get product by id
-//    public Optional<Product> getById(Long id) {
-//        return Optional.ofNullable(productRepository.findProductById(id));
-//    }
+    public Optional<Product> getById(Long id) {
+        return Optional.ofNullable(productRepository.findProductById(id));
+    }
 
     //get product by name
 
@@ -42,7 +42,7 @@ public class ProductService {
 
     //get product by category
     public List<Product> getByCategory(String categoryName){
-        return productRepository.findAllByCategory(categoryName);
+        return productRepository.findProductsByCategory(categoryName);
     }
 
 }
