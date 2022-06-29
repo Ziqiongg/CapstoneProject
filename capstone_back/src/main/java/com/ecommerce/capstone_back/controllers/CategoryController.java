@@ -15,4 +15,5 @@ public class CategoryController {
         return ResponseEntity.ok().body(categories);
     }
 
+
 }
