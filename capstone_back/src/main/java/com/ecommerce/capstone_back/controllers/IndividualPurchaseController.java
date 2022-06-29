@@ -49,9 +49,9 @@ public class IndividualPurchaseController {
 //need to get user id, product id
 //// will need to be modified to check wallet against product price
     @PostMapping("/AppUser_basket/additem")
-    public ResponseEntity addToBasket(@PathVariable Long AppUserId, Long ProductId){
+    public ResponseEntity addToBasket(@PathVariable Long AppUserId, Long ProductId, Integer quantity){
         try {
-            List<IndividualPurchase> basket = individualPurchaseService.addToUserBasket(AppUserId, ProductId);
+            List<IndividualPurchase> basket = individualPurchaseService.addToUserBasket(AppUserId, ProductId, quantity);
             return ResponseEntity.status(HttpStatus.OK).body(basket);
         } catch (RuntimeException re) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
@@ -74,8 +74,8 @@ public class IndividualPurchaseController {
 
 // will need to be modified to check wallet against product price
     @PutMapping("/AppUser_basket/updateitem")
-    public void updateBasket(@PathVariable Long AppUserId, Long ProductId, int Quantity){
-        individualPurchaseService.updateToUserBasket(AppUserId, ProductId, Quantity);
+    public void updateBasket(@PathVariable  Integer Quantity, Long AppUserId, Long ProductId){
+        individualPurchaseService.updateToUserBasket( Quantity, AppUserId, ProductId);
     }
 
     }

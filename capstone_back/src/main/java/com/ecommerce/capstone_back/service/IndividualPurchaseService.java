@@ -45,9 +45,8 @@ public class IndividualPurchaseService {
 //    add to user basket,
     // needs to check wallet, check price, check stock and adjust
 
-    public List<IndividualPurchase> addToUserBasket(Long AppUserId, Long ProductId){
-
-        return individualPurchaseRepository.addItemToBasket(AppUserId, ProductId);
+    public List<IndividualPurchase> addToUserBasket(Long AppUserId, Long ProductId, Integer quantity){
+        return individualPurchaseRepository.addItemToBasket(AppUserId, ProductId, quantity);
     }
 
 
@@ -62,8 +61,8 @@ public class IndividualPurchaseService {
 // needs to check wallet, check stock, check price and adjust
 
 
-    public void updateToUserBasket(Long AppUserId, Long ProductId, int Quantity) {
-        individualPurchaseRepository.updateChangeToBasket(AppUserId, ProductId, Quantity);
+    public void updateToUserBasket(Integer Quantity, Long AppUserId, Long ProductId) {
+        individualPurchaseRepository.updateChangeToBasket(Quantity, AppUserId, ProductId);
     }
 
     }
