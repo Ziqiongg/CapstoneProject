@@ -34,14 +34,39 @@ public class IndividualPurchaseController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
         }
 
-
+    }
+// Get purchases
+    @GetMapping("/AppUser/get_purchases/{customer_id}")
+    public ResponseEntity getCustomerPurchase(@PathVariable Long AppUserId) {
+        try {
+            List<IndividualPurchase> basket = individualPurchaseService.getPurchase(AppUserId);
+            return ResponseEntity.status(HttpStatus.OK).body(basket);
+        } catch (RuntimeException re) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
+        }
+    }
 // Add to basket
 //need to get user id, product id
-
-//    @PostMapping("/AppUser_basket/additem")
-//    public ResponseEntity addToBasket()
 //
-//    }
+    @PostMapping("/AppUser_basket/additem")
+    public ResponseEntity addToBasket(@PathVariable Long AppUserId, Long ProductId){
+        try {
+            List<IndividualPurchase> basket = individualPurchaseService.addToUserBasket(AppUserId, ProductId);
+            return ResponseEntity.status(HttpStatus.OK).body(basket);
+        } catch (RuntimeException re) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
+        }
+    }
+
+
+// Remove item from basket
+// need to get user id, product id
+
+    @DeleteMapping("/AppUser_basket/{user_id}")
+    public void deleteCustomerBasket(@PathVariable Long AppUserId, Long ProductId) {
+        individualPurchaseService.deleteById(AppUserId, ProductId);
+
+    }
 
 // Update basket
 
@@ -52,17 +77,7 @@ public class IndividualPurchaseController {
 
 //    @DeleteMapping
 
-//    Get purchases
 //
-//    @GetMapping("/AppUser/get_purchases/{user_id}")
-//    public ResponseEntity getCustomerPurchase(@PathVariable AppUser user) {
-//        try {
-//            List<IndividualPurchase> basket = IndividualPurchaseService.getPurchase(user.getId());
-//            return ResponseEntity.status(HttpStatus.OK).body(basket);
-//        } catch (RuntimeException re) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
-//        }
-//    }
 //
 //// Remove item from basket
 //// need to get user id, product id
@@ -88,5 +103,5 @@ public class IndividualPurchaseController {
 
 //    }
 
-    }}
+    }
 

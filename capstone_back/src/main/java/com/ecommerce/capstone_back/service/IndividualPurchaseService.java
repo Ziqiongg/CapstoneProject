@@ -1,16 +1,11 @@
 package com.ecommerce.capstone_back.service;
 
 
-import com.ecommerce.capstone_back.model.AppUser;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 
-import com.ecommerce.capstone_back.model.Product;
-
 import com.ecommerce.capstone_back.repository.IndividualPurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ecommerce.capstone_back.repository.IndividualPurchaseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -34,18 +29,25 @@ public class IndividualPurchaseService {
 
         return individualPurchaseRepository.getBasketById(AppUserId);
     }
-    
-    
 
 //    get customer purchase
-//public static List<IndividualPurchase> getPurchase(AppUser user) {
-//
-//    return IndividualPurchaseRepository.viewPurchaseById(user.getId());
-//}
-//// delete customer basket
-//    public void deleteById (AppUser user, Product product){
-//     return IndividualPurchaseRepository.deleteBasketById(user.getId(), product.getId());
-//        }
+    public  List<IndividualPurchase> getPurchase(Long AppUserId) {
+
+        return individualPurchaseRepository.viewPurchaseById(AppUserId);
+    }
+
+//    add to user basket
+
+    public List<IndividualPurchase> addToUserBasket(Long AppUserId, Long ProductId){
+
+        return individualPurchaseRepository.addItemToBasket(AppUserId, ProductId);
+    }
+
+
+// delete customer basket
+    public void deleteById (Long AppUserId, Long ProductId){
+     individualPurchaseRepository.deleteBasketById(AppUserId, ProductId);
+        }
 //
 ////        view purchased
 //    public List<IndividualPurchase> viewPurchased(){
