@@ -2,33 +2,27 @@ package com.ecommerce.capstone_back.controllers;
 
 
 import com.ecommerce.capstone_back.model.AppUser;
-import com.ecommerce.capstone_back.repository.AppUserRepository;
-import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.ecommerce.capstone_back.service.AppUserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.annotation.Repeatable;
 import java.util.Optional;
 
 @RestController
 public class AppUserController {
 
-//    testing
+    public final AppUserService appUserService;
 
-
-
-    @Autowired
-    private final AppUserRepository appUserRepository;
-
-    public AppUserController(AppUserRepository appUserRepository) {
-        this.appUserRepository = appUserRepository;
+    public AppUserController(AppUserService appUserService) {
+        this.appUserService = appUserService;
     }
 
+
     @GetMapping({"/users/id/{id}"})
-    public Optional<AppUser> getUserById(@PathVariable Long id){
-        return this.appUserRepository.findById(id);
+    public ResponseEntity<AppUser> getUserById(@PathVariable Long id) throws Exception {
+        AppUser appUser = appUserService.getAppUserById(id);
+        return ResponseEntity.ok().body(appUser);
    }
 
 //   @GetMapping({"/users/wallet/{wallet}"})
@@ -36,10 +30,11 @@ public class AppUserController {
 //        return this.appUserRepository.findBy(wallet);
 //   }
 
+    // Why not just get user by ID then take wallet at frontend? Why dies this have a double in that it never uses?
    @GetMapping({"/users/wallet/{id}/{wallet}"})
-   public double getUserWallet(@PathVariable Long id, @PathVariable double wallet) {
-        AppUser user = appUserRepository.findById(id).get();
-       return user.getWallet();
+   public ResponseEntity<Double> getUserWallet(@PathVariable Long id, @PathVariable double wallet) throws Exception {
+        AppUser appUser = appUserService.getAppUserById(id);
+       return ResponseEntity.ok().body(appUser.getWallet());
    }
 
 //   get Wallet
@@ -48,58 +43,73 @@ public class AppUserController {
            value = {"/users/wallet/{wallet}"},
            produces = {"application/json"}
    )
-    public AppUser updateWallet(@RequestBody AppUser user1, @PathVariable double wallet){
-        return (AppUser) this.appUserRepository.save(user1);
+    public ResponseEntity<Double> updateWallet(@RequestBody AppUser appUser, @PathVariable double wallet){
+        appUser.setWallet(wallet);
+        appUserService.updateAppUser(appUser);
+        return ResponseEntity.ok().body(appUser.getWallet());
    }
 
-   @PatchMapping("/users/{id}/{firstName}")
-    public ResponseEntity<AppUser> updateUserFirstName(@PathVariable Long id, @PathVariable String firstName){
-        try{
-            AppUser user =  appUserRepository.findById(id).get();
-            user.setUserFirstName(firstName);
-            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-        } catch(Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-   }
+   // Super update all things as needed
+    @PatchMapping("/users/{id}")
+    public ResponseEntity<AppUser> updateAppUser(@PathVariable Long id,
+                                                 @RequestParam Optional<Double> wallet,
+                                                 @RequestParam Optional<String> firstName,
+                                                 @RequestParam Optional<String> lastName,
+                                                 @RequestParam Optional<String> address) throws Exception {
+        AppUser appUser = appUserService.getAppUserById(id);
+        wallet.ifPresent(appUser::setWallet);
+        firstName.ifPresent(appUser::setUserFirstName);
+        lastName.ifPresent(appUser::setUserLastName);
+        address.ifPresent(appUser::setUserAddress);
+        return ResponseEntity.ok().body(appUser);
+    }
 
-   @PatchMapping("/users/{id}/{lastName}")
-    public ResponseEntity<AppUser> updateUserLastName(@PathVariable Long id, @PathVariable String lastName){
-        try{
-            AppUser user = appUserRepository.findById(id).get();
-            user.setUserLastName(lastName);
-            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-        } catch(Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-   }
+//    @PatchMapping("/users/{id}/{firstName}")
+//    public ResponseEntity<AppUser> updateUserFirstName(@PathVariable Long id, @PathVariable String firstName) throws Exception {
+//        AppUser appUser =  appUserService.getAppUserById(id);
+//        appUser.setUserFirstName(firstName);
+//        appUserService.updateAppUser(appUser);
+//        return ResponseEntity.ok().body(appUser);
+//   }
+//
+//   @PatchMapping("/users/{id}/{lastName}")
+//    public ResponseEntity<AppUser> updateUserLastName(@PathVariable Long id, @PathVariable String lastName){
+//        try{
+//            AppUser user = appUserRepository.findById(id).get();
+//            user.setUserLastName(lastName);
+//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+//        } catch(Exception e) {
+//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//   }
+//
+//   @PatchMapping("/users/{id}/{address}")
+//    public ResponseEntity<AppUser> updateUserAddress(@PathVariable Long id, @PathVariable String address){
+//        try{
+//            AppUser user = appUserRepository.findById(id).get();
+//            user.setUserAddress(address);
+//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+//        } catch(Exception e){
+//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//   }
+//
+//   @PatchMapping("/users/{id}/{address}")
+//    public ResponseEntity<AppUser> updateUserPassword(@PathVariable Long id, @PathVariable String password){
+//        try{
+//            AppUser user = appUserRepository.findById(id).get();
+//            user.setUserPassword(password);
+//            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
+//        } catch(Exception e){
+//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//   }
+//
 
-   @PatchMapping("/users/{id}/{address}")
-    public ResponseEntity<AppUser> updateUserAddress(@PathVariable Long id, @PathVariable String address){
-        try{
-            AppUser user = appUserRepository.findById(id).get();
-            user.setUserAddress(address);
-            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-        } catch(Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-   }
-
-   @PatchMapping("/users/{id}/{address}")
-    public ResponseEntity<AppUser> updateUserPassword(@PathVariable Long id, @PathVariable String password){
-        try{
-            AppUser user = appUserRepository.findById(id).get();
-            user.setUserPassword(password);
-            return new ResponseEntity<AppUser>(appUserRepository.save(user), HttpStatus.OK);
-        } catch(Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-   }
-
-   @DeleteMapping("/users/delete/{id}/{delete}")
-   public void deleteUser(@PathVariable Long id){
-        this.appUserRepository.deleteById(id);
-
+   @DeleteMapping("/users/{id}")
+   public void deleteAppUser(@PathVariable Long id) throws Exception {
+       AppUser appUser = appUserService.getAppUserById(id);
+       appUserService.deleteAppUser(appUser);
 }
 
 
