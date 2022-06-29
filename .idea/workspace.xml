@@ -5,6 +5,16 @@
   </component>
   <component name="ChangeListManager">
 
+    <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
+    </list>
+
+
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="" />
 
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
@@ -25,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,33 +71,125 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+
     "last_opened_file_path": "/Users/peacebnta/coursework/week_12/Capstone/CapstoneProject",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ecommerce.capstone_back.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.IndividualPurchaseControllerTest.addToMyBasket">
+    <configuration name="IndividualPurchaseControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
   <component name="RunManager">
     <configuration name="CapstoneBackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.CapstoneBackApplication" />
+>>>>>>> bf1916a4873b6edf73d1407dd6fb74c3f5d50f88
       <module name="capstone_back" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ecommerce.capstone_back.*" />
+          <option name="PATTERN" value="com.ecommerce.capstone_back.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndividualPurchaseControllerTest.addToMyBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
+      <option name="METHOD_NAME" value="addToMyBasket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndividualPurchaseControllerTest.getUserBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
+      <option name="METHOD_NAME" value="getUserBasket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndividualPurchaseControllerTest.getUserPurchases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
+      <option name="METHOD_NAME" value="getUserPurchases" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndividualPurchaseControllerTest.updateUserBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
+      <option name="METHOD_NAME" value="updateUserBasket" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest.addToMyBasket" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest.getUserPurchases" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest.updateUserBasket" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest.getUserBasket" />
+
         <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
 
         <item itemvalue="Application.CapstoneBackApplication" />
+
 
       </list>
     </recent_temporary>
