@@ -19,12 +19,18 @@ public class ProductController {
     @Autowired
     private final ProductService productService;
 
-    public ProductController(ProductService productService) {
+    @Autowired
+    private final ProductRepository productRepository;
+
+    public ProductController(ProductService productService, ProductRepository productRepository) {
         this.productService = productService;
+        this.productRepository = productRepository;
     }
 
+
+
     //get all products
-    @GetMapping("/product")
+    @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAll();
         return ResponseEntity
@@ -35,16 +41,16 @@ public class ProductController {
     }
 
     //get products by id
-    @GetMapping("/product/{id}")
+    @GetMapping("/products/id/{id}")
     public ResponseEntity<Optional<Product>> getProductsById(@PathVariable Long id){
-        Optional<Product> productsById = productService.getById(id);
+        Optional<Product> productsById = Optional.ofNullable(productRepository.findProductById(id));
         return ResponseEntity
                 .ok()
                 .body(productsById);
     }
 
     //get products by name
-    @GetMapping("/product/{name}")
+    @GetMapping("/product/name/{name}")
     public ResponseEntity<List<Product>> getProductsByName(@PathVariable String name) {
         List<Product> productsByName = productService.getByName(name);
         return ResponseEntity
@@ -56,7 +62,7 @@ public class ProductController {
 
 
     ////get products by category
-    @GetMapping("/product/{category}")
+    @GetMapping("/product/category/{category}")
     public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String category) {
         List<Product> productsByCategory = productService.getByCategory(category);
         return ResponseEntity
