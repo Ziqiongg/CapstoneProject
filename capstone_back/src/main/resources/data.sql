@@ -4,11 +4,11 @@ insert into app_user (user_first_name, user_last_name, user_address, user_passwo
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Joseph', 'Sutherland', 'Copford', '123', 1000);
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Michelle', 'Tambi', 'London', '123', 1000);
 
-insert into product (name, category, price, stock) values ('Big Boi Hat', 0, 99.99, 200);
-insert into product (name, category, price, stock) values ('Little Boat', 1, 2590.56, 30);
-insert into product (name, category, price, stock) values ('Bigger Boat', 1, 25900.56, 3);
-insert into product (name, category, price, stock) values ('Thicc Oats', 2, 5.99, 1000);
-insert into product (name, category, price, stock) values ('Special Goat', 4, 79.33, 57);
+insert into product (name, category, price, stock) values ('Big Boi Hat', 'Hats', 99.99, 200);
+insert into product (name, category, price, stock) values ('Little Boat', 'Boats', 2590.56, 30);
+insert into product (name, category, price, stock) values ('Bigger Boat', 'Boats', 25900.56, 3);
+insert into product (name, category, price, stock) values ('Thicc Oats', 'Oats', 5.99, 1000);
+insert into product (name, category, price, stock) values ('Special Goat', 'Goats', 79.33, 57);
 
 insert into individual_purchase (quantity, purchased, product_id, app_user_id) values (5, True, 1, 1);
 insert into individual_purchase (quantity, purchased, product_id, app_user_id) values (5, True, 1, 1);
