@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 public class CategoryController {
-    @GetMapping("categories")
+    @GetMapping("/categories")
     public ResponseEntity<List<Category>> getAllCategories() {
         List<Category> categories = List.of(Category.values());
         return ResponseEntity.ok().body(categories);
     }
+
 
 }
