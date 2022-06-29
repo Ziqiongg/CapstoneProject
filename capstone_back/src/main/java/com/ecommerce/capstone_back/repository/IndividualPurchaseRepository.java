@@ -33,10 +33,10 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 //    USER, PRODUCT, QUANTITY, PURCHASED
     @Query(
             value = "INSERT INTO" + "individual_purchase"
-                    + "app_user_id"
+                    + "(app_user_id"
                     + "Product_id"
                     + "quantity"
-                    + "purchased"
+                    + "purchased)"
                     + " values (?1, ?2, ?3, FALSE) ",
 
             nativeQuery = true)
