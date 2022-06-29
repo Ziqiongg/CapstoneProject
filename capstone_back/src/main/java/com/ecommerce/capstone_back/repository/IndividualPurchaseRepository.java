@@ -16,7 +16,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
     @Query(
 
-            value="SELECT * FROM IndividualPurchase WHERE AppUser_id = ?1 AND purchased = FALSE",
+            value="SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = FALSE",
             nativeQuery = true
     )
      List<IndividualPurchase> getBasketById(Long AppUserId);
@@ -24,7 +24,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
 // Get purchases
     @Query(
-            value = "SELECT * FROM IndividualPurchase WHERE customer_id = ?1 AND purchased = TRUE",
+            value = "SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = TRUE",
             nativeQuery = true)
     List<IndividualPurchase> viewPurchaseById(Long AppUser_Id);
 
@@ -32,8 +32,8 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     //    Add to basket query
 //    USER, PRODUCT, QUANTITY, PURCHASED
     @Query(
-            value = "INSERT INTO" + "IndividualPurchase"
-                    + "AppUser_id"
+            value = "INSERT INTO" + "individual_purchase"
+                    + "app_user_id"
                     + "Product_id"
                     + "quantity"
                     + "purchased"
@@ -45,16 +45,16 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
     //    Delete from basket query
     @Query(
-            value = "DELETE FROM IndividualPurchase WHERE AppUser_id = ?1 AND product_id = ?2",
+            value = "DELETE FROM individual_purchase WHERE app_user_id = ?1 AND product_id = ?2",
             nativeQuery = true)
     Integer deleteBasketById(Long AppUserId, Long ProductId);
 
 
     // update basket quantity query
     @Query(
-            value = "UPDATE IndividualPurchase " + " SET quantity = quantity + ?1 " + " WHERE id = ?2",
+            value = "UPDATE individual_purchase " + " SET quantity = quantity + ?1 " + " WHERE app_user_id = ?2 AND product_id = ?3",
             nativeQuery = true)
-    Integer BasketUpdate();
+    Integer updateChangeToBasket(Long AppUserId, Long ProductId, int Quantity);
 // need to add arguments being passed through ^^
 
 

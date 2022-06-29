@@ -48,22 +48,15 @@ public class IndividualPurchaseService {
     public void deleteById (Long AppUserId, Long ProductId){
      individualPurchaseRepository.deleteBasketById(AppUserId, ProductId);
         }
-//
-////        view purchased
-//    public List<IndividualPurchase> viewPurchased(){
-//        return IndividualPurchase.viewPurchaseById();
-//    }
-//
-////        view basket(purchased = false)
-//    public List<IndividualPurchase> viewBasket(){
-//        return IndividualPurchase.viewBasketById();
+
+
+//        update basket quantity
+
+
+//    public List<IndividualPurchase> updateToUserBasket(Long AppUserId, Long ProductId, int Quantity){
+////        return individualPurchaseRepository.updateChangeToBasket(AppUserId, ProductId, Quantity);
 //    }
 
-//update basket (quantity change)
-
-
-
-    // add to basket
     }
 
 

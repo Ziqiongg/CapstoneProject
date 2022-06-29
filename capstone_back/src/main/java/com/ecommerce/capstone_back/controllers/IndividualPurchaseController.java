@@ -69,14 +69,17 @@ public class IndividualPurchaseController {
     }
 
 // Update basket
+//    need user id, product id, quantity
 
-//    @PutMapping
-
-// Remove item from basket
-// need to get user id, product id
-
-
-
+//    @PutMapping("/AppUser_basket/updateitem")
+//    public ResponseEntity updateBasket(@PathVariable Long AppUserId, Long ProductId, int Quantity){
+//        try {
+//            List<IndividualPurchase> basket = individualPurchaseService.updateToUserBasket(AppUserId, ProductId, Quantity);
+//            return ResponseEntity.status(HttpStatus.OK).body(basket);
+//        } catch (RuntimeException re) {
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
+//        }
+//    }
 
     }
 
