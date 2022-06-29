@@ -29,8 +29,8 @@ public class AppUserController {
 
 
     // Why not just get user by ID then take wallet at frontend? Why dies this have a double in that it never uses?
-   @GetMapping({"/users/wallet/{id}/{wallet}"})
-   public ResponseEntity<Double> getUserWallet(@PathVariable Long id, @PathVariable double wallet) throws Exception {
+   @GetMapping({"/users/wallet/{id}"})
+   public ResponseEntity<Double> getUserWallet(@PathVariable Long id) throws Exception {
         AppUser appUser = appUserService.getAppUserById(id);
        return ResponseEntity.ok().body(appUser.getWallet());
    }

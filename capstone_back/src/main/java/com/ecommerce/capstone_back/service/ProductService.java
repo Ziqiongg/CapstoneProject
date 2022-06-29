@@ -29,14 +29,14 @@ public class ProductService {
     }
 
     //get product by id
-    public Optional<Product> getById(Long id) {
-        return productRepository.findById(id);
-    }
+//    public Optional<Product> getById(Long id) {
+//        return Optional.ofNullable(productRepository.findProductById(id));
+//    }
 
     //get product by name
 
     public List<Product> getByName(String name){
-        return productRepository.findAllByNameLikeIgnoreCase(name);
+        return productRepository.findByName(name);
     }
 
 
