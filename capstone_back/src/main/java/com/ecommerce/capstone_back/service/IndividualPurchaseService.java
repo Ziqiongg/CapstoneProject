@@ -1,16 +1,11 @@
 package com.ecommerce.capstone_back.service;
 
 
-import com.ecommerce.capstone_back.model.AppUser;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 
-import com.ecommerce.capstone_back.model.Product;
-
 import com.ecommerce.capstone_back.repository.IndividualPurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ecommerce.capstone_back.repository.IndividualPurchaseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -40,33 +35,37 @@ public class IndividualPurchaseService {
         return individualPurchaseRepository.getBasketById(AppUserId);
     }
 
-    
 
 //    get customer purchase
-//public static List<IndividualPurchase> getPurchase(AppUser user) {
-//
-//    return IndividualPurchaseRepository.viewPurchaseById(user.getId());
-//}
-//// delete customer basket
-//    public void deleteById (AppUser user, Product product){
-//     return IndividualPurchaseRepository.deleteBasketById(user.getId(), product.getId());
-//        }
-//
-////        view purchased
-//    public List<IndividualPurchase> viewPurchased(){
-//        return IndividualPurchase.viewPurchaseById();
-//    }
-//
-////        view basket(purchased = false)
-//    public List<IndividualPurchase> viewBasket(){
-//        return IndividualPurchase.viewBasketById();
-//    }
+    public  List<IndividualPurchase> getPurchase(Long AppUserId) {
 
-//update basket (quantity change)
+        return individualPurchaseRepository.viewPurchaseById(AppUserId);
+    }
+
+//    add to user basket,
+    // needs to check wallet, check price, check stock and adjust
+
+    public List<IndividualPurchase> addToUserBasket(Long AppUserId, Long ProductId){
+
+        return individualPurchaseRepository.addItemToBasket(AppUserId, ProductId);
+    }
 
 
+// delete customer basket
+    public void deleteById (Long AppUserId, Long ProductId){
+     individualPurchaseRepository.deleteBasketById(AppUserId, ProductId);
+        }
 
-    // add to basket
+
+//        update basket quantity
+
+// needs to check wallet, check stock, check price and adjust
+
+
+    public void updateToUserBasket(Long AppUserId, Long ProductId, int Quantity) {
+        individualPurchaseRepository.updateChangeToBasket(AppUserId, ProductId, Quantity);
+    }
+
     }
 
 

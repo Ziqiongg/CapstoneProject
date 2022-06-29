@@ -16,52 +16,48 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
     @Query(
 
-            value="SELECT * FROM IndividualPurchase WHERE AppUser_id = ?1 AND purchased = FALSE",
+            value="SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = FALSE",
             nativeQuery = true
     )
      List<IndividualPurchase> getBasketById(Long AppUserId);
 
+
+// Get purchases
+    @Query(
+            value = "SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = TRUE",
+            nativeQuery = true)
+    List<IndividualPurchase> viewPurchaseById(Long AppUser_Id);
+
+
     //    Add to basket query
 //    USER, PRODUCT, QUANTITY, PURCHASED
-//    @Query(
-//            value = "INSERT INTO" + "IndividualPurchase" + "" ,
-//
-//            nativeQuery = true)
-//
-//    List<IndividualPurchase> addToBasket();
+    @Query(
+            value = "INSERT INTO" + "individual_purchase"
+                    + "(app_user_id"
+                    + "Product_id"
+                    + "quantity"
+                    + "purchased)"
+                    + " values (?1, ?2, ?3, FALSE) ",
+
+            nativeQuery = true)
+
+    List<IndividualPurchase> addItemToBasket(Long AppUserId, Long ProductId);
 
     //    Delete from basket query
     @Query(
-            value = "DELETE FROM IndividualPurchase WHERE AppUser_id = ?1 AND product_id = ?2",
+            value = "DELETE FROM individual_purchase WHERE app_user_id = ?1 AND product_id = ?2",
             nativeQuery = true)
-    Integer deleteBasketById();
+    Integer deleteBasketById(Long AppUserId, Long ProductId);
 
-    //    View purchased basket query
-    @Query(
-            value = "SELECT * FROM IndividualPurchase WHERE customer_id = ?1 AND purchased = TRUE",
-            nativeQuery = true)
-    List<IndividualPurchase> viewPurchaseById(Long AppUser_Id, Long product_Id);
-
-    // view basket query
-
-    @Query(
-            value = "SELECT * FROM IndividualPurchase WHERE customer_id = ?1 AND purchased = FALSE",
-            nativeQuery = true)
-    List<IndividualPurchase> viewBasketById(Long AppUser_Id, Long product_Id);
-
-    ;
 
     // update basket quantity query
     @Query(
-            value = "UPDATE IndividualPurchase " + " SET quantity = quantity + ?1 " + " WHERE id = ?2",
+            value = "UPDATE individual_purchase " + " SET quantity = quantity + ?1 " + " WHERE app_user_id = ?2 AND product_id = ?3",
             nativeQuery = true)
-    Integer BasketUpdate();
+    Integer updateChangeToBasket(Long AppUserId, Long ProductId, int Quantity);
 // need to add arguments being passed through ^^
 
-    @Query( value = "SELECT * FROM individual_purchase WHERE AppUser_id = ?1 AND purchased = FALSE",
-                nativeQuery = true
-        )
-     List<IndividualPurchase> getCustomerBasket(Long appUserId);
+
 
     }
 

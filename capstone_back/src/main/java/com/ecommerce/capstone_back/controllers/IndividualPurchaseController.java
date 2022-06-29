@@ -25,7 +25,7 @@ public class IndividualPurchaseController {
 
 //  Get basket
 
-    @GetMapping("/AppUser/get_basket/{customer_id}")
+    @GetMapping("/AppUser/get_basket/{appuser_id}")
     public ResponseEntity getCustomerBasket(@PathVariable Long AppUserId) {
         try {
             List<IndividualPurchase> basket = individualPurchaseService.getBasket(AppUserId);
@@ -34,59 +34,49 @@ public class IndividualPurchaseController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
         }
 
-
+    }
+// Get purchases
+    @GetMapping("/AppUser/get_purchases/{appuser_id}")
+    public ResponseEntity getCustomerPurchase(@PathVariable Long AppUserId) {
+        try {
+            List<IndividualPurchase> basket = individualPurchaseService.getPurchase(AppUserId);
+            return ResponseEntity.status(HttpStatus.OK).body(basket);
+        } catch (RuntimeException re) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
+        }
+    }
 // Add to basket
 //need to get user id, product id
+//// will need to be modified to check wallet against product price
+    @PostMapping("/AppUser_basket/additem")
+    public ResponseEntity addToBasket(@PathVariable Long AppUserId, Long ProductId){
+        try {
+            List<IndividualPurchase> basket = individualPurchaseService.addToUserBasket(AppUserId, ProductId);
+            return ResponseEntity.status(HttpStatus.OK).body(basket);
+        } catch (RuntimeException re) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
+        }
+    }
 
-//    @PostMapping("/AppUser_basket/additem")
-//    public ResponseEntity addToBasket()
-//
-//    }
-
-// Update basket
-
-//    @PutMapping
 
 // Remove item from basket
 // need to get user id, product id
 
-//    @DeleteMapping
+    @DeleteMapping("/AppUser_basket/{user_id}")
+    public void deleteCustomerBasket(@PathVariable Long AppUserId, Long ProductId) {
+        individualPurchaseService.deleteById(AppUserId, ProductId);
 
-//    Get purchases
-//
-//    @GetMapping("/AppUser/get_purchases/{user_id}")
-//    public ResponseEntity getCustomerPurchase(@PathVariable AppUser user) {
-//        try {
-//            List<IndividualPurchase> basket = IndividualPurchaseService.getPurchase(user.getId());
-//            return ResponseEntity.status(HttpStatus.OK).body(basket);
-//        } catch (RuntimeException re) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
-//        }
-//    }
-//
-//// Remove item from basket
-//// need to get user id, product id
-//
-//    @DeleteMapping("/AppUser_basket/{user_id}")
-//    public void deleteCustomerBasket(@PathVariable AppUser user, Product product) {
-//        IndividualPurchaseService.deleteById(user.getId());
-//
-//    }
-//
-//// Add to basket
-////need to get user id, product id
-////
-//    @PostMapping("/AppUser_basket/additem")
-//    public ResponseEntity addToBasket(){
-//        try {
-//            List<IndividualPurchase> basket = IndividualPurchaseService.addToBasket();
-//            return ResponseEntity.status(HttpStatus.OK).body(basket);
-//        } catch (RuntimeException re) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
-//        }
-//    }
+    }
 
-//    }
+// Update basket
+//    need user id, product id, quantity
 
-    }}
+
+// will need to be modified to check wallet against product price
+    @PutMapping("/AppUser_basket/updateitem")
+    public void updateBasket(@PathVariable Long AppUserId, Long ProductId, int Quantity){
+        individualPurchaseService.updateToUserBasket(AppUserId, ProductId, Quantity);
+    }
+
+    }
 
