@@ -1,6 +1,7 @@
 package com.ecommerce.capstone_back.controllers;
 
 
+import com.ecommerce.capstone_back.dto.AppUserFirstNamePasswordDTO;
 import com.ecommerce.capstone_back.model.AppUser;
 import com.ecommerce.capstone_back.repository.AppUserRepository;
 import com.ecommerce.capstone_back.service.AppUserService;
@@ -61,13 +62,23 @@ public class AppUserController {
         return ResponseEntity.ok().body(appUser);
     }
 
-
-
    @DeleteMapping("/users/{id}")
    public void deleteAppUser(@PathVariable Long id) throws Exception {
        AppUser appUser = appUserService.getAppUserById(id);
        appUserService.deleteAppUser(appUser);
 }
+
+    @PostMapping("users/login")
+    public ResponseEntity findByNameAndPassword(@RequestBody AppUserFirstNamePasswordDTO appUser){
+        Optional<AppUser> knownUser = appUserService.findByNameAndPassword(
+                appUser.getUserFirstName(), appUser.getPassword());
+        if(knownUser.isPresent()){
+            return ResponseEntity.ok().body(knownUser);
+        } else {
+            return new ResponseEntity<>("User does not exist", HttpStatus.BAD_REQUEST);
+        }
+    }
+
 
 
 }
