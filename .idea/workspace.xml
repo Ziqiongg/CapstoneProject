@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
-<<<<<<< HEAD
+
       <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/service/AppUserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
+
       <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/AppUserFirstNamePasswordDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
->>>>>>> 1a086a43cd889e7c964bb014d4e8f4d92c933951
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +37,8 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
-<<<<<<< HEAD
-=======
+
         <entry key="$PROJECT_DIR$" value="Authentication-M" />
->>>>>>> 1a086a43cd889e7c964bb014d4e8f4d92c933951
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
