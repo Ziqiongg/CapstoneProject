@@ -5,6 +5,8 @@ import com.ecommerce.capstone_back.repository.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class AppUserService {
 
@@ -27,5 +29,9 @@ public class AppUserService {
 
     public void deleteAppUser(AppUser appUser) {
         appUserRepository.delete(appUser);
+    }
+
+    public Optional<AppUser> findByNameAndPassword(String userFirstName, String password){
+        return appUserRepository.findByNameAndPassword(userFirstName, password);
     }
 }
