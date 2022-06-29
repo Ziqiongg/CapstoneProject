@@ -5,9 +5,6 @@ public class AppUserFirstNamePasswordDTO {
     private String userFirstName;
     private String password;
 
-    public AppUserFirstNamePasswordDTO(){
-    }
-
     public AppUserFirstNamePasswordDTO(String userFirstName, String password){
         this.userFirstName = userFirstName;
         this.password = password;

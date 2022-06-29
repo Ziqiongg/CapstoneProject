@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -78,6 +79,14 @@ public class AppUserController {
             return new ResponseEntity<>("User does not exist", HttpStatus.BAD_REQUEST);
         }
     }
+
+//    Get all users (just in case we decide to add admin responsibilities)
+    @GetMapping("/users")
+    public ResponseEntity<List<AppUser>> findAllUsers(){
+        List<AppUser> users = appUserService.getAllUsers();
+        return ResponseEntity.ok().body(users);
+    }
+
 
 
 
