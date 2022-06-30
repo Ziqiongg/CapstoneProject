@@ -22,6 +22,8 @@ public class Product {
 
     private int stock;
 
+    private byte[] pictureAddress;
+
     @OneToMany(mappedBy = "product")
     @JsonManagedReference(value = "product")
     private List<IndividualPurchase> basket;
@@ -30,13 +32,14 @@ public class Product {
     public Product () {
     }
 
-    public Product(Long id, String name, Category category, Double price, List<IndividualPurchase> basket, int stock) {
+    public Product(Long id, String name, Category category, Double price, List<IndividualPurchase> basket, int stock, byte[] pictureAddress) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.price = price;
         this.basket = basket;
         this.stock = stock;
+        this.pictureAddress = pictureAddress;
     }
 
     public Long getId() {
@@ -77,6 +80,14 @@ public class Product {
 
     public void setBasket(ArrayList<IndividualPurchase> basket) {
         this.basket = basket;
+    }
+
+    public byte[] getPictureAddress() {
+        return pictureAddress;
+    }
+
+    public void setPictureAddress(byte[] pictureAddress) {
+        this.pictureAddress = pictureAddress;
     }
 
     //reduce stock
