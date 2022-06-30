@@ -1,30 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ProductList.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useEffect } from 'react';
+import axios from 'axios';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const ProductList = () => {
 
-  
+  const [products, setProducts] = useState([]);
 
 
+  useEffect(() =>{
+    axios.get('http://localhost:8080/products')
+      .then(response =>{
+        setProducts(response.data);
+      })
+    })
+   
 
 return(
-  <div className="ProductList">
-    <Card style={{ width: '18rem' }} className = "each-card">
-      <Card.Img variant="top" src="data:image/jpeg;base64,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" />
+  // products.map((product) => {
+
+  // return(
+    
+  // <div className="ProductList">
+  //   <Row xs={4} md={4} className="g-4">
+  //   <Card style={{ width: '18rem'}} className = "each-card" key= {product.id} >
+  //     <Card.Img variant="top" src= {product.pictureAddress} />
+  //     <Card.Body>
+  //       <Card.Title>{product.name}</Card.Title>
+  //       <Card.Subtitle>{product.category}</Card.Subtitle>
+  //       <Card.Subtitle>{product.price}</Card.Subtitle>
+  //       <Card.Text>
+  //         free-delivery
+  //       </Card.Text>
+  //       <Button variant="primary">purchase</Button>
+  //     </Card.Body>
+  //   </Card>
+  //   </Row>
+  // </div>)})
+
+//   <Row xs={1} md={2} className="g-4">
+  // {products.map((product) => {
+  //   <Col>
+  //   <Card style={{ width: '18rem'}} className = "each-card" key= {product.id} >
+  //     <Card.Img variant="top" src= {product.pictureAddress} />
+  //     <Card.Body>
+  //           <Card.Title>{product.name}</Card.Title>
+  //         <Card.Subtitle>{product.category}</Card.Subtitle>
+  //         <Card.Subtitle>{product.price}</Card.Subtitle>
+  //         <Card.Text>
+  //           free-delivery
+  //         </Card.Text>
+  //         <Button variant="primary">purchase</Button>
+  //       </Card.Body>
+  //     </Card>
+  //   </Col>}
+//   )}
+// </Row>
+<Row xs={1} xl = {4} sm = {2} md={3} className="g-4">
+{Array.from(products, (product) => {
+  return(
+    <Col>
+    <Card style={{ width: '18rem'}} className = "each-card" key= {product.id} >
+      <Card.Img variant="top" src= {product.pictureAddress} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-  </div>)
-};
+            <Card.Title>{product.name}</Card.Title>
+          <Card.Subtitle>{product.category}</Card.Subtitle>
+          <Card.Subtitle>{product.price}</Card.Subtitle>
+          <Card.Text>
+            free-delivery
+          </Card.Text>
+          <Button variant="primary">purchase</Button>
+        </Card.Body>
+      </Card>
+    </Col>)})}
+</Row>
+
+)};
 
 ProductList.propTypes = {};
 
