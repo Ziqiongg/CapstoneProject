@@ -36,6 +36,7 @@ const Landing = () => (
 </section>
   {/* top row images */}
   {/* links to product category page, will add a href once they have been created^^ */}
+  <h2>CATEGORIES</h2>
   <section className="landing-top-container">
       
       {/* <div className="landing-page-top-row"> */}

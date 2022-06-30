@@ -28,7 +28,7 @@
     position:center;
     top:-25px;
     left:-35px;
-    width:400px;
+    /* width:400px; */
     height:auto;
     display:block;
     z-index:999;
