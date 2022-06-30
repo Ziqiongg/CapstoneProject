@@ -6,7 +6,7 @@ import './Landing.css';
 
 const Landing = () => (
   <div className="Landing">
-
+    <h1>hello</h1>
   </div>
 );
 
