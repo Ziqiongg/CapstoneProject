@@ -19,17 +19,15 @@ function Header () {
 
   return (
     <>
-    
+     <div id={openLinks ? "open" : "close"}>
         <header class = "logo">
           <h1 class = "title"><a href = "/"></a>Title
           </h1>
-          <div className = "searchBar">
-      <input type = "text" placeholder = "Search..."></input>
-      <button class = "not-white" type = "submit">Search</button>    
-    </div>
-          <nav>
+          <nav className = "Nav">
             
             <ul class = "nav-buttons">
+            <input type = "text" placeholder = "Search..."></input>
+      <button class = "not-white" type = "submit">Search</button> 
               <li><a href = "/loginpage"></a><button>Login</button></li>
               <li><a href = "/signuppage"></a><button>Sign Up</button></li>
               <li><a href = "/orderspage"></a><button>Orders</button></li>
@@ -39,31 +37,23 @@ function Header () {
           </nav>
           </header>
 
-          <nav2>
-      <div className='leftSide' id={openLinks ? "open" : "close"}>
-          <div class = "dropdown">
-          <button class = "drop-button">
-          Categories
-          </button>
-          <div class = "dropdown-content">
-          <a href="/">1</a>
-          <a href="/">2</a>
-          <a href="/">3</a>
-          <a href="/">4</a>
-          </div>
-          </div>
-          <div className = "category-search">
-      <input type = "text" placeholder = "Search for categories here..." ></input>
-      
-      <button class = "not-white" type = "submit">Search</button>    
-    </div>
-</div>
 
+          <nav2>
+     
+      <div class="dropdown">
+  <button class="dropbtn">Categories</button>
+  <div class="dropdown-content">
+    <a href="#">Category 1</a>
+    <a href="#">Category 2</a>
+    <a href="#">Category 3</a>
+  </div>
+</div>
+      <input type = "text" placeholder = "Search for categories here..." ></input>
+      <button class = "not-white" type = "submit">Search</button>    
 
           </nav2>
-       
    
-
+          </div>
       
 
 
