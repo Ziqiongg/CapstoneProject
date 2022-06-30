@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0b3d30f-ae3b-4174-955e-b79be19a6669" name="Changes" comment="">
+
+      <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/service/AppUserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/AppUserFirstNamePasswordDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -33,6 +37,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
+
         <entry key="$PROJECT_DIR$" value="Authentication-M" />
       </map>
     </option>
@@ -59,8 +64,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
 
+
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+
 
     &quot;last_opened_file_path&quot;: &quot;/Users/peacebnta/coursework/week_12/Capstone/CapstoneProject&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
@@ -68,6 +75,83 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+
+  <component name="RunManager" selected="JUnit.AppUserServiceTest.canUpdateAppUser">
+    <configuration name="AppUserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.service.AppUserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppUserServiceTest.canFindByNameAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.service.AppUserServiceTest" />
+      <option name="METHOD_NAME" value="canFindByNameAndPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppUserServiceTest.canGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.service.AppUserServiceTest" />
+      <option name="METHOD_NAME" value="canGetAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppUserServiceTest.canUpdateAppUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.service.AppUserServiceTest" />
+      <option name="METHOD_NAME" value="canUpdateAppUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppUserServiceTest.getUserByIdCanThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone_back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecommerce.capstone_back.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.service.AppUserServiceTest" />
+      <option name="METHOD_NAME" value="getUserByIdCanThrowException" />
+
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -151,6 +235,7 @@
       <option name="PACKAGE_NAME" value="com.ecommerce.capstone_back.controllers" />
       <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.controllers.IndividualPurchaseControllerTest" />
       <option name="METHOD_NAME" value="updateUserBasket" />
+
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,6 +243,12 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppUserServiceTest.canUpdateAppUser" />
+        <item itemvalue="JUnit.AppUserServiceTest.getUserByIdCanThrowException" />
+        <item itemvalue="JUnit.AppUserServiceTest" />
+        <item itemvalue="JUnit.AppUserServiceTest.canGetAllUsers" />
+        <item itemvalue="JUnit.AppUserServiceTest.canFindByNameAndPassword" />
+
         <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest.addToMyBasket" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest.getUserPurchases" />

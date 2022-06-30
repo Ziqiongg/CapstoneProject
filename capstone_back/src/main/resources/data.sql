@@ -1,5 +1,5 @@
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Alex', 'Leaver Hernandez', 'Cambridge', '123', 1000);
-insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Peace', 'Akib', 'London', '123', 1000);
+insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Peace', 'Akib', 'London', '321', 1000);
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Carol', 'Ziqiong', 'Bristol', '123', 1000);
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Joseph', 'Sutherland', 'Copford', '123', 1000);
 insert into app_user (user_first_name, user_last_name, user_address, user_password, wallet) values ('Michelle', 'Tambi', 'London', '123', 1000);
