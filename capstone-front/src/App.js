@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route exact path="/productlist" element={<ProductList />} />
+          {/* <Route exact path="/productlist" element={<ProductList />} /> */}
           {/* <Route path="/login"  element={<LogInPage />}/>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/settings" element={<SettingsPage />} />
