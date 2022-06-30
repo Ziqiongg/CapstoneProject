@@ -1,5 +1,10 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
 import Landing from "./components/Landing/Landing";
@@ -7,15 +12,18 @@ import Landing from "./components/Landing/Landing";
 
 function App() {
   return (
- 
-    <BrowserRouter>
+
+    <Router>
       <Routes>
-        <Route path="/" element={<Landing />}>
-          <Route path="productlist" element={<ProductList />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
-        </Route>
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/productlist" element={<ProductList />} />
+          {/* <Route path="/login"  element={<LogInPage />}/>
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
-    </BrowserRouter>
+    </Router>
+
   
   );
 }
