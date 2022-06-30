@@ -19,32 +19,46 @@ import BagofOats from './ProductImages/BagOfOats.jpg';
 import CoatPile from './ProductImages/CoatPile.jpg';
 import HatPile from './ProductImages/PileOfHats.jpg';
 import BoatPile from './ProductImages/BoatPile.jpg';
-// import StoatsPile from './ProductImages/StoatPile.jpg';
 import Moats from './ProductImages/Moats.jpg';
+import Stoat from './ProductImages/Stoat.jpg';
+import MediumBoat from './ProductImages/MediumBoat.jpg';
+import NewMoat from './ProductImages/NewMoat.jpg';
 
 
 const Landing = () => (
 
 <>
 <div>
+<section className="empty-container">
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h2>
+</section>
   {/* top row images */}
-  {/* links to product category page(?), will add a href once they have been created^^ */}
+  {/* links to product category page, will add a href once they have been created^^ */}
   <section className="landing-top-container">
-    <div className="landing-page-top-row">
-      <h1>Check Out Our Product Categories</h1>
-        <img src={GoatHerd} alt="Goat Category"></img>
-        <img src={BagofOats} alt="Bag of Oats Category"></img>
-        <img src={CoatPile} alt="Coats Category"></img>
-        <img src={HatPile} alt="Hat Category"></img>
-        <img src={BoatPile} alt="Boat Category"></img>
-        <img src={Moats} alt="Moats Category"></img>
-
-    </div>
+      
+      {/* <div className="landing-page-top-row"> */}
+      <a href="/"><img className="top-row-img" src={GoatHerd} alt="Goat Category"></img><figcaption>GOATS</figcaption></a>
+      <a href="/"><img className="top-row-img" src={BagofOats} alt="Bag of Oats Category"></img><figcaption>OATS</figcaption></a>
+      <a href="/"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></a>
+      <a href="/"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></a>
+      <a href="/"> <img className="top-row-img" src={BoatPile} alt="Boat Category"></img><figcaption>BOATS</figcaption></a>
+      <a href="/"> <img className="top-row-img" src={Moats} alt="Moats Category"></img><figcaption>MOATS</figcaption></a>
+    
     
   </section>
 </div>
 
-{/* image carousel thing */}
+{/* Empty coontainer */}
+
+<section className="empty-container">
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h2>
+</section>
+
+{/* image carousel */}
 {/* need to add links to the product pages when theyre complete */}
 <section id="trending-products">
         
@@ -62,15 +76,28 @@ const Landing = () => (
             <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/><figcaption>Frog Bucket Hat</figcaption></a>
             <a href="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/><figcaption>Quaker Oats</figcaption></a>
             <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/><figcaption>Magic Coat</figcaption></a> 
-            <p><strong> WHAT PEOPLE ARE LOVING: TRENDING PRODUCTS </strong></p>           
+                   
        </div>
-    </section>
+       <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+    </section> <br/>
 
+    <section className="empty-container">
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt"</h2>
+</section>
+
+    <section>
     <div className="bottom-row-container">
- <h1>THIRD GRID CONTAINER</h1>
-
-  
+    <a href="/"><img className="bottom-row-images"src={Stoat} alt="Stoats"/><figcaption>Stoat Stuff</figcaption></a> 
+    <a href="/"><img className="bottom-row-images" src={MediumBoat} alt="Stoats"/><figcaption>Better Boats</figcaption></a> 
+    <a href="/"><img className="bottom-row-images" src={NewMoat} alt="Stoats"/><figcaption>More Moats</figcaption></a> 
     </div>
+    <h2 className="bottom-row-text">NEW IN</h2>
+    </section>
 
 </>
 

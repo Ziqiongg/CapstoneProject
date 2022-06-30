@@ -17,7 +17,7 @@ function App() {
 
     <Router>
       <Header />
-      <Footer />
+      
       <Routes>
           <Route exact path="/" element={<Landing />} />
           {/* <Route exact path="/productlist" element={<ProductList />} /> */}
@@ -26,6 +26,8 @@ function App() {
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
+
+      {/* <Footer /> */}
     </Router>
 
   );
