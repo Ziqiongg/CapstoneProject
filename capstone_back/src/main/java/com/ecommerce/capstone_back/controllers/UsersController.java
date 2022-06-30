@@ -66,7 +66,7 @@ public class UsersController {
     @PatchMapping("/users/patch/firstName/{id}")
     public ResponseEntity<Users> updateUsersFirstName(@PathVariable Long id, @RequestBody String firstName) throws Exception{
         Users users = usersService.getUsersById(id);
-        users.setUsersFirstName(firstName);
+        users.setUserFirstName(firstName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
@@ -74,7 +74,7 @@ public class UsersController {
     @PatchMapping("/users/patch/lastName/{id}")
     public ResponseEntity<Users> updateUsersLastName(@PathVariable Long id, @RequestBody String lastName) throws Exception{
         Users users = usersService.getUsersById(id);
-        users.setUsersLastName(lastName);
+        users.setUserLastName(lastName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
@@ -82,7 +82,7 @@ public class UsersController {
     @PatchMapping("/users/patch/address/{id}")
     public ResponseEntity<Users> updateUsersAddress(@PathVariable Long id, @RequestBody String address) throws Exception{
         Users users = usersService.getUsersById(id);
-        users.setUsersAddress(address);
+        users.setUserAddress(address);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
@@ -90,7 +90,7 @@ public class UsersController {
     @PatchMapping("/users/patch/password/{id}")
     public ResponseEntity<Users> updateUsersPassword(@PathVariable Long id, @RequestBody String password) throws Exception{
         Users users = usersService.getUsersById(id);
-        users.setUsersPassword(password);
+        users.setUserPassword(password);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }

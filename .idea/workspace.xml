@@ -5,30 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/UsersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/MyDBUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_7_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/AppUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/AppUserFirstNamePasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/dto/UsersFirstNamePasswordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/AppUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/AppUserControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/AppUserControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/service/AppUserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/service/UsersServiceTest.java" afterDir="false" />
     </list>
-    <list id="6d37472b-5d34-4d73-841c-04a36a48da8e" name="Changes by Joseph" comment="">
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" afterDir="false" />
+    <list id="0371b2bd-c916-4cd7-906f-b073121c90f2" name="Changes by Joseph" comment="">
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,43 +29,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Security" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java">
+    <file path="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java">
       <ranges>
-        <range start1="6" end1="7" start2="6" end2="6" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="10" end1="11" start2="9" end2="10" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="18" end1="18" start2="17" end2="18" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="27" end1="28" start2="27" end2="28" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="30" end1="32" start2="30" end2="32" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="36" end1="36" start2="36" end2="37" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="47" end1="48" start2="48" end2="49" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="51" end1="52" start2="52" end2="53" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="55" end1="56" start2="56" end2="57" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="60" end1="64" start2="61" end2="61" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="80" end1="81" start2="77" end2="78" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="84" end1="85" start2="81" end2="82" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="88" end1="89" start2="85" end2="86" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="92" end1="93" start2="89" end2="90" changelist="6d37472b-5d34-4d73-841c-04a36a48da8e" />
-        <range start1="99" end1="99" start2="96" end2="104" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="2" end1="2" start2="2" end2="3" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="4" end1="4" start2="5" end2="6" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="7" end1="7" start2="9" end2="10" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="8" end1="8" start2="11" end2="13" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="12" end1="12" start2="17" end2="29" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
+        <range start1="19" end1="20" start2="36" end2="37" changelist="0371b2bd-c916-4cd7-906f-b073121c90f2" />
+        <range start1="21" end1="22" start2="38" end2="40" changelist="0371b2bd-c916-4cd7-906f-b073121c90f2" />
+        <range start1="26" end1="27" start2="44" end2="47" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
       </ranges>
     </file>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BIUBHSvrTx98Cn0eZa3M0CTzfg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="CapstoneBackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.CapstoneBackApplication" />
@@ -91,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
       </list>
     </recent_temporary>

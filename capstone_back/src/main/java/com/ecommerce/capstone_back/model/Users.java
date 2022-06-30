@@ -20,8 +20,8 @@ public class Users {
     @JsonIgnore
     private String userPassword;
 
-    @OneToMany(mappedBy = "appUser")
-    @JsonManagedReference(value = "appuser")
+    @OneToMany(mappedBy = "users")
+    @JsonManagedReference(value = "users")
     private List<IndividualPurchase> basket;
 
 
@@ -46,17 +46,16 @@ public class Users {
         return userFirstName;
     }
 
-    public void setUsersFirstName(String userFirstName) {
+    public void setUserFirstName(String userFirstName) {
         this.userFirstName = userFirstName;
     }
 
-    public String getUsersLastName() {
+    public String getUserLastName() {
         return userLastName;
     }
 
-    public void setUsersLastName(String userLastName) {
+    public void setUserLastName(String userLastName) {
         this.userLastName = userLastName;
-
     }
 
     public Long getId() {
@@ -75,19 +74,19 @@ public class Users {
         this.wallet = wallet;
     }
 
-    public String getUsersAddress() {
+    public String getUserAddress() {
         return userAddress;
     }
 
-    public void setUsersAddress(String userAddress) {
+    public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
     }
 
-    public String getUsersPassword() {
+    public String getUserPassword() {
         return userPassword;
     }
 
-    public void setUsersPassword(String userPassword) {
+    public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
 
