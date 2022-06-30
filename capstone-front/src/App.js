@@ -1,3 +1,4 @@
+
 import ReactDOM from "react-dom/client";
 import {
   BrowserRouter as Router,
@@ -8,12 +9,13 @@ import {
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
 import Landing from "./components/Landing/Landing";
-
+import Header from "./components/Header/Header";
 
 function App() {
   return (
 
     <Router>
+      <Header />
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/productlist" element={<ProductList />} />
@@ -25,6 +27,7 @@ function App() {
     </Router>
 
   
+
   );
 }
 
