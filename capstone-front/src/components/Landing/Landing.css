@@ -1,1 +1,36 @@
-.Landing {}
+
+
+div.landing-page-slide-wrapper {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+div.landing-page-slide-wrapper a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: none;
+    text-decoration: none;
+  }
+  
+div.landing-page-slide-wrapper a:hover {
+    background-color: #777;
+  }
+ 
+img.animated-img {
+    width: 400px;
+    height: auto;
+  }
+
+img.animated-img:hover {
+    position:center;
+    top:-25px;
+    left:-35px;
+    width:600px;
+    height:auto;
+    display:block;
+    z-index:999;
+  }
+
+
