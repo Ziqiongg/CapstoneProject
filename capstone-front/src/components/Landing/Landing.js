@@ -18,6 +18,7 @@ import QuakerOats from './ProductImages/QuakerOats.jpg';
 
 
 const Landing = () => (
+
 <>
 <div>
   <section className="landing-top-images">
@@ -46,10 +47,10 @@ const Landing = () => (
     </section>
 
 </>
+
+
+
 );
-
-
-
 
  
 
