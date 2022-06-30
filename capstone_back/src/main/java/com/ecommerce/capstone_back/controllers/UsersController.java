@@ -111,16 +111,16 @@ public class UsersController {
        usersService.deleteUsers(users);
 }
 
-    @PostMapping("users/login")
-    public ResponseEntity findByNameAndPassword(@RequestBody UsersFirstNamePasswordDTO users){
-        Optional<Users> knownUsers = usersService.findByNameAndPassword(
-                users.getUserFirstName(), users.getPassword());
-        if(knownUsers.isPresent()){
-            return ResponseEntity.ok().body(knownUsers);
-        } else {
-            return new ResponseEntity<>("Users does not exist", HttpStatus.BAD_REQUEST);
-        }
-    }
+//    @PostMapping("users/login")
+//    public ResponseEntity findByNameAndPassword(@RequestBody UsersFirstNamePasswordDTO users){
+//        Optional<Users> knownUsers = usersService.findByNameAndPassword(
+//                users.getUserFirstName(), users.getPassword());
+//        if(knownUsers.isPresent()){
+//            return ResponseEntity.ok().body(knownUsers);
+//        } else {
+//            return new ResponseEntity<>("Users does not exist", HttpStatus.BAD_REQUEST);
+//        }
+//    }
 
 //    Get all users (just in case we decide to add admin responsibilities)
     @GetMapping("/users")
