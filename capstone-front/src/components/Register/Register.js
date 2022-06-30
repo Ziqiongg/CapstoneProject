@@ -8,7 +8,6 @@ import React, { useState } from 'react';
 
 const Register = ({ handleClose }) => {
   
-  // create state variables for each input
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
