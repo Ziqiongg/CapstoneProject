@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/MyDBUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/data.sql" afterDir="false" />
-    </list>
-    <list id="0371b2bd-c916-4cd7-906f-b073121c90f2" name="Changes by Joseph" comment="">
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/model/IndividualPurchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" name="Changes" comment="" />
+    <list id="0371b2bd-c916-4cd7-906f-b073121c90f2" name="Changes by Joseph" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,20 +26,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="4" end1="4" start2="5" end2="6" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="7" end1="7" start2="9" end2="10" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="8" end1="8" start2="11" end2="13" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="12" end1="12" start2="17" end2="29" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-        <range start1="19" end1="20" start2="36" end2="37" changelist="0371b2bd-c916-4cd7-906f-b073121c90f2" />
-        <range start1="21" end1="22" start2="38" end2="40" changelist="0371b2bd-c916-4cd7-906f-b073121c90f2" />
-        <range start1="26" end1="27" start2="44" end2="47" changelist="efb3aa7d-7890-4117-a199-ea9b1f2c3ae2" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
