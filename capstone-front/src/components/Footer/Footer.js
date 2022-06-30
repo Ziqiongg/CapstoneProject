@@ -33,6 +33,11 @@ const Footer = () => {
             <Link href="/michellepage">Michelle</Link>
             <Link href="/peacepage">Peace</Link>
           </Column>
+          <Column>
+            <Heading>Terms & Privacy</Heading>
+            <Link href="/conditions">Terms & Conditions</Link>
+           
+          </Column>
         </Row>
       </FooterBox>
     </FooterBackground>
