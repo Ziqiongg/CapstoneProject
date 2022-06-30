@@ -5,6 +5,7 @@ import com.ecommerce.capstone_back.repository.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -33,5 +34,9 @@ public class AppUserService {
 
     public Optional<AppUser> findByNameAndPassword(String userFirstName, String password){
         return appUserRepository.findByNameAndPassword(userFirstName, password);
+    }
+
+    public List<AppUser> getAllUsers(){
+        return appUserRepository.findAll();
     }
 }
