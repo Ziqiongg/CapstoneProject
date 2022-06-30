@@ -12,7 +12,7 @@ import Landing from "./components/Landing/Landing";
 
 function App() {
   return (
- 
+
     <Router>
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -23,6 +23,7 @@ function App() {
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
     </Router>
+
   
   );
 }
