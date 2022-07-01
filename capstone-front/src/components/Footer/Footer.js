@@ -24,7 +24,7 @@ const Footer = () => {
             <Link href="/ourmissionpage">The Mission</Link>
             <Link href="/ourvisionforthefuturepage">The Vision</Link>
           </Column>
-        
+
           <Column>
             <Heading>Contact Us</Heading>
             <Link href="/alexpage">Alex</Link>
@@ -34,8 +34,8 @@ const Footer = () => {
             <Link href="/peacepage">Peace</Link>
           </Column>
           <Column>
-            <Heading>Terms & Privacy</Heading>
-            <Link href="/conditions">Terms & Conditions</Link>
+            <Heading>Terms  Privacy</Heading>
+            <Link href="/conditions">Terms  Conditions</Link>
            
           </Column>
         </Row>
@@ -44,3 +44,4 @@ const Footer = () => {
   );
 };
 export default Footer;
+

@@ -1,8 +1,8 @@
 package com.ecommerce.capstone_back.controllers;
-import com.ecommerce.capstone_back.model.AppUser;
+import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 import com.ecommerce.capstone_back.model.Product;
-import com.ecommerce.capstone_back.repository.AppUserRepository;
+import com.ecommerce.capstone_back.repository.UsersRepository;
 import com.ecommerce.capstone_back.repository.IndividualPurchaseRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

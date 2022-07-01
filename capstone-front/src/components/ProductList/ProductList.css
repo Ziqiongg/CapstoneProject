@@ -1,5 +1,14 @@
-.ProductList {}
+.ProductList {
 
+    
+}
+
+.all-products{
+    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
 .each-card{
     margin: 30px;
 
@@ -26,4 +35,5 @@ img{
     background: #FAEA48;
     text-decoration: none;
   }
-  
+
+ 

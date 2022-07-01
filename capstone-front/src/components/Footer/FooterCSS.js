@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterBackground = styled.div`
   padding: 0.0001px;
   background: rgba(0,136,169,1);;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   
