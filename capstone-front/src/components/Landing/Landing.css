@@ -12,13 +12,15 @@
     margin: 2rem 5rem;   
   
 }
+.category-text{
+    text-align: center;
+}
 
 .top-row-img {
    
     height: 200px;
     width: 300px;
     display: inline-block;
-    /* margin: 10px; */
     margin-top:10px;
 
     /* padding: 10px;  */

@@ -25,6 +25,9 @@
 //             <Link href="/ourvisionforthefuturepage">The Vision</Link>
 //           </Column>
         
+
+
+
 //           <Column>
 //             <Heading>Contact Us</Heading>
 //             <Link href="/alexpage">Alex</Link>
@@ -33,9 +36,15 @@
 //             <Link href="/michellepage">Michelle</Link>
 //             <Link href="/peacepage">Peace</Link>
 //           </Column>
+//           <Column>
+//             <Heading>Terms  Privacy</Heading>
+//             <Link href="/conditions">Terms  Conditions</Link>
+           
+//           </Column>
 //         </Row>
 //       </FooterBox>
 //     </FooterBackground>
 //   );
 // };
 // export default Footer;
+

@@ -23,6 +23,7 @@ import Moats from './ProductImages/Moats.jpg';
 import Stoat from './ProductImages/Stoat.jpg';
 import MediumBoat from './ProductImages/MediumBoat.jpg';
 import NewMoat from './ProductImages/NewMoat.jpg';
+import BoatPage from '../BoatsCategoryPage/Boats';
 
 
 const Landing = () => (
@@ -36,16 +37,16 @@ const Landing = () => (
 </section>
   {/* top row images */}
   {/* links to product category page, will add a href once they have been created^^ */}
-  <h2>CATEGORIES</h2>
+  <h2 className='category-text'>CATEGORIES</h2>
   <section className="landing-top-container">
       
       {/* <div className="landing-page-top-row"> */}
-      <a href="/"><img className="top-row-img" src={GoatHerd} alt="Goat Category"></img><figcaption>GOATS</figcaption></a>
-      <a href="/"><img className="top-row-img" src={BagofOats} alt="Bag of Oats Category"></img><figcaption>OATS</figcaption></a>
-      <a href="/"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></a>
-      <a href="/"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></a>
-      <a href="/"> <img className="top-row-img" src={BoatPile} alt="Boat Category"></img><figcaption>BOATS</figcaption></a>
-      <a href="/"> <img className="top-row-img" src={Moats} alt="Moats Category"></img><figcaption>MOATS</figcaption></a>
+      <a href="https://www.buttercups.org.uk/adoption.htm"><img className="top-row-img" src={GoatHerd} alt="Goat Category"></img><figcaption>GOATS</figcaption></a>
+      <a href="/Oats"><img className="top-row-img" src={BagofOats} alt="Bag of Oats Category"></img><figcaption>OATS</figcaption></a>
+      <a href="/Coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></a>
+      <a href="/Hats"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></a>
+      <a href="/Boats"><img className="top-row-img" src={BoatPile} alt="Boat Category"></img><figcaption>BOATS</figcaption></a>
+      <a href="/Moats"> <img className="top-row-img" src={Moats} alt="Moats Category"></img><figcaption>MOATS</figcaption></a>
     
     
   </section>
