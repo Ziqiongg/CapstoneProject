@@ -10,13 +10,13 @@ import Row from 'react-bootstrap/Row';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-const ProductList = () => {
+const ProductList = (props) => {
 
   const [products, setProducts] = useState([]);
 
 
   useEffect(() =>{
-    axios.get('http://localhost:8080/products')
+    axios.get(props.address)
       .then(response =>{
         setProducts(response.data);
       })
