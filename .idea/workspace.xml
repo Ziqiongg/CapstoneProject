@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/security/WebSecurityConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

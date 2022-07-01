@@ -12,6 +12,7 @@ const Login = () => {
 
   const attemptLogin = () => {
     axios.get('http://localhost:8080/products')
+    console.log("heya")
   }
     
   
