@@ -38,8 +38,8 @@ return(
       return(
         
       
-        <Col>
-        <Card style={{ width: '18rem'}} className = "each-card" key= {product.id} >
+        <Col key= {product.id}>
+        <Card style={{ width: '18rem'}} className = "each-card"  >
           <Card.Img variant="top" src= {product.pictureAddress} />
           <Card.Body>
                 <Card.Title>{product.name}</Card.Title>

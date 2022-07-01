@@ -23,25 +23,26 @@ function Header () {
   const [categories, setCategories] = useState([]);
 
   useEffect(() =>{
-    axios.get('localhost:8080/categories')
-      .then(response =>{
+    axios.get('http://localhost:8080/categories')
+      .then(response => {
         setCategories(response.data);
+  
       })
+      .catch(error => {console.log(error)})
     })
-  console.log(categories)
+
 
 
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
-        <header class = "logo">
-          <h1 class = "title">Title
-          </h1>
+        <header className = "logo">
+          <h1 className = "title">Title</h1>
           <nav className = "Nav">
             
-            <ul class = "nav-buttons">
+            <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>
-      <button class = "not-white" type = "submit">Search</button> 
+            <button className = "not-white" type = "submit">Search</button> 
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
@@ -49,27 +50,28 @@ function Header () {
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
             </ul>
           </nav>
-          </header>
+        </header>
 
 
-          <nav2>
-     
-      <div class="dropdown">
-  <button class="dropbtn">Categories</button>
-  <div class="dropdown-content">
-    <Link to = "/category1">Category 1</Link>
-    <Link to = "/category2">Category 2</Link>
-    <Link to = "/category3">Category 3</Link>
-  </div>
-</div>
-      <input type = "text" placeholder = "Search for categories here..." ></input>
-      <button class = "not-white" type = "submit">Search</button>    
-
-          </nav2>
-   
+        <nav2>
+          <div className="dropdown">
+            <button className="dropbtn">Categories</button>
+            <div className="dropdown-content">
+              {categories.map((each, index) => {
+                let itemLowercase = each.toLowerCase();
+                let filterItem = itemLowercase[0].toUpperCase() + itemLowercase.substr(1);
+                return (
+                  <Link to = "/productlist" key = {index} >{filterItem} </Link>
+                )
+              })}
+            </div>
           </div>
-      
+          <input type = "text" placeholder = "Search for categories here..." ></input>
+          <button className = "not-white" type = "submit">Search</button>    
 
+        </nav2>
+   
+      </div>
 
     </>
   )
