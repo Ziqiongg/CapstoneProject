@@ -1,4 +1,3 @@
-
 import ReactDOM from "react-dom/client";
 import {
   BrowserRouter as Router,
@@ -6,6 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
 import Landing from "./components/Landing/Landing";
@@ -16,8 +16,9 @@ function App() {
   return (
 
     <Router>
-       <Header /> 
-       <Footer /> 
+
+      <Header />
+      <Footer />
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/productlist" element={<ProductList />} />
@@ -26,9 +27,9 @@ function App() {
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
-    </Router>
 
-  
+     
+    </Router>
 
   );
 }

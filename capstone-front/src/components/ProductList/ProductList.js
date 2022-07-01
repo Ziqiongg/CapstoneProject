@@ -82,8 +82,9 @@ return(
 
 )};
 
-ProductList.propTypes = {};
 
-ProductList.defaultProps = {};
+// ProductList.propTypes = {};
+
+// ProductList.defaultProps = {};
 
 export default ProductList;
