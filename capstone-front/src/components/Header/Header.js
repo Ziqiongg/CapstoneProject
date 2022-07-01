@@ -63,7 +63,7 @@ function Header () {
                 let itemLowercase = each.toLowerCase();
                 let filterItem = itemLowercase[0].toUpperCase() + itemLowercase.substr(1);
                 return (
-                  <Link to = "/productlist" key = {index} >{filterItem} </Link>
+                  <Link to = {`/productcategory/${itemLowercase}`} key = {index} >{filterItem} </Link>
                 )
               })}
             </div>
