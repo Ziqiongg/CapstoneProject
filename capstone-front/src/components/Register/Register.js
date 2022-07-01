@@ -7,12 +7,14 @@ import React, { useState } from 'react';
 
 
 const Register = ({ handleClose }) => {
-  
+
+  const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleUserNameChange = event => setUserName(event.target.value);
   const handleFirstNameChange = event => setFirstName(event.target.value);
   const handleLastNameChange = event => setLastName(event.target.value);
   const handleEmailChange = event => setEmail(event.target.value);
@@ -21,13 +23,21 @@ const Register = ({ handleClose }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(firstName, lastName, email, password);
+    console.log(userName, firstName, lastName, email, password);
     handleClose();
   };
 
   return (
     <div class = "register-form">
       <form onSubmit = {handleSubmit}>
+
+      <div class = "user-name">
+          <label>
+            Enter your username:
+            <input type = "text" name = "userName" variant = "filled" required onChange = {handleUserNameChange} />
+          </label>
+        </div>
+
         <div class = "first-name">
           <label>
             Enter your first name:
