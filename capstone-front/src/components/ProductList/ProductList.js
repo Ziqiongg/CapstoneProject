@@ -38,6 +38,7 @@ return(
       return(
         
       
+
         <Col key= {product.id}>
         <Card style={{ width: '18rem'}} className = "each-card"  >
           <Card.Img variant="top" src= {product.pictureAddress} />
@@ -48,6 +49,7 @@ return(
               <Card.Text>
                 free-delivery
               </Card.Text>
+
               <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>purchase</Button>
             </Card.Body>
           </Card>

@@ -1,6 +1,5 @@
 package com.ecommerce.capstone_back.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -31,7 +30,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         http
                 .authorizeRequests()
-                .antMatchers("/", "/products*").permitAll()
+                .antMatchers("/",
+                        "/products*",
+                        "/products/id/{id}",
+                        "/products/name/{name}",
+                        "/products/category/{category}",
+                        "/categories").permitAll()
                 .anyRequest().authenticated()
                         .and()
                         .formLogin()
@@ -43,6 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .permitAll()
 //                .and()
 //                .httpBasic();
+                http.csrf().disable();
 
 
     }

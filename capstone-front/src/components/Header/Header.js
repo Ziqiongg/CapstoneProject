@@ -23,6 +23,7 @@ function Header () {
   const [categories, setCategories] = useState([]);
 
   useEffect(() =>{
+
     axios.get('http://localhost:8080/categories')
       .then(response => {
         setCategories(response.data);
@@ -30,6 +31,7 @@ function Header () {
       })
       .catch(error => {console.log(error)})
     })
+
 
 
 

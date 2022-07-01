@@ -129,6 +129,12 @@ public class UsersController {
         return ResponseEntity.ok().body(users);
     }
 
+    @PostMapping("/register")
+    public ResponseEntity<Users> createUser(@RequestBody Users newUser){
+        usersService.addUser(newUser);
+        return ResponseEntity.ok().body(newUser);
+    }
+
 
 
 
