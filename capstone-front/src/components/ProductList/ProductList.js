@@ -22,6 +22,9 @@ const ProductList = () => {
       })
     })
    
+  const handleClickToDetailPage = () => {
+    
+  }
 
 return(
   <>
@@ -45,7 +48,7 @@ return(
               <Card.Text>
                 free-delivery
               </Card.Text>
-              <Button variant="primary" className='btn'>purchase</Button>
+              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>purchase</Button>
             </Card.Body>
           </Card>
         </Col>)})}
