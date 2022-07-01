@@ -34,7 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/products*",
                         "/products/id/{id}",
                         "/products/name/{name}",
-                        "/products/category/{category}").permitAll()
+                        "/products/category/{category}",
+                        "/categories").permitAll()
                 .anyRequest().authenticated()
                         .and()
                         .formLogin()
