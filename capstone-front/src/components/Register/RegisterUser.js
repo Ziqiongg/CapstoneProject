@@ -6,14 +6,14 @@ import axios from 'axios';
 
 
 
-const RegisterUser = (newUser) => fetch("http://127.0.0.1:8080/register",{
+const RegisterUser = (newUser) => fetch("http://localhost:8080/register", {
     method: 'POST',
     header:{
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
     body: newUser
-}).then((register) => register.json())
+})
 .catch((error) => {console.error(error)})
 
 

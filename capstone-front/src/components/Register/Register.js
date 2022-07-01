@@ -10,7 +10,7 @@ import RegisterUser from './RegisterUser';
 
 const Register = () => {
 
-  const [newUser, setNewUser] = useState('');
+  const [newUser, setNewUser] = useState({});
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -28,11 +28,11 @@ const Register = () => {
     event.preventDefault();
 
   const user = {
-    "userName": userName,
-    "firstName": firstName,
-    "lastName": lastName,
-    "email": email,
-    "password": password
+    "userFirstName": firstName,
+    "userLastName": lastName,
+    "username": userName,
+    "userAddress": email,
+    "userPassword": password
   }
 
   setNewUser(user);
@@ -40,7 +40,7 @@ const Register = () => {
 };
 
 const addUser = async() => {
-const result =await RegisterUser(JSON.stringify(newUser));
+const result = await RegisterUser(JSON.stringify(newUser));
 }
 
 
@@ -52,35 +52,35 @@ const result =await RegisterUser(JSON.stringify(newUser));
       <div class = "user-name">
           <label>
             Enter your username:
-            <input type = "text" name = "userName" variant = "filled" required onChange = {handleUserNameChange} />
+            <input type = "text" name = "username" variant = "filled" required onChange = {handleUserNameChange} />
           </label>
         </div>
 
         <div class = "first-name">
           <label>
             Enter your first name:
-            <input type = "text" name = "firstName" variant = "filled" required onChange = {handleFirstNameChange} />
+            <input type = "text" name = "userFirstName" variant = "filled" required onChange = {handleFirstNameChange} />
           </label>
         </div>
 
         <div class = "last-name">
           <label>
             Enter your last name:
-            <input type = "text" name = "lastName" variant = "filled" required onChange = {handleLastNameChange} />
+            <input type = "text" name = "userLastName" variant = "filled" required onChange = {handleLastNameChange} />
           </label>
         </div>
 
         <div class = "user-email">
           <label>
             Enter your email:
-            <input type = "email" variant = "filled" required name = "email" onChange = {handleEmailChange} />
+            <input type = "email" variant = "filled" required name = "userAddress" onChange = {handleEmailChange} />
           </label>
         </div>
 
         <div class = "user-password">
           <label>
             Enter your password:
-            <input type = "password" variant = "filled" required name = "password" onChange = {handlePasswordChange} />
+            <input type = "password" variant = "filled" required name = "userPassword" onChange = {handlePasswordChange} />
           </label>
         </div>
         
