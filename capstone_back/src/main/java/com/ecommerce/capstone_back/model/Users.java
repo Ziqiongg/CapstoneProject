@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Users {
@@ -17,7 +18,7 @@ public class Users {
     private String userLastName;
     private String username;
     private String userAddress;
-    @JsonIgnore
+//    @JsonIgnore
     private String userPassword;
 
     @OneToMany(mappedBy = "users")
@@ -38,8 +39,6 @@ public class Users {
         this.userAddress = userAddress;
         this.userPassword = userPassword;
         this.basket = basket;
-
-
     }
 
     public String getUserFirstName() {
@@ -113,5 +112,17 @@ public class Users {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Users users = (Users) o;
+        return username.equals(users.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username);
+    }
 }
 
