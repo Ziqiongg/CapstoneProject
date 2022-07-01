@@ -2,6 +2,8 @@ import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import axios from 'axios';
 
 
 function Header () {
@@ -16,6 +18,18 @@ function Header () {
 
     setIsOn(isOn => !isOn);
   }
+
+  //get categories
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() =>{
+    axios.get('localhost:8080/categories')
+      .then(response =>{
+        setCategories(response.data);
+      })
+    })
+  console.log(categories)
+
 
   return (
     <>
