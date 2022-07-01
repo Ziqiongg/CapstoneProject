@@ -24,11 +24,15 @@ import Stoat from './ProductImages/Stoat.jpg';
 import MediumBoat from './ProductImages/MediumBoat.jpg';
 import NewMoat from './ProductImages/NewMoat.jpg';
 import BoatPage from '../BoatsCategoryPage/Boats';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 
 const Landing = () => (
 
 <>
+
+
 <div>
 <section className="empty-container">
   <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
@@ -100,7 +104,8 @@ const Landing = () => (
     </div>
     <h2 className="bottom-row-text">NEW IN</h2>
     </section>
-
+   
+    
 </>
 
 
