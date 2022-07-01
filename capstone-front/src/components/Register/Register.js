@@ -3,11 +3,14 @@ import './Register.css';
 import { Link } from "react-router-dom";
 
 import React, { useState } from 'react';
+import axios from 'axios';
+import RegisterUser from './RegisterUser';
 
 
 
-const Register = ({ handleClose }) => {
+const Register = () => {
 
+  const [newUser, setNewUser] = useState('');
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -21,11 +24,26 @@ const Register = ({ handleClose }) => {
   const handlePasswordChange = event => setPassword(event.target.value);
 
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log(userName, firstName, lastName, email, password);
-    handleClose();
-  };
+  const handleSubmit = event => {
+    event.preventDefault();
+
+  const user = {
+    "userName": userName,
+    "firstName": firstName,
+    "lastName": lastName,
+    "email": email,
+    "password": password
+  }
+
+  setNewUser(user);
+  
+};
+
+const addUser = async() => {
+const result =await RegisterUser(JSON.stringify(newUser));
+}
+
+
 
   return (
     <div class = "register-form">
@@ -73,11 +91,9 @@ const Register = ({ handleClose }) => {
     <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Terms & Conditions</Link></p>
         </div>
 
-
-
     <div class = "clearfix">
       <button type = "reset" class = "cancelbtn">Cancel</button>
-    <button class = "signupbtn" type = "submit">Sign Up</button>
+    <button class = "signupbtn" type = "submit" onClick = {addUser}>Sign Up</button>
     </div>
       </form>
 

@@ -23,25 +23,37 @@ function Header () {
   const [categories, setCategories] = useState([]);
 
   useEffect(() =>{
-    axios.get('localhost:8080/categories')
-      .then(response =>{
+
+    axios.get('http://localhost:8080/categories')
+      .then(response => {
         setCategories(response.data);
+  
       })
+      .catch(error => {console.log(error)})
     })
-  console.log(categories)
+
+
 
 
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
+<<<<<<< HEAD
           <h1 className = "title">Title
           </h1>
+=======
+          <h1 className = "title">Title</h1>
+>>>>>>> 9dce6843370f767324d71449da3750ccb13df3d1
           <nav className = "Nav">
             
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>
+<<<<<<< HEAD
       <button className = "not-white" type = "submit">Search</button> 
+=======
+            <button className = "not-white" type = "submit">Search</button> 
+>>>>>>> 9dce6843370f767324d71449da3750ccb13df3d1
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
@@ -49,6 +61,7 @@ function Header () {
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
             </ul>
           </nav>
+<<<<<<< HEAD
           </header>
 
 
@@ -67,9 +80,30 @@ function Header () {
 
           </nav2>
    
-          </div>
-      
+=======
+        </header>
 
+
+        <nav2>
+          <div className="dropdown">
+            <button className="dropbtn">Categories</button>
+            <div className="dropdown-content">
+              {categories.map((each, index) => {
+                let itemLowercase = each.toLowerCase();
+                let filterItem = itemLowercase[0].toUpperCase() + itemLowercase.substr(1);
+                return (
+                  <Link to = "/productlist" key = {index} >{filterItem} </Link>
+                )
+              })}
+            </div>
+>>>>>>> 9dce6843370f767324d71449da3750ccb13df3d1
+          </div>
+          <input type = "text" placeholder = "Search for categories here..." ></input>
+          <button className = "not-white" type = "submit">Search</button>    
+
+        </nav2>
+   
+      </div>
 
     </>
   )
