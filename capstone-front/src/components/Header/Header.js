@@ -26,11 +26,11 @@ function Header () {
 
     axios.get('http://localhost:8080/categories')
       .then(response => {
-        setCategories(response.data);
+        setCategories(response.data); 
   
       })
       .catch(error => {console.log(error)})
-    })
+    },[categories])
 
 
 

@@ -20,7 +20,7 @@ const ProductList = (props) => {
       .then(response =>{
         setProducts(response.data);
       })
-    })
+    }, products)
    
   const handleClickToDetailPage = () => {
     
