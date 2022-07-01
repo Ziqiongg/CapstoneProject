@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" afterDir="false" />
-    </list>
+    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
