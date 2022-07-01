@@ -1,6 +1,6 @@
 package com.ecommerce.capstone_back.repository;
 
-import com.ecommerce.capstone_back.model.AppUser;
+import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

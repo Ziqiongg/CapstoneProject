@@ -1,7 +1,7 @@
 package com.ecommerce.capstone_back.service;
 
-import com.ecommerce.capstone_back.model.AppUser;
-import com.ecommerce.capstone_back.repository.AppUserRepository;
+import com.ecommerce.capstone_back.model.Users;
+import com.ecommerce.capstone_back.repository.UsersRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,31 +13,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-public class AppUserServiceTest {
+public class UsersServiceTest {
 
     @Autowired
-    AppUserService appUserService;
+    UsersService appUserService;
     @Autowired
-    AppUserRepository appUserRepository;
+    UsersRepository appUserRepository;
 
     @Test
-    public void canGetAppUserByID() throws Exception {
+    public void canGetUsersByID() throws Exception {
 //        given appUserService
 
 //        when
-        AppUser user2 = appUserService.getAppUserById(2L);
+        Users user2 = appUserService.getUsersById(2L);
 //        then
         assertEquals(user2.getUserFirstName(), "Peace");
     }
 
 
     @Test
-    public void canUpdateAppUser() {
+    public void canUpdateUsers() {
 //        given
-        AppUser testUser = new AppUser(6L, 1000, "Testing", "McTesty",
-                "Address", "12345", null);
+        Users testUser = new Users(6L, 1000, "Testing", "McTesty",
+                "testUsername", "Address", "12345", null);
 //        when
-        appUserService.updateAppUser(testUser);
+        appUserService.updateUsers(testUser);
 //        then
         assertEquals(appUserRepository.findAll().size(), 6);
 
@@ -51,7 +51,7 @@ public class AppUserServiceTest {
         String name = "Alex";
         String password = "123";
 //        when
-        Optional<AppUser> user = appUserService.findByNameAndPassword(name, password);
+        Optional<Users> user = appUserService.findByNameAndPassword(name, password);
 //        then
         assertEquals(user.get().getUserFirstName(),"Alex");
 
