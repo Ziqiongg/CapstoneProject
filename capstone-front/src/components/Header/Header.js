@@ -4,47 +4,31 @@ import './Header.css';
 import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
-
-
 function Header () {
-
   const [openLinks,setOpenLinks] = useState(false);
-
   const [isOn, setIsOn] = useState(false);
-
   function darkModeButton(){
-    
     document.body.classList.toggle("dark");
-
     setIsOn(isOn => !isOn);
   }
-
   //get categories
   const [categories, setCategories] = useState([]);
-
   useEffect(() =>{
-
     axios.get('http://localhost:8080/categories')
       .then(response => {
         setCategories(response.data);
-  
       })
       .catch(error => {console.log(error)})
     })
-
-
-
-
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
-          <h1 className = "title">Title</h1>
+        <a href="/"><h1 className = "title" >Title</h1></a>
           <nav className = "Nav">
-            
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>
-            <button className = "not-white" type = "submit">Search</button> 
+            <button className = "not-white" type = "submit">Search</button>
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
@@ -53,8 +37,6 @@ function Header () {
             </ul>
           </nav>
         </header>
-
-
         <nav2>
           <div className="dropdown">
             <button className="dropbtn">Categories</button>
@@ -69,14 +51,10 @@ function Header () {
             </div>
           </div>
           <input type = "text" placeholder = "Search for categories here..." ></input>
-          <button className = "not-white" type = "submit">Search</button>    
-
+          <button className = "not-white" type = "submit">Search</button>
         </nav2>
-   
       </div>
-
     </>
   )
 }
-
 export default Header;

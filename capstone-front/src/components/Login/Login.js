@@ -1,15 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
+import axios from 'axios';
 
-const Login = () => (
-  <div className="Login">
-    Login Component
-  </div>
-);
 
-Login.propTypes = {};
+const Login = () => {
 
-Login.defaultProps = {};
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+
+  const attemptLogin = () => {
+    axios.get('http://localhost:8080/products')
+    console.log("heya")
+  }
+    
+  
+
+  return (
+
+    <>
+    <button onClick = {attemptLogin}>LogIn</button>
+    </>
+  )
+  
+
+
+  }
+
+
+
+
+
+
+
+
+
+// Login.propTypes = {};
+
+// Login.defaultProps = {};
 
 export default Login;
