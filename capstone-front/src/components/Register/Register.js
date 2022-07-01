@@ -40,7 +40,7 @@ const Register = () => {
 };
 
 const addUser = async() => {
-const result = await RegisterUser(JSON.stringify(newUser));
+const result =await RegisterUser(JSON.stringify(newUser));
 }
 
 
