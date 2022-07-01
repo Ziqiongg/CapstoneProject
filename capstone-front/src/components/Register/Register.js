@@ -3,11 +3,14 @@ import './Register.css';
 import { Link } from "react-router-dom";
 
 import React, { useState } from 'react';
+import axios from 'axios';
+import RegisterUser from './RegisterUser';
 
 
 
-const Register = ({ handleClose }) => {
+const Register = () => {
 
+  const [newUser, setNewUser] = useState({});
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -21,11 +24,26 @@ const Register = ({ handleClose }) => {
   const handlePasswordChange = event => setPassword(event.target.value);
 
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log(userName, firstName, lastName, email, password);
-    handleClose();
-  };
+  const handleSubmit = event => {
+    event.preventDefault();
+
+  const user = {
+    "userFirstName": firstName,
+    "userLastName": lastName,
+    "username": userName,
+    "userAddress": email,
+    "userPassword": password
+  }
+
+  setNewUser(user);
+  
+};
+
+const addUser = async() => {
+const result = await RegisterUser(JSON.stringify(newUser));
+}
+
+
 
   return (
     <div class = "register-form">
@@ -34,35 +52,35 @@ const Register = ({ handleClose }) => {
       <div class = "user-name">
           <label>
             Enter your username:
-            <input type = "text" name = "userName" variant = "filled" required onChange = {handleUserNameChange} />
+            <input type = "text" name = "username" variant = "filled" required onChange = {handleUserNameChange} />
           </label>
         </div>
 
         <div class = "first-name">
           <label>
             Enter your first name:
-            <input type = "text" name = "firstName" variant = "filled" required onChange = {handleFirstNameChange} />
+            <input type = "text" name = "userFirstName" variant = "filled" required onChange = {handleFirstNameChange} />
           </label>
         </div>
 
         <div class = "last-name">
           <label>
             Enter your last name:
-            <input type = "text" name = "lastName" variant = "filled" required onChange = {handleLastNameChange} />
+            <input type = "text" name = "userLastName" variant = "filled" required onChange = {handleLastNameChange} />
           </label>
         </div>
 
         <div class = "user-email">
           <label>
             Enter your email:
-            <input type = "email" variant = "filled" required name = "email" onChange = {handleEmailChange} />
+            <input type = "email" variant = "filled" required name = "userAddress" onChange = {handleEmailChange} />
           </label>
         </div>
 
         <div class = "user-password">
           <label>
             Enter your password:
-            <input type = "password" variant = "filled" required name = "password" onChange = {handlePasswordChange} />
+            <input type = "password" variant = "filled" required name = "userPassword" onChange = {handlePasswordChange} />
           </label>
         </div>
         
@@ -73,11 +91,9 @@ const Register = ({ handleClose }) => {
     <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Terms & Conditions</Link></p>
         </div>
 
-
-
     <div class = "clearfix">
       <button type = "reset" class = "cancelbtn">Cancel</button>
-    <button class = "signupbtn" type = "submit">Sign Up</button>
+    <button class = "signupbtn" type = "submit" onClick = {addUser}>Sign Up</button>
     </div>
       </form>
 
