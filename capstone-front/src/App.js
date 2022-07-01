@@ -15,7 +15,6 @@ import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-
 function App() {
 
     //get categories
@@ -43,6 +42,7 @@ function App() {
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
 
+
           {categories.map(item => {
             let itemLower = item.toLowerCase();
             return (  
@@ -50,9 +50,10 @@ function App() {
           address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
           )
           })}
-          
-         
-          {/* <Route path="/settings" element={<SettingsPage />} />
+       
+
+          {/* 
+          <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
       <Footer />
