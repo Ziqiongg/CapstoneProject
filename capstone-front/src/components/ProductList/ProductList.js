@@ -25,7 +25,7 @@ const ProductList = () => {
 
 return(
   <>
-    <Header />
+
     <Row xs={1} xl = {4} sm = {2} md={3} className="g-4">
     {Array.from(products, (product) => {
 
@@ -50,7 +50,7 @@ return(
           </Card>
         </Col>)})}
     </Row>
-    <Footer />
+
   </>
 
 )};
