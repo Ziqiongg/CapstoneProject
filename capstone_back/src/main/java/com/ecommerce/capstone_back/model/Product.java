@@ -22,6 +22,10 @@ public class Product {
 
     private int stock;
 
+    private String pictureAddress;
+
+    private String description;
+
     @OneToMany(mappedBy = "product")
     @JsonManagedReference(value = "product")
     private List<IndividualPurchase> basket;
@@ -30,13 +34,15 @@ public class Product {
     public Product () {
     }
 
-    public Product(Long id, String name, Category category, Double price, List<IndividualPurchase> basket, int stock) {
+    public Product(Long id, String name, Category category, Double price, List<IndividualPurchase> basket, int stock, String pictureAddress, String description) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.price = price;
         this.basket = basket;
         this.stock = stock;
+        this.pictureAddress = pictureAddress;
+        this.description = description;
     }
 
     public Long getId() {
@@ -77,6 +83,22 @@ public class Product {
 
     public void setBasket(ArrayList<IndividualPurchase> basket) {
         this.basket = basket;
+    }
+
+    public String getPictureAddress() {
+        return pictureAddress;
+    }
+
+    public void setPictureAddress(String pictureAddress) {
+        this.pictureAddress = pictureAddress;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     //reduce stock

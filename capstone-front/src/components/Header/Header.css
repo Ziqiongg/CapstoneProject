@@ -1,1 +1,190 @@
-.Header {}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    color: blue;
+}
+
+
+.dark {
+    color: hotpink;
+    background-color: #292929;     }
+input{
+    height: 30px;
+    width: 980px;
+}
+h1{
+    color: Black;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-areas: "second nav bar";
+}
+.Nav2{
+    grid-area: nav2;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items:center;
+    justify-items: center;
+}
+
+@media(max-width: 700px){
+    .logo{
+        grid-template-areas: "second nav bar" "nav2 nav2";
+    }
+
+    .Nav{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+    }
+}
+
+.logo{
+    display: grid;
+    grid-template-areas: "top nav bar";
+}
+
+.Nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items:center;
+    justify-items: center;
+}
+
+@media(max-width: 700px){
+    .logo{
+        grid-template-areas: "top nav bar" "nav nav";
+    }
+
+    .Nav{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+    }
+}
+
+
+
+
+.nav-buttons{
+    list-style: none;
+}
+
+.nav-buttons li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-buttons li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-buttons li a:hover{
+    color: #0088a9
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.drop-button:hover{
+    background-color: orange;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+.nav2{
+    background-color: #baabe0;
+    overflow: hidden;
+}
+
+.nav2 input{
+    height: 30px;
+    width: 9800px;
+}
+
+.nav2 a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.nav2{
+    display: none;
+}
+
+.dropbtn {
+    background-color: rgba(0,136,169,1);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: rgba(0,136,169,1);
+  }
+
+
+
+
+
