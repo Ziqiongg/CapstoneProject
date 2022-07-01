@@ -14,9 +14,9 @@ public class IndividualPurchase {
 
 
     @ManyToOne
-    @JoinColumn(name = "app_user_id")
-    @JsonBackReference(value = "appUser")
-    private AppUser appUser;
+    @JoinColumn(name = "users_id")
+    @JsonBackReference(value = "users")
+    private Users users;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
@@ -29,9 +29,9 @@ public class IndividualPurchase {
     public IndividualPurchase(){
     }
 
-    public IndividualPurchase(Long id, AppUser appUser, Product product, int quantity, boolean purchased) {
+    public IndividualPurchase(Long id, Users users, Product product, int quantity, boolean purchased) {
         this.id = id;
-        this.appUser = appUser;
+        this.users = users;
         this.product = product;
         this.quantity = quantity;
         this.purchased = purchased;
@@ -45,12 +45,12 @@ public class IndividualPurchase {
         this.id = id;
     }
 
-    public AppUser getAppUser() {
-        return appUser;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setAppUser(AppUser appUser) {
-        this.appUser = appUser;
+    public void setUsers (Users users) {
+        this.users = users;
     }
 
     public Product getProduct() {
@@ -78,7 +78,7 @@ public class IndividualPurchase {
     }
 
     //  if purchase is successful, return true and change purchased to true, else return false.
-    public boolean makePurchase(Product product, AppUser user, int total){
+    public boolean makePurchase(Product product, Users user, int total){
         if (user.checkWallet(total)){
             purchased = true;
             return true;

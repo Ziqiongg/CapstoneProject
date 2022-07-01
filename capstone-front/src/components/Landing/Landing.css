@@ -1,2 +1,123 @@
-.Landing {}
 
+/* CSS FOR TOP IMAGE GRID */
+
+.landing-top-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin: 2rem 5rem;   
+  
+}
+.category-text{
+    text-align: center;
+}
+
+.top-row-img {
+   
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    margin-top:10px;
+
+    /* padding: 10px;  */
+  }
+
+.top-row-img:hover {
+    position:center;
+    top:-25px;
+    left:-35px;
+    /* width:400px; */
+    height:auto;
+    display:block;
+    z-index:999;
+    
+  }
+  
+  /* @media (max-width: 800px) {
+    .landing-page-top-row {
+      flex-direction: column;
+    }
+  } */
+
+
+/* CSS FOR THE CAROUSEL */
+
+.carousel-text{
+    text-align: center;
+}
+
+.landing-page-slide-wrapper {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+.landing-page-slide-wrapper a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: none;
+    text-decoration: none;
+  }
+  
+.landing-page-slide-wrapper a:hover {
+    background-color: #777;
+  }
+ 
+.animated-img {
+    width: 400px;
+    height: auto;
+  }
+
+.animated-img:hover {
+    position:center;
+    top:-25px;
+    left:-35px;
+    width:600px;
+    height:auto;
+    display:block;
+    z-index:999;
+  }
+
+  /* CSS FOR THE BOTTOM IMAGE GRID */
+
+.bottom-row-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin: 2rem 10rem;
+}
+
+.bottom-row-images{
+    height: 300px;
+    display: inline-block;
+    margin: 10px;
+    margin-top:10px;
+    padding: 20px; 
+}
+
+.bottom-row-text{
+    text-align: center;
+}
+
+.empty-container{
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    margin: 2rem 10rem;
+    color: white;
+
+}

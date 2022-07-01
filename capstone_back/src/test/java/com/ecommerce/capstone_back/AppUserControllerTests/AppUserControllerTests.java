@@ -1,10 +1,10 @@
-package com.ecommerce.capstone_back.AppUserControllerTests;
+package com.ecommerce.capstone_back.UsersControllerTests;
 
-import com.ecommerce.capstone_back.model.AppUser;
+import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.model.Product;
-import com.ecommerce.capstone_back.repository.AppUserRepository;
-import com.ecommerce.capstone_back.controllers.AppUserController;
-import com.ecommerce.capstone_back.service.AppUserService;
+import com.ecommerce.capstone_back.repository.UsersRepository;
+import com.ecommerce.capstone_back.controllers.UsersController;
+import com.ecommerce.capstone_back.service.UsersService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,20 +15,20 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class AppUserControllerTests {
+public class UsersControllerTests {
 
     @Autowired
-    AppUserRepository appUserRepository;
+    UsersRepository appUserRepository;
 
     @Test
     public void canGetUserById() {
-        Optional<AppUser> userId = appUserRepository.findById(1L);
+        Optional<Users> userId = appUserRepository.findById(1L);
         assertEquals("Alex", userId.get().getUserFirstName());
     }
 
     @Test
     public void canGetUserWalletById(){
-        Optional<AppUser> userWalletById = appUserRepository.findById(1L);
+        Optional<Users> userWalletById = appUserRepository.findById(1L);
         assertEquals(1000, userWalletById.get().getWallet());
     }
 
