@@ -11,15 +11,15 @@ function Header () {
     document.body.classList.toggle("dark");
     setIsOn(isOn => !isOn);
   }
-  //get categories
-  const [categories, setCategories] = useState([]);
-  useEffect(() =>{
-    axios.get('http://localhost:8080/categories')
-      .then(response => {
-        setCategories(response.data);
-      })
-      .catch(error => {console.log(error)})
-    })
+  // //get categories
+  // const [categories, setCategories] = useState([]);
+  // useEffect(() =>{
+  //   axios.get('http://localhost:8080/categories')
+  //     .then(response => {
+  //       setCategories(response.data);
+  //     })
+  //     .catch(error => {console.log(error)})
+  //   })
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
@@ -37,7 +37,7 @@ function Header () {
             </ul>
           </nav>
         </header>
-        <nav2>
+        {/* <nav2>
           <div className="dropdown">
             <button className="dropbtn">Categories</button>
             <div className="dropdown-content">
@@ -52,7 +52,7 @@ function Header () {
           </div>
           <input type = "text" placeholder = "Search for categories here..." ></input>
           <button className = "not-white" type = "submit">Search</button>
-        </nav2>
+        </nav2> */}
       </div>
     </>
   )

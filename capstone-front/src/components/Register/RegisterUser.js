@@ -8,12 +8,12 @@ import axios from 'axios';
 
 const RegisterUser = (newUser) => fetch("http://localhost:8080/register", {
     method: 'POST',
-    header:{
+    headers:{
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
     body: newUser
-})
+}).then((register) => register.json())
 .catch((error) => {console.error(error)})
 
 
