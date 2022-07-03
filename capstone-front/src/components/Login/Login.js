@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
 import { SERVER_URL } from '../../constants';
+import Landing from '../Landing/Landing';
 
 
 const Login = () => {
@@ -33,26 +34,22 @@ const login = () => {
     const jwtToken = res.headers.get
     ("Authorization");
     if (jwtToken != null) {
-      // if the user has been authenticates, jwtToken will not be null --> use sessionStorage so if the user refreshes page, they're still
+      // if the user has been authenticated, jwtToken will not be null --> use sessionStorage so if the user refreshes page, they're still
       // logged in
       sessionStorage.setItem("jwt", jwtToken);
-
+      // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
 
     } else {
       setOpen(true)
     }
-
-
-    
   }).catch(err => console.error(err))
 
 }
-
-
-
-
-
+// if the user has logged in successfully, take them to the Landing page
+if (isAuthenticated){
+  return <Landing/>
+}
 
   // const attemptLogin = () => {
   //   axios.get('http://127.0.0.1:8080/products')
@@ -63,8 +60,17 @@ const login = () => {
 
   return (
 
-    <>
-    <button>LogIn</button>
+    <><form>
+      <label>Username: </label>
+      <input
+      type = "text"
+      onChange = {handleChange}/>
+      <label>Password</label>
+      <input
+      type = "text"
+      onChange = {handleChange}/>
+    </form>
+    <button onClick = {login}>LogIn</button>
     </>
   )
   
