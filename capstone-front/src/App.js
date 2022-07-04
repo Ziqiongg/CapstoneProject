@@ -12,14 +12,11 @@ import Landing from "./components/Landing/Landing";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-=======
-import Login from  "./components/Login/Login"
->>>>>>> ee583fc421a621f6783f2863c6ba2a234b798f3a
+
 function App() {
 
     //get categories
@@ -34,7 +31,7 @@ function App() {
     
         })
         .catch(error => {console.log(error)})
-      }, categories)
+      }, [categories])
 
   return (
 
@@ -47,7 +44,6 @@ function App() {
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
-<<<<<<< HEAD
 
           {categories.map(item => {
             let itemLower = item.toLowerCase();
@@ -56,14 +52,9 @@ function App() {
           address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
           )
           })}
-          
-         
-          {/* <Route path="/settings" element={<SettingsPage />} />
-=======
-          <Route path="/login"  element={<Login />}/>
+
           {/* 
           <Route path="/settings" element={<SettingsPage />} />
->>>>>>> ee583fc421a621f6783f2863c6ba2a234b798f3a
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
       <Footer />
