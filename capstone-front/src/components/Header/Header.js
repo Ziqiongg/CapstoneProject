@@ -21,9 +21,6 @@ function Header (props) {
 
 
 
-
-
-
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
@@ -42,6 +39,7 @@ function Header (props) {
             </ul>
           </nav>
         </header>
+
 
         <nav2>
           <div className="dropdown">
@@ -63,7 +61,7 @@ function Header (props) {
           <button className = "not-white" type = "submit">Search</button>    
 
         </nav2>
-   
+
       </div>
 
     </>
