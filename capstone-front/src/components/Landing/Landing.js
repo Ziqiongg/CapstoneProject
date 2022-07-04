@@ -69,19 +69,28 @@ const Landing = () => (
 <section id="trending-products">
         
         <div className="landing-page-slide-wrapper">
-            <a href="/"><img className="animated-img" src={BigHat} alt="pingu hat"/><figcaption>Big Boi Hat</figcaption></a>
-            <a href="/"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/><figcaption>Little Boat</figcaption></a>
-            <a href="/"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/><figcaption>Bigger Boat</figcaption></a>
-            <a href="/"><img className="animated-img" src={ThiccOats} alt="ThiccOats"/><figcaption>Thicc Oats</figcaption></a>
-            <a href="/"><img className="animated-img" src={SpecialGoat} alt="SpecialGoat"/><figcaption>Special Goat</figcaption></a>
-            <a href="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/><figcaption>Avocado Hat</figcaption></a>
-            <a href="/"><img className="animated-img" src={Crown} alt="Crown"/><figcaption>Crown</figcaption></a>
+        
+            <a href="/"><img className="animated-img" src={BigHat} alt="pingu hat"/></a>
+            {/* <figcaption>Big Boi Hat</figcaption></a> */}
+            
+            <a href="/"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></a>
+            {/* <figcaption>Little Boat</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/></a>
+            {/* <figcaption>Bigger Boat</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={ThiccOats} alt="ThiccOats"/></a>
+            {/* <figcaption>Thicc Oats</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={SpecialGoat} alt="SpecialGoat"/></a>
+            {/* <figcaption>Special Goat</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></a>
+            {/* <figcaption>Avocado Hat</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={Crown} alt="Crown"/></a>
+            {/* on>Crown</figcaption></a>
             <a href="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/><figcaption>Dino Cat</figcaption></a>
             <a href="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/><figcaption>World Coat</figcaption></a>
             <a href="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/><figcaption>Funky Coat Coat</figcaption></a>
             <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/><figcaption>Frog Bucket Hat</figcaption></a>
             <a href="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/><figcaption>Quaker Oats</figcaption></a>
-            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/><figcaption>Magic Coat</figcaption></a> 
+            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/><figcaption>Magic Coat</figcaption></a>  */}
                    
        </div>
        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
