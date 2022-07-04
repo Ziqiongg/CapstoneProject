@@ -3,21 +3,16 @@ import { GetIdProducts } from './Axios/GetProductsAPI';
 import axios from 'axios';
 
 
-const  ProductPage =  (props) => {
+const  ProductPage =  () => {
 
     const [specificProduct, setSpecificProduct] = useState([]);
-    // const [id, setproductId] = useState([]);
-
-    
-    
-    useEffect(() =>{ axios.get(`http://localhost:8080/products/id/${id}`)
+  
+    useEffect(() =>{ axios.get(`http://localhost:8080/products`)
       .then(response =>{ const data = response.data;
       setSpecificProduct(data);
       }).catch(err => console.log(err));
     });
    
-
-    // useEffect(()=>{setSpecificProduct(specificProduct.id);}).catch(err => console.log(err));
 
       return (
         
@@ -39,9 +34,6 @@ const  ProductPage =  (props) => {
       )
 
       };
-
-// name, category, price, pictureAddress, description 
-
 
 export default ProductPage;
 
