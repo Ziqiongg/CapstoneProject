@@ -8,6 +8,7 @@ import {
 
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
+import ProductPage from "./components/ProductPage/Productpage";
 import Landing from "./components/Landing/Landing";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -33,6 +34,7 @@ function App() {
         .catch(error => {console.log(error)})
       }, [])
 
+
   return (
 
     <Router>
@@ -41,6 +43,9 @@ function App() {
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
+          <Route exact path={`/products/id/:id`} element={<ProductPage />} />
+        
+
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
