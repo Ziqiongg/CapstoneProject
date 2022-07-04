@@ -36,9 +36,10 @@ function App() {
 
     const [name,  setName] = useState("")
 
-    function handleInputName(input) {
+    const handleInputName = (input) => {
       setName(input);
     }
+   
 
 
 
@@ -65,7 +66,7 @@ function App() {
 
 
           <Route path={`/product/name/${name}`} element = {<ProductList 
-          address = {`http://localhost:8080/products/name/${name}`} setUPName = {handleInputName} />} />
+          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName} />} />
 
 
           {/* 

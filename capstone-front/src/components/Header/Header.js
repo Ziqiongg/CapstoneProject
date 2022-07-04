@@ -9,7 +9,7 @@ import ProductList from '../ProductList/ProductList';
 let exportName;
 
 
-function Header (props) {
+const  Header = (props) => {
 
   const [openLinks,setOpenLinks] = useState(false);
 
@@ -38,10 +38,8 @@ function Header (props) {
 
 
 
-
+    //input name and get product list
   const [inputName,setInputName] = useState("");
-
-
   const handleOnChangeName = (event) => {
     // console.log(event.target.value);
     setInputName(event.target.value);
@@ -57,6 +55,16 @@ function Header (props) {
     navigate(`http://localhost:3000/product/name/${inputName}`)
  
   }
+
+  // //input category and get product list
+  // const [inputCategory, setInputCategory] = useState("");
+  // const handleOnChangeCategory = (event) => {
+
+  //   setInputCategory(event.target.value);
+    
+  // }
+
+
 
 
 
