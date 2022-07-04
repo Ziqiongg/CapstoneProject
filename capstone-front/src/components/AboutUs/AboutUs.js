@@ -11,7 +11,7 @@ function AboutUs(){
         <h1>
             Our Mission!
         </h1>
-            <p>To definitely not an Amazon rip off...</p>
+            <p>To definitely not be an Amazon rip off...</p>
             </div>
         </>
     )
