@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
+
 const ProductList = (props) => {
 
   const [products, setProducts] = useState([]);
@@ -21,6 +22,8 @@ const ProductList = (props) => {
         setProducts(response.data);
       })
     }, [])
+
+  let setupNameFunction = () => props.setUpName();
    
   const handleClickToDetailPage = () => {
     
@@ -28,7 +31,7 @@ const ProductList = (props) => {
 
 return(
   <>
-
+    <Header setUpNameHeader = {setupNameFunction}/>
     <Row xs={1} xl = {4} sm = {2} md={3} className="g-4 all-products">
     {Array.from(products, (product) => {
 
@@ -55,6 +58,7 @@ return(
           </Card>
         </Col>)})}
     </Row>
+    <Footer />
 
   </>
 

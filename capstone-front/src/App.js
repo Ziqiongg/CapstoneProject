@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { exportName } from "./components/Header/Header";
 
 
 
@@ -33,11 +34,14 @@ function App() {
         .catch(error => {console.log(error)})
       }, [])
 
+    const [name,  setName] = useState("")
+
+
   return (
 
     <Router>
       <div className = "main-wrapper">
-      <Header categories= {category} />
+      {/* <Header categories= {category} /> */}
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -53,11 +57,16 @@ function App() {
           )
           })}
 
+
+          <Route path={`/product/name/${name}`} element = {<ProductList 
+          address = {`http://localhost:8080/products/name/${name}`} setUPName = {setName} />} />
+
+
           {/* 
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
-      <Footer />
+
      </div>
     </Router>
 
