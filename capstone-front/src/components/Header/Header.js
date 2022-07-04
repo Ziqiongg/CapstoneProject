@@ -43,8 +43,9 @@ function Header (props) {
 
 
   const handleOnChangeName = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setInputName(event.target.value);
+    
   }
 
   let navigate = useNavigate();
@@ -52,15 +53,9 @@ function Header (props) {
     
     event.preventDefault();
     props.setUpNameHeader(inputName);
-    console.log(event);
-    
 
     navigate(`http://localhost:3000/product/name/${inputName}`)
  
-
-    
-    
-
   }
 
 
