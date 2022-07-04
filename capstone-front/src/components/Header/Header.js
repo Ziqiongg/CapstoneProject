@@ -4,6 +4,7 @@ import './Header.css';
 import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
+import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
 
 
 function Header (props) {
@@ -25,7 +26,7 @@ function Header (props) {
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
-        <a href="/"><h1 className = "title">Title</h1></a>
+        {/* <a href="/"><img src={placeholder} alt="logo-placeholder"></img></a> */}
           <nav className = "Nav">           
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>

@@ -27,8 +27,8 @@ const  ProductPage =  () => {
 
           <div>
             {/* <p>ID: {product.id}</p> */}
-            <p className="product-info-text">Category: {product.category}</p>
-            <p  className="product-info-text">Price: £{product.price}</p>
+            <h3 className="product-info-text">Category: {product.category}</h3>
+            <h3  className="product-info-text">Price: £{product.price}</h3>
             <p  className="product-info-text">Description: {product.description}</p>
           </div>
         
