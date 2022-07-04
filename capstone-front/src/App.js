@@ -62,8 +62,9 @@ function App() {
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
       </Routes>
+      </div>
       <Footer />
-     </div>
+    
     </Router>
 
   );
