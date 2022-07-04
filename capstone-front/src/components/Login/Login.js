@@ -17,26 +17,27 @@ const [isAuthenticated, setAuthenticate] = useState(false);
 
 const [open, setOpen] = useState(false);
 
+// setUser({ ...user, [event.target.name]: event.target.value });
 
 const handleChange = (event) => {
-  setUser({...user, [event.target.name] : event.target.value});
+  setUser({... user, [event.target.name] : event.target.value});
 }
 
 const login = () => {
   // Add "login" to the url, fetching the login endpoint, specify method type, headers, and the body which contains the user object set in
   // the login form
-  fetch(SERVER_URL + "login", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
+  fetch(SERVER_URL + 'login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(user)
   })
   .then(res => {
     const jwtToken = res.headers.get
-    ("Authorization");
+    ('Authorization');
     if (jwtToken != null) {
       // if the user has been authenticated, jwtToken will not be null --> use sessionStorage so if the user refreshes page, they're still
       // logged in
-      sessionStorage.setItem("jwt", jwtToken);
+      sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
 
@@ -50,11 +51,14 @@ const login = () => {
 if (isAuthenticated){
   return <Landing/>
 }
+// else {
+//   console.log(open);
+// }
 
-  // const attemptLogin = () => {
-  //   axios.get('http://127.0.0.1:8080/products')
-  //   console.log("heya")
-  // }
+  const logout = () => {
+    sessionStorage.removeItem('jwt');
+    setAuthenticate(false);
+  }
     
   
 
@@ -63,10 +67,12 @@ if (isAuthenticated){
     <><form>
       <label>Username: </label>
       <input
+      name = "username"
       type = "text"
       onChange = {handleChange}/>
       <label>Password</label>
       <input
+      name = "password"
       type = "text"
       onChange = {handleChange}/>
     </form>
