@@ -39,6 +39,7 @@ public class JWTService {
                     .setSigningKey(key)
                     .build()
                     .parseClaimsJws(token.replace(PREFIX, ""))
+//                    .parseClaimsJws("Authorization: " + PREFIX + token)
                     .getBody()
                     .getSubject();
             if (user != null)

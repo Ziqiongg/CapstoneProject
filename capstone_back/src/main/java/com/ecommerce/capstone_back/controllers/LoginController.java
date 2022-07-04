@@ -23,13 +23,15 @@ public class LoginController {
     @PostMapping("/login")
     public ResponseEntity<?> getToken(@RequestBody UsersFirstNamePasswordDTO credentials){
         UsernamePasswordAuthenticationToken creds = new UsernamePasswordAuthenticationToken(
-                credentials.getUserFirstName(),
+                credentials.getUsername(),
                 credentials.getPassword());
         Authentication auth = authenticationManager.authenticate(creds);
-
+//      Generates the token
         String jwt = jwtService.getToken(auth.getName());
-
+//      Build response with token in header
         return ResponseEntity.ok()
+//                to use this method in postman: login in the browser then go into Postman --> Post request with no Auth
+//                in header set Authorization value to the token in the header found in the browser (Bearer ...)
                 .header(HttpHeaders.AUTHORIZATION, "Bearer" + jwt)
                 .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "Authorization")
                 .build();

@@ -29,6 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             Users currentUser = user.get();
             builder = User.withUsername(username);
             builder.password(currentUser.getUserPassword());
+            builder.roles("USER");
         } else {
             throw new UsernameNotFoundException("User with username: " + username + " not found");
         }
