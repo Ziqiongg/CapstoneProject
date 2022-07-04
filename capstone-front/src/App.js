@@ -20,14 +20,14 @@ import axios from "axios";
 function App() {
 
     //get categories
-    const [categories, setCategories] = useState([]);
+    const [category, setCategory] = useState([]);
 
     useEffect(() =>{
   
       axios.get('http://localhost:8080/categories')
         .then(response => {
        
-          setCategories(response.data);
+          setCategory(response.data);
     
         })
         .catch(error => {console.log(error)})
@@ -37,7 +37,7 @@ function App() {
 
     <Router>
       <div className = "main-wrapper">
-      <Header />
+      <Header categories= {category} />
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -45,7 +45,7 @@ function App() {
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
 
-          {categories.map(item => {
+          {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
               <Route exact path={`/productcategory/${itemLower}`} element={<ProductList 

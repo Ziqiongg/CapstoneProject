@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 
-function Header () {
+function Header (props) {
 
   const [openLinks,setOpenLinks] = useState(false);
 
@@ -18,19 +18,6 @@ function Header () {
 
     setIsOn(isOn => !isOn);
   }
-
-  //get categories
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() =>{
-
-    axios.get('http://localhost:8080/categories')
-      .then(response => {
-        setCategories(response.data); 
-  
-      })
-      .catch(error => {console.log(error)})
-    },[])
 
 
 
@@ -60,7 +47,7 @@ function Header () {
           <div className="dropdown">
             <button className="dropbtn">Categories</button>
             <div className="dropdown-content">
-              {categories.map((each, index) => {
+              {props.categories.map((each, index) => {
                 let itemLowercase = each.toLowerCase();
                 let filterItem = itemLowercase[0].toUpperCase() + itemLowercase.substr(1);
                 return (
