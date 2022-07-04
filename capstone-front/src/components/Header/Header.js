@@ -18,8 +18,9 @@ function Header (props) {
 
     setIsOn(isOn => !isOn);
   }
-
-
+ 
+ 
+  
 
   return (
     <>
@@ -36,6 +37,8 @@ function Header (props) {
               <li><button><Link to = "/settings">Settings</Link></button></li>
               <li><button><Link to = "/feedPage">Feed</Link></button></li>
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
+             
+              
             </ul>
           </nav>
         </header>

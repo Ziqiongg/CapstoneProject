@@ -1,4 +1,6 @@
 .main-wrapper{
   position: relative;
   min-height: 100vh;
+  background-color: #00AFDB;
+  color: #0E0101;
 }
