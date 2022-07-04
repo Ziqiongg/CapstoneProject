@@ -26,7 +26,8 @@ import NewMoat from './ProductImages/NewMoat.jpg';
 import BoatPage from '../BoatsCategoryPage/Boats';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Landing = () => (
 
@@ -67,31 +68,54 @@ const Landing = () => (
 {/* image carousel */}
 {/* need to add links to the product pages when theyre complete */}
 <section id="trending-products">
-        
         <div className="landing-page-slide-wrapper">
-        
+
+<Carousel>
+  <div>
             <a href="/"><img className="animated-img" src={BigHat} alt="pingu hat"/></a>
             {/* <figcaption>Big Boi Hat</figcaption></a> */}
+
             
             <a href="/"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></a>
             {/* <figcaption>Little Boat</figcaption></a> */}
+            
             <a href="/"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/></a>
             {/* <figcaption>Bigger Boat</figcaption></a> */}
+</div>
+<div>
             <a href="/"><img className="animated-img" src={ThiccOats} alt="ThiccOats"/></a>
             {/* <figcaption>Thicc Oats</figcaption></a> */}
+            
             <a href="/"><img className="animated-img" src={SpecialGoat} alt="SpecialGoat"/></a>
             {/* <figcaption>Special Goat</figcaption></a> */}
+
             <a href="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></a>
             {/* <figcaption>Avocado Hat</figcaption></a> */}
+</div>
+<div>
             <a href="/"><img className="animated-img" src={Crown} alt="Crown"/></a>
-            {/* on>Crown</figcaption></a>
-            <a href="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/><figcaption>Dino Cat</figcaption></a>
-            <a href="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/><figcaption>World Coat</figcaption></a>
-            <a href="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/><figcaption>Funky Coat Coat</figcaption></a>
-            <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/><figcaption>Frog Bucket Hat</figcaption></a>
-            <a href="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/><figcaption>Quaker Oats</figcaption></a>
-            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/><figcaption>Magic Coat</figcaption></a>  */}
-                   
+            {/* on>Crown</figcaption></a> */}
+            
+            
+            <a href="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></a>
+            {/* <figcaption>Dino Cat</figcaption></a> */}
+            <a href="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/></a>
+            {/* <figcaption>World Coat</figcaption></a> */}
+            </div>
+<div>
+            <a href="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></a>
+            {/* <figcaption>Funky Coat Coat</figcaption></a> */}
+
+            <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/></a>
+            {/* <figcaption>Frog Bucket Hat</figcaption></a> */}
+
+            <a href="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/></a>
+            {/* <figcaption>Quaker Oats</figcaption></a> */}
+           
+            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/></a>
+            {/* <figcaption>Magic Coat</figcaption></a>  */}
+            </div>
+            </Carousel>     
        </div>
        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
     </section> <br/>
