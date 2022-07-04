@@ -16,6 +16,8 @@ import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Basket from "./components/Basket/Basket";
+import AboutUs from "./components/AboutUs/AboutUs";
+import TermsConditions from "./components/TermsConditions/TermsConditions";
 
 
 
@@ -58,8 +60,9 @@ function App() {
           address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
           )
           })}
-
-        <Route path="/basket" element={<Basket />} />
+          <Route path = "/ourmissionpage" element = {<AboutUs />}/>
+          <Route path = "/conditions" element = {<TermsConditions />}/>
+          <Route path="/basket" element={<Basket />} />
 
           
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
