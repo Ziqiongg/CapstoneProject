@@ -66,7 +66,7 @@ function App() {
 
 
           <Route path={`/product/name/${name}`} element = {<ProductList 
-          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName} />} />
+          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName} name = {name} />} />
 
 
           {/* 

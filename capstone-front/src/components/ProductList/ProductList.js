@@ -20,12 +20,18 @@ const ProductList = (props) => {
     axios.get(props.address)
       .then(response =>{
         setProducts(response.data);
+        props.setUpName("hello");
+        console.log(props.name);
       })
     }, [])
 
    
   const handleClickToDetailPage = () => {
     
+  }
+
+  const handleClickToBasketPage = () =>{
+
   }
 
 return(
@@ -52,7 +58,8 @@ return(
                 free-delivery
               </Card.Text>
 
-              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>purchase</Button>
+              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>View</Button>
+              <Button variant="primary" className='btn' onClick = {handleClickToBasketPage}>Purchase</Button>
             </Card.Body>
           </Card>
         </Col>)})}
