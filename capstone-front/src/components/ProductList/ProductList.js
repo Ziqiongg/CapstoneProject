@@ -20,8 +20,7 @@ const ProductList = (props) => {
     axios.get(props.address)
       .then(response =>{
         setProducts(response.data);
-        props.setUpName("hello");
-        console.log(props.name);
+
       })
     }, [])
 
@@ -36,7 +35,7 @@ const ProductList = (props) => {
 
 return(
   <>
-    <Header setUpNameHeader = {props.setUpName}/>
+    {/* <Header setupHeader = {props.setUpName}/> */}
     <Row xs={1} xl = {4} sm = {2} md={3} className="g-4 all-products">
     {Array.from(products, (product) => {
 

@@ -5,11 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
 import ProductList from '../ProductList/ProductList';
+import { Navigate } from "react-router-dom";
 
 let exportName;
 
 
-const  Header = (props) => {
+const  Header = ({setupHeader}) => {
 
   const [openLinks,setOpenLinks] = useState(false);
 
@@ -43,16 +44,21 @@ const  Header = (props) => {
   const handleOnChangeName = (event) => {
     // console.log(event.target.value);
     setInputName(event.target.value);
+  
+    
     
   }
 
   let navigate = useNavigate();
+
   const handleOnClickName = (event) => {
     
     event.preventDefault();
-    props.setUpNameHeader(inputName);
+    // setupHeader(inputName);
+    // props.setUpNameHeader(inputName);
 
-    navigate(`http://localhost:3000/product/name/${inputName}`)
+    // navigate(`http://localhost:3000/product/name/hat`)
+    // return <Navigate to="/product/name/hat" />
  
   }
 
@@ -77,7 +83,9 @@ const  Header = (props) => {
           <nav className = "Nav">           
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search By Name" onChange={handleOnChangeName}></input>
-            <button className = "not-white" type = "button" onClick={handleOnClickName}>Search</button> 
+            <Link to={`/product/name/${inputName}`}>
+              <button className = "not-white" type = "button" onClick= {handleOnClickName}>Search</button> 
+            </Link>
 
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
@@ -108,7 +116,10 @@ const  Header = (props) => {
           <button className = "not-white" type = "submit">Search</button>    
 
         </nav2>
+
       </div>
+      <ProductList 
+          address = {`http://localhost:8080/products/name/${inputName}`}  />
 
     </>
   )

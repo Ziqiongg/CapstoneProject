@@ -39,7 +39,9 @@ function App() {
     const handleInputName = (input) => {
       setName(input);
     }
-   
+
+    console.log(name);
+
 
 
 
@@ -65,8 +67,13 @@ function App() {
           })}
 
 
-          <Route path={`/product/name/${name}`} element = {<ProductList 
-          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName} name = {name} />} />
+        {/* <Route path={`/product/name/${name}`} element = {<ProductList 
+          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName}/>} />  */}
+          
+         {/* <Route path={`/product/name/hat`} element = {<ProductList 
+          address = {`http://localhost:8080/products/name/hat`}  />} /> */}
+
+          <Route path={`/product/name`} element = {<Header />} />
 
 
           {/* 
