@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Basket from "./components/Basket/Basket";
 
 
 
@@ -58,9 +59,10 @@ function App() {
           )
           })}
 
-          {/* 
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/feedPage" element={<FeedPage />} /> */}
+        <Route path="/basket" element={<Basket />} />
+
+          
+          {/* <Route path="/settings" element={<SettingsPage />} /> */}
       </Routes>
       </div>
       <Footer />
