@@ -21,9 +21,6 @@ function Header (props) {
 
 
 
-
-
-
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
@@ -63,7 +60,6 @@ function Header (props) {
           <button className = "not-white" type = "submit">Search</button>    
 
         </nav2>
-   
       </div>
 
     </>
