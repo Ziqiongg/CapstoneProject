@@ -43,7 +43,7 @@ function App() {
       const DeleteFromBasket = (product) =>{
         console.log("deleting from basket");
         let itemToDelete = document.getElementById(product.id)
-        itemToDelete.parentNode.removeChild(itemToDelete);
+        itemToDelete.basketItem.removeChild(itemToDelete);
       }
 
     // add items from basket to ordered/purchased
