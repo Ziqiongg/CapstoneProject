@@ -17,6 +17,9 @@ import axios from "axios";
 import Basket from "./components/Basket/Basket";
 import Order from "./components/Orders/Orders";
 import { getBasket } from "./components/Basket/Axios/BasketAPI";
+import AboutUs from "./components/AboutUs/AboutUs";
+import TermsConditions from "./components/TermsConditions/TermsConditions";
+
 
 
 
@@ -75,10 +78,11 @@ function App() {
           address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
           )
           })}
-
         <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
           <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
-          
+          <Route path = "/ourmissionpage" element = {<AboutUs />}/>
+          <Route path = "/conditions" element = {<TermsConditions />}/>
+          <Route path="/basket" element={<Basket />} />
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
       </Routes>
       </div>
