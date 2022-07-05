@@ -66,7 +66,7 @@ function App() {
 
     <Router>
       <div className = "main-wrapper">
-      {/* <Header categories= {category} /> */}
+      <Header categories= {category} />
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
