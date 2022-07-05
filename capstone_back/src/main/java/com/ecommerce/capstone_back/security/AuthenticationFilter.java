@@ -30,8 +30,9 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 
         if (jwt != null) {
             String user = jwtService.getAuthUser(request);
-
-            Authentication authentication = new UsernamePasswordAuthenticationToken(user, null);
+//          without line 35, "bad credentials" error is thrown - user is given a token, but it is not recognised
+            Authentication authentication = new UsernamePasswordAuthenticationToken(user, null,
+                    java.util.Collections.emptyList());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(request, response);
