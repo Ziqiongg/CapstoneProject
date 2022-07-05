@@ -55,7 +55,11 @@ insert into product (name, category, price, stock, picture_address, description)
 
 
 
-
+insert into product (name, category, price, stock, picture_address, description) values ('Big Boi Hat', 'HATS', 99.99, 200, 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','Hi Pingu - an excellent choice of head wear, available in many colours! a Great gift to your friends');
+insert into product (name, category, price, stock, picture_address, description) values ('Little Boat', 'BOATS', 2590.56, 30, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','The model has everything outstanding detailing, rims, rubber tyres and a great paint finish. This great toy will make the perfect gift for kids ages 6+');
+insert into product (name, category, price, stock, picture_address, description) values ('Bigger Boat', 'BOATS', 25900.56, 3,'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60', ' Very low engines hours | Part of the successful Sunseeker 116 series | Impressive outdoor space | Hot tub on the flybridge  15-stateroom layout');
+insert into product (name, category, price, stock, picture_address, description) values ('Thicc Oats', 'OATS', 5.99, 1000,'https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','An expertly blended combination of tasty oat varieties resulting in a deliciously creamy and hearty porridge. Oats worth waking up for deserve a little time and attention by cooking slowly on the hob');
+insert into product (name, category, price, stock, picture_address, description) values ('Special Goat', 'GOATS', 79.33, 57,'https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','Ever wanted your own goat? Well, now you can! Limited time deal to make your wildest dreams come true');
 
 
 insert into individual_purchase (quantity, purchased, product_id, users_id) values (5, True, 1, 1);

@@ -4,6 +4,9 @@ import './Header.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
+
+import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
+
 import ProductList from '../ProductList/ProductList';
 
 
@@ -83,7 +86,10 @@ const  Header = (props) => {
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
-        <a href="/"><h1 className = "title">Dodgy Amazon</h1></a>
+
+
+        <Link to="/"><h1 className = "title">Dodgy Amazon</h1></Link>
+
           <nav className = "Nav">           
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
@@ -93,6 +99,7 @@ const  Header = (props) => {
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
               <li><button><Link to = "/basket">Basket</Link></button></li>
+              <li><button><Link to = "/orders">My Orders</Link></button></li>
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
             </ul>
           </nav>
