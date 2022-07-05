@@ -1,7 +1,7 @@
 
 import './Register.css';
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/header-logo.png";
 import React, { useState } from 'react';
 import axios from 'axios';
 import RegisterUser from './RegisterUser';
@@ -49,10 +49,9 @@ const result = await RegisterUser(JSON.stringify(newUser));
 
     <div className="register-form">
             <Link to='/'>
-                <img
-                    className="register__logo"
-                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' 
-                />
+                <div
+                    className = "title"><img src={logo} alt="logo"></img></div>
+               
             </Link>
       <form onSubmit = {handleSubmit}>
       <div className='form-container'>
