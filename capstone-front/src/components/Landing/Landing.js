@@ -34,6 +34,7 @@ import Stoat from './ProductImages/Pets/Stoat.jpg';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 
 const Landing = () => (
 
@@ -47,12 +48,15 @@ const Landing = () => (
   <section className="landing-top-container">
       
       {/* <div className="landing-page-top-row"> */}
-      <a href="/productslist"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></a>
-      <a href="/productslist"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></a>
-      <a href="/productslist"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></a>
-      <a href="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></a>
-      <a href="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></a>
-      <a href="/productslist"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></a>
+
+    
+      <Link to="/productslist"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
+      <Link to="/productslist"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
+      <Link to="/productslist"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
+      <Link to="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
+      <Link to="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
+      <Link to="/productslist"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
+
     
     
   </section>
@@ -65,49 +69,50 @@ const Landing = () => (
 
 <Carousel>
   <div>
-            <a href="/products/id/1"><img className="animated-img" src={BigHat} alt="pingu hat"/></a>
+            <Link to="/products/id/1"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
             {/* <figcaption>Big Boi Hat</figcaption></a> */}
 
-            
-            <a href="/products/id/2"><img className="animated-img" src={Gear_Samsung_Galaxy_A01_back_SOURCE_Samsung} alt="LittleBoat"/></a>
+            {/* <Link to="/products/id/2"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></Link> */}
+
+            <Link to="/products/id/2"><img className="animated-img" src={Gear_Samsung_Galaxy_A01_back_SOURCE_Samsung} alt="Galaxy a01"/></Link>
+
             {/* <figcaption>Little Boat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={samsung_galaxy_a9_2016_white} alt="QuakerCoat"/></a>
+            <Link to="/"><img className="animated-img" src={samsung_galaxy_a9_2016_white} alt="Galaxy A9"/></Link>
             {/* <figcaption>Quaker Oats</figcaption></a> */}
             
-            
 </div>
+
 <div>
-            <a href="/products/id/4"><img className="animated-img" src={iphone_red} alt="ThiccOats"/></a>
+            <a href="/products/id/4"><img className="animated-img" src={iphone_red} alt="Red Iphone"/></a>
             {/* <figcaption>Thicc Oats</figcaption></a> */}
             
-            <a href="/products/id/5"><img className="animated-img" src={iphone13_blue} alt="SpecialGoat"/></a>
+            <a href="/products/id/5"><img className="animated-img" src={iphone13_blue} alt="Blue Iphone"/></a>
+
             {/* <figcaption>Special Goat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></a>
+            <Link to="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></Link>
             {/* <figcaption>Avocado Hat</figcaption></a> */}
 </div>
 <div>
-            <a href="/"><img className="animated-img" src={Crown} alt="Crown"/></a>
+            <Link to="/"><img className="animated-img" src={Crown} alt="Crown"/></Link>
             {/* on>Crown</figcaption></a> */}
             
             
-            <a href="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></a>
+            <Link to="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></Link>
             {/* <figcaption>Dino Cat</figcaption></a> */}
-            <a href="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/></a>
+            <Link to="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/></Link>
             {/* <figcaption>World Coat</figcaption></a> */}
             </div>
 <div>
-            <a href="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></a>
+            <Link to="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></Link>
             {/* <figcaption>Funky Coat Coat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/></a>
+            <Link to="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/></Link>
             {/* <figcaption>Frog Bucket Hat</figcaption></a> */}
 
-            {/* <a href="/products/id/3"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/></a> */}
-            {/* <figcaption>Bigger Boat</figcaption></a> */}
            
-            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/></a>
+            <Link to="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/></Link>
             {/* <figcaption>Magic Coat</figcaption></a>  */}
             </div>
             </Carousel>     
@@ -118,9 +123,11 @@ const Landing = () => (
 
     <section>
     <div className="bottom-row-container">
-    <a href="/"><img className="bottom-row-images"src={Stoat} alt="Stoats"/><figcaption>STOAT STUFF</figcaption></a> 
-    {/* <a href="/"><img className="bottom-row-images" src={MediumBoat} alt="Stoats"/><figcaption>BETTER BOATS</figcaption></a> 
-    <a href="/"><img className="bottom-row-images" src={NewMoat} alt="Stoats"/><figcaption>MORE MOATS</figcaption></a>  */}
+
+    <Link to="/"><img className="bottom-row-images"src={Stoat} alt="Stoats"/><figcaption>STOAT STUFF</figcaption></Link> 
+    {/* <Link to="/"><img className="bottom-row-images" src={MediumBoat} alt="Boats"/><figcaption>BETTER BOATS</figcaption></Link> 
+    <Link to="/"><img className="bottom-row-images" src={NewMoat} alt="Moats"/><figcaption>MORE MOATS</figcaption></Link>  */}
+
     </div>
     <h2 className="bottom-row-text">NEW IN</h2>
     </section>

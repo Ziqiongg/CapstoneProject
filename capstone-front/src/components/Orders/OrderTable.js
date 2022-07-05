@@ -1,6 +1,6 @@
 
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -12,18 +12,15 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { useNavigate } from 'react-router-dom';
 import { Chip } from '@mui/material';
-import { getBasket, deleteItem} from './Axios/BasketAPI';
 
 
-const BasketTable = ({basketItem}) => {
+const OrderTable = ({}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
     { id: 'category', label: 'Category', minWidth: 100 },
     { id: 'price', label: 'Price', minWidth: 100 },
-    { id: 'deleteButton', minWidth: 100},
-    {id: 'PurchaseButton', minWidth: 100}
-    // {id: 'subtotal', label: 'Subtotal', minWidth:100}
+    { id: 'reorderButton', minWidth: 100}
   ];
 
   const [page, setPage] = React.useState(0);
@@ -38,34 +35,30 @@ const BasketTable = ({basketItem}) => {
     setPage(0);
   }
   const [basket, setBasket] = useState([]);
-  const [product, setProduct] = useState({});
 
-  const deleteFromBasket = () => {
-    deleteItem(setBasket, product.id)
+ 
+
+  const handleClick = {
+
   }
-
+  
   const navigate = useNavigate();
 
   function goToIte(id) {
     navigate("/products/id/" + id)
   }
 
-  function createData(id, name, category, price, deleteButton, purchaseButton) {
-    return { id, name, category, price, deleteButton,purchaseButton};
+  function createData(id, name, category, price, reorderButton) {
+    return { id, name, category, price, reorderButton};
   }
 
-  /* function subtotal(basketItem) {
- return basketItem.map(({ price }) => price).reduce((sum, i) => sum + i, 0);} */
-
-  const rows = basketItem.map(product => createData(product.id,
+  const rows = basket.map(product => createData(product.id,
     product.name,
     product.category,
     product.price,
-     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
-     
-    
 
-    ))
+    <Chip label="Reorder Item" variant="soft" onClick={handleClick} />
+     ))
 
   return (
     <>
@@ -88,7 +81,6 @@ const BasketTable = ({basketItem}) => {
           </TableHead>
           <TableBody>
             {rows
-
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
@@ -124,4 +116,6 @@ const BasketTable = ({basketItem}) => {
   )
 
 }
-export default BasketTable;
+
+
+export default OrderTable;
