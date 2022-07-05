@@ -53,8 +53,8 @@ const Landing = () => (
       <Link to="/productslist"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
       <Link to="/productslist"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
       <Link to="/productslist"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-      <Link to="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
-      <Link to="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
+      <Link to="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>Coats</figcaption></Link>
+      <Link to="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>Hats</figcaption></Link>
       <Link to="/productslist"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
 
     

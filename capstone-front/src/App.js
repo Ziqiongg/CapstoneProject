@@ -47,12 +47,7 @@ function App() {
         console.log("adding to basket");
         setBasketItem([...basketItem, product])}
 
-    // delete items from basket
-      const DeleteFromBasket = (product) =>{
-        console.log("deleting from basket");
-        let itemToDelete = document.getElementById(product)
-        itemToDelete.basketItem.removeChild(itemToDelete);
-      }
+   
 
     // add items from basket to ordered/purchased
       const PurchaseItems = ([basketItem]) => {
@@ -82,7 +77,7 @@ function App() {
               <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
-        <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
+        <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} />} />
           <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
