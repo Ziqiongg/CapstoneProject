@@ -22,7 +22,7 @@ const BasketTable = ({basketItem}) => {
     { id: 'category', label: 'Category', minWidth: 100 },
     { id: 'price', label: 'Price', minWidth: 100 },
     { id: 'deleteButton', minWidth: 100},
-    {id: 'PurchaseButton', minWidth: 50}
+    {id: 'PurchaseButton', minWidth: 100}
     // {id: 'subtotal', label: 'Subtotal', minWidth:100}
   ];
 
@@ -50,8 +50,8 @@ const BasketTable = ({basketItem}) => {
     navigate("/products/id/" + id)
   }
 
-  function createData(id, name, category, price, deleteButton, subtotal) {
-    return { id, name, category, price, deleteButton,subtotal};
+  function createData(id, name, category, price, deleteButton, purchaseButton) {
+    return { id, name, category, price, deleteButton,purchaseButton};
   }
 
   /* function subtotal(basketItem) {
@@ -61,7 +61,9 @@ const BasketTable = ({basketItem}) => {
     product.name,
     product.category,
     product.price,
-     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />,
+     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+     
+    
 
     ))
 

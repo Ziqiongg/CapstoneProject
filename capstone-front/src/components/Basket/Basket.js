@@ -18,7 +18,7 @@ function Basket ({basketItem}, {BuyBasket}) {
       <div className = "BasketPage">
         <h1 class = "name">Basket</h1>
         <BasketTable basketItem={basketItem}/>
-        <Button onClick={handleClick}>Purchase All</Button>
+        <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
       </div>
     </>
   )
