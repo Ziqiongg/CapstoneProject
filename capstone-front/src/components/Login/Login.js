@@ -17,7 +17,6 @@ const [isAuthenticated, setAuthenticate] = useState(false);
 
 const [open, setOpen] = useState(false);
 
-// setUser({ ...user, [event.target.name]: event.target.value });
 
 const handleChange = (event) => {
   setUser({... user, [event.target.name] : event.target.value});

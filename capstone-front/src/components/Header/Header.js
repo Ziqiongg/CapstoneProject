@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
 
-
 function Header (props) {
 
   const [openLinks,setOpenLinks] = useState(false);
 
   const [isOn, setIsOn] = useState(false);
+
 
   function darkModeButton(){
     
@@ -18,8 +18,6 @@ function Header (props) {
 
     setIsOn(isOn => !isOn);
   }
-
-
 
   return (
     <>
@@ -30,8 +28,8 @@ function Header (props) {
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>
             <button className = "not-white" type = "submit">Search</button> 
-
-              <li><button><Link to = "/login">Login</Link></button></li>
+{/* {authenticated ? "LogOut" : "LogIn"} */}
+              <li><button><Link to = "/login">LogIn</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
               <li><button><Link to = "/basket">Basket</Link></button></li>
