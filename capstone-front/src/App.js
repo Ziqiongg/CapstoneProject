@@ -17,6 +17,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Basket from "./components/Basket/Basket";
 import Login from "./components/Login/Login";
+import { UserInfo } from "./UserContext";
 
 
 
@@ -26,6 +27,12 @@ function App() {
     const [category, setCategory] = useState([]);
 //////
     const [isAuthenticated, setAuthenticate] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [user, setUser] = useState({
+      username: "",
+      password: ""
+    });
+    const [users, setUsers] = useState([]);
 
     useEffect(() =>{
   
@@ -40,6 +47,7 @@ function App() {
 
 
   return (
+    <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers}}>
     <Router>
       <div className = "main-wrapper">
       <Header categories= {category}/>
@@ -48,9 +56,8 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage />} />
 
-          <Route exact path = "/login" element = {<Login authenticated = {isAuthenticated}/>}/>
-        
-
+          
+  
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
@@ -62,16 +69,15 @@ function App() {
           address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
           )
           })}
-
+        {/*  */}
         <Route path="/basket" element={<Basket />} />
-
-          
-          {/* <Route path="/settings" element={<SettingsPage />} /> */}
+        <Route exact path = "/login" element = {<Login/>}/>
       </Routes>
       </div>
       <Footer />
-    
+
     </Router>
+    </UserInfo.Provider>
 
   );
 }

@@ -1,3 +1,11 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const UserContext = createContext([]);
+// const [isAuthenticated, setAuthenticate] = useState(false);
+//     const [open, setOpen] = useState(false);
+
+export const UserInfo = createContext({
+    user: null, setUser: () =>{},
+    isAuthenticated: false, setAuthenticate: () => {},
+    open: false, setOpen: () => {},
+    users: null, setUsers: () =>{}
+});
