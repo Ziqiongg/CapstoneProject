@@ -14,6 +14,11 @@ import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+import { exportName } from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
+import CategoryPage from "./components/CategoryPage/CategoryPage";
+
 import Basket from "./components/Basket/Basket";
 import Order from "./components/Orders/Orders";
 import { getBasket } from "./components/Basket/Axios/BasketAPI";
@@ -61,7 +66,7 @@ function App() {
 
     <Router>
       <div className = "main-wrapper">
-      <Header categories= {category} />
+      {/* <Header categories= {category} /> */}
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -74,8 +79,7 @@ function App() {
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
-              <Route exact path={`/productcategory/${itemLower}`} element={<ProductList 
-          address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
+              <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
         <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
@@ -83,11 +87,19 @@ function App() {
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
+
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
+
+          <Route path={`/searchname`} element = {<SearchBar />} />
+
+          {/* 
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/feedPage" element={<FeedPage />} /> */}
+
       </Routes>
-      </div>
-      <Footer />
-    
+
+     </div>
+     <Footer />
     </Router>
   
   );
