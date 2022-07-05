@@ -72,8 +72,6 @@ const Landing = () => (
             <Link to="/products/id/1"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
             {/* <figcaption>Big Boi Hat</figcaption></a> */}
 
-            {/* <Link to="/products/id/2"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></Link> */}
-
             <Link to="/products/id/2"><img className="animated-img" src={Gear_Samsung_Galaxy_A01_back_SOURCE_Samsung} alt="Galaxy a01"/></Link>
 
             {/* <figcaption>Little Boat</figcaption></a> */}
