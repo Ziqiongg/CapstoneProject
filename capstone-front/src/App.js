@@ -8,15 +8,22 @@ import {
 
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
+import ProductPage from "./components/ProductPage/Productpage";
 import Landing from "./components/Landing/Landing";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 import { exportName } from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import CategoryPage from "./components/CategoryPage/CategoryPage";
+
+import Basket from "./components/Basket/Basket";
+import AboutUs from "./components/AboutUs/AboutUs";
+import TermsConditions from "./components/TermsConditions/TermsConditions";
+
 
 
 
@@ -45,6 +52,9 @@ function App() {
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
+          <Route exact path={`/products/id/:id`} element={<ProductPage />} />
+        
+
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
@@ -55,6 +65,9 @@ function App() {
               <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
+          <Route path = "/ourmissionpage" element = {<AboutUs />}/>
+          <Route path = "/conditions" element = {<TermsConditions />}/>
+          <Route path="/basket" element={<Basket />} />
 
           <Route path={`/searchname`} element = {<SearchBar />} />
 

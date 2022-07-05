@@ -86,7 +86,7 @@ const  Header = (props) => {
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
-          <h1 className = "title">Title</h1>
+        <a href="/"><h1 className = "title">Dodgy Amazon</h1></a>
           <nav className = "Nav">           
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
@@ -95,7 +95,7 @@ const  Header = (props) => {
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
-              <li><button><Link to = "/feedPage">Feed</Link></button></li>
+              <li><button><Link to = "/basket">Basket</Link></button></li>
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
             </ul>
           </nav>
