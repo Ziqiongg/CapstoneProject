@@ -29,6 +29,8 @@ img{
     border-color: #F4E06D;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   
   .btn:hover {

@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
+
 const ProductList = (props) => {
 
   const [products, setProducts] = useState([]);
@@ -19,16 +20,23 @@ const ProductList = (props) => {
     axios.get(props.address)
       .then(response =>{
         setProducts(response.data);
+        console.log(products)
+
       })
-    }, [])
+    }, [props.address])
+
    
   const handleClickToDetailPage = () => {
     
   }
 
+  const handleClickToBasketPage = () =>{
+
+  }
+
 return(
   <>
-
+    {/* <Header setupHeader = {props.setUpName}/> */}
     <Row xs={1} xl = {4} sm = {2} md={3} className="g-4 all-products">
     {Array.from(products, (product) => {
 
@@ -50,11 +58,13 @@ return(
                 free-delivery
               </Card.Text>
 
-              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>purchase</Button>
+              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>View</Button>
+              <Button variant="primary" className='btn' onClick = {handleClickToBasketPage}>Purchase</Button>
             </Card.Body>
           </Card>
         </Col>)})}
     </Row>
+    <Footer />
 
   </>
 
