@@ -5,9 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
 import ProductList from '../ProductList/ProductList';
-// import { Navigate } from "react-router-dom";
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 let exportName;
 
@@ -69,11 +67,10 @@ const  Header = (props) => {
     props.setCategory(inputCategory);
   }
 
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
   const handleOnClickSearchPage = () =>{
 
-    // navigate(`http://localhost:3000/searchname`);
-    // <Navigate to="/dashboard" replace={true} />
+    navigate(`/searchname`);
 
   }
 
@@ -117,7 +114,7 @@ const  Header = (props) => {
             </div>
           </div>
 
-          <input type = "text" placeholder = "Search for categories here..." onChange={handleOnChangeCategory}></input>
+          <input type = "text" placeholder = "Search for categories here..." onChange={handleOnChangeCategory} onClick = {handleOnClickSearchPage}></input>
           <button className = "not-white" type = "submit" onClick= {handleOnClickCategory}>Search</button> 
 
         </nav2>
