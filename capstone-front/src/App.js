@@ -66,7 +66,7 @@ function App() {
 
     <Router>
       <div className = "main-wrapper">
-      <Header categories= {category} />
+       <Header categories= {category} /> 
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -88,15 +88,25 @@ function App() {
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
 
+          <Route path={`/searchname`} element = {<SearchBar />} />
+
+
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
 
           <Route path={`/searchname`} element = {<SearchBar />} />
+
 
           {/* 
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
 
       </Routes>
+
+     </div>
+     <Footer />
+    </Router>
+      </Routes>
+
 
      </div>
      <Footer />
