@@ -2,13 +2,12 @@ package com.ecommerce.capstone_back;
 
 
 public enum Category {
-    HATS,
-    BOATS,
-    OATS,
-    MOATS,
-    GOATS,
+    ELECTRONICS,
+    PETFOOD,
+    PETS,
     COATS,
-    STOATS
+    HATS,
+    INSTRUMENTS
 };
 
 
