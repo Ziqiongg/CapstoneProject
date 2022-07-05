@@ -66,7 +66,7 @@ function App() {
 
     <Router>
       <div className = "main-wrapper">
-       <Header categories= {category} /> 
+      
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -82,16 +82,11 @@ function App() {
               <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
-        <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
+          <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
           <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
-          <Route path="/basket" element={<Basket />} />
 
-          <Route path={`/searchname`} element = {<SearchBar />} />
-
-
-          {/* <Route path="/settings" element={<SettingsPage />} /> */}
 
           <Route path={`/searchname`} element = {<SearchBar />} />
 
@@ -102,12 +97,7 @@ function App() {
 
       </Routes>
 
-     </div>
-     <Footer />
-    </Router>
-      </Routes>
-
-
+     
      </div>
      <Footer />
     </Router>
