@@ -20,9 +20,10 @@ const ProductList = (props) => {
     axios.get(props.address)
       .then(response =>{
         setProducts(response.data);
+        console.log(products)
 
       })
-    }, [])
+    }, [props.address])
 
    
   const handleClickToDetailPage = () => {

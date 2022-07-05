@@ -15,6 +15,7 @@ import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { exportName } from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 
 
@@ -33,17 +34,6 @@ function App() {
         })
         .catch(error => {console.log(error)})
       }, [])
-
-    const [name,  setName] = useState("")
-
-    const handleInputName = (input) => {
-      setName(input);
-    }
-
-    console.log(name);
-
-
-
 
 
   return (
@@ -73,7 +63,7 @@ function App() {
          {/* <Route path={`/product/name/hat`} element = {<ProductList 
           address = {`http://localhost:8080/products/name/hat`}  />} /> */}
 
-          <Route path={`/product/name`} element = {<Header />} />
+          <Route path={`/searchname`} element = {<SearchBar />} />
 
 
           {/* 

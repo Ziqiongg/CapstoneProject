@@ -10,7 +10,7 @@ import { Navigate } from "react-router-dom";
 let exportName;
 
 
-const  Header = ({setupHeader}) => {
+const  Header = (props) => {
 
   const [openLinks,setOpenLinks] = useState(false);
 
@@ -54,6 +54,8 @@ const  Header = ({setupHeader}) => {
   const handleOnClickName = (event) => {
     
     event.preventDefault();
+    props.setName(inputName)
+    // console.log(props.name)
     // setupHeader(inputName);
     // props.setUpNameHeader(inputName);
 
@@ -118,8 +120,7 @@ const  Header = ({setupHeader}) => {
         </nav2>
 
       </div>
-      <ProductList 
-          address = {`http://localhost:8080/products/name/${inputName}`}  />
+
 
     </>
   )
