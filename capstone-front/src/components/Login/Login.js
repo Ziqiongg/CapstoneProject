@@ -25,6 +25,7 @@ const login = () => {
     body: JSON.stringify(user)
   })
   .then(res => {
+    // get the actual value of the token and store it in this variable: jwtToken
     const jwtToken = res.headers.get
     ('Authorization');
     if (jwtToken != null) {
@@ -46,11 +47,6 @@ const login = () => {
    return <Landing/>
  }
  
-
-  const logout = () => {
-    sessionStorage.removeItem('jwt');
-    setAuthenticate(false);
-  }
 
   const handleButton = () =>{
     const token = sessionStorage.getItem("jwt");
