@@ -100,12 +100,10 @@ function App() {
      </div>
      <Footer />
     </Router>
-      </Routes>
+    
 
 
-     </div>
-     <Footer />
-    </Router>
+    
   
   );
 }
