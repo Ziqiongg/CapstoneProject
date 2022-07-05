@@ -42,14 +42,15 @@ function App() {
     // delete items from basket
       const DeleteFromBasket = (product) =>{
         console.log("deleting from basket");
-        let itemToDelete = document.getElementById(product.id)
+        let itemToDelete = document.getElementById(product)
         itemToDelete.basketItem.removeChild(itemToDelete);
       }
 
     // add items from basket to ordered/purchased
-      const PurchaseItems = (basketItem) => {
+      const PurchaseItems = ([basketItem]) => {
         console.log("purchasing basket");
-        // setPurchases([])
+        setPurchases([...purchases, basketItem]);
+        
 
 }
     
@@ -76,7 +77,7 @@ function App() {
           })}
 
         <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
-          <Route path="/orders" element={<Order basketItem={basketItem} />} />
+          <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
           
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
       </Routes>

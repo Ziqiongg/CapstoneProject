@@ -20,14 +20,12 @@ const  ProductPage =  ({AddItems}) => {
 
 
     const handleClick = () => {
-
-        AddItems(product)
+      AddItems(product)
     }
    
 
       return (
-        
-       
+         
 <section>
 <div>
 

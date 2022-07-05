@@ -7,7 +7,9 @@ import { Button } from 'react-bootstrap';
 function Basket ({basketItem}, {BuyBasket}) {
 
   const handleClick = () => {
-    BuyBasket({basketItem})
+    BuyBasket([basketItem])
+    console.log("purchasing 2 basket");
+
   }
 
 
