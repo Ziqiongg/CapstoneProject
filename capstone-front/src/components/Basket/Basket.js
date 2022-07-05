@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Basket ({basketItem}, {BuyBasket}) {
 
   const handleClick = () => {
-    BuyBasket([basketItem])
+    BuyBasket()
     console.log("purchasing 2 basket");
 
   }

@@ -47,8 +47,6 @@ function App() {
         console.log("adding to basket");
         setBasketItem([...basketItem, product])}
 
-   
-
     // add items from basket to ordered/purchased
       const PurchaseItems = ([basketItem]) => {
         console.log("purchasing basket");
@@ -66,11 +64,9 @@ function App() {
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
-        
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
-
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
@@ -82,17 +78,8 @@ function App() {
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
-
           <Route path={`/searchname`} element = {<SearchBar />} />
-
-
-          {/* <Route path="/settings" element={<SettingsPage />} /> */}
-
-          <Route path={`/searchname`} element = {<SearchBar />} />
-
-
-          {/* 
-          <Route path="/settings" element={<SettingsPage />} />
+          {/* <Route path="/settings" element={<SettingsPage />} />
           <Route path="/feedPage" element={<FeedPage />} /> */}
 
       </Routes>
@@ -100,10 +87,6 @@ function App() {
      </div>
      <Footer />
     </Router>
-    
-
-
-    
   
   );
 }
