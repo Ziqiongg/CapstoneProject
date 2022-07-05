@@ -13,15 +13,14 @@ let exportName;
 const  Header = (props) => {
 
   const [openLinks,setOpenLinks] = useState(false);
-
   const [isOn, setIsOn] = useState(false);
 
   function darkModeButton(){
     
     document.body.classList.toggle("dark");
-
     setIsOn(isOn => !isOn);
   }
+
 
   //get categories
   const [category, setCategory] = useState([]);
@@ -30,9 +29,7 @@ const  Header = (props) => {
 
     axios.get('http://localhost:8080/categories')
       .then(response => {
-      
         setCategory(response.data);
-  
       })
       .catch(error => {console.log(error)})
     }, [])
@@ -41,36 +38,34 @@ const  Header = (props) => {
 
     //input name and get product list
   const [inputName,setInputName] = useState("");
+
   const handleOnChangeName = (event) => {
     // console.log(event.target.value);
     setInputName(event.target.value);
-  
-    
-    
+
   }
 
-  let navigate = useNavigate();
 
   const handleOnClickName = (event) => {
-    
     event.preventDefault();
-    props.setName(inputName)
-    // console.log(props.name)
-    // setupHeader(inputName);
-    // props.setUpNameHeader(inputName);
+    props.setName(inputName);
 
-    // navigate(`http://localhost:3000/product/name/hat`)
-    // return <Navigate to="/product/name/hat" />
  
   }
 
-  // //input category and get product list
-  // const [inputCategory, setInputCategory] = useState("");
-  // const handleOnChangeCategory = (event) => {
+  //input category and get product list
+  const [inputCategory, setInputCategory] = useState("");
 
-  //   setInputCategory(event.target.value);
+  const handleOnChangeCategory = (event) => {
+
+    setInputCategory(event.target.value);
     
-  // }
+  }
+
+  const handleOnClickCategory = (event) =>{
+    event.preventDefault();
+    props.setCategory(inputCategory);
+  }
 
 
 
@@ -84,10 +79,8 @@ const  Header = (props) => {
           <h1 className = "title">Title</h1>
           <nav className = "Nav">           
             <ul className = "nav-buttons">
-            <input type = "text" placeholder = "Search By Name" onChange={handleOnChangeName}></input>
-            <Link to={`/product/name/${inputName}`}>
-              <button className = "not-white" type = "button" onClick= {handleOnClickName}>Search</button> 
-            </Link>
+            <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName}></input>
+            <button className = "not-white" type = "submit" onClick= {handleOnClickName} >Search</button> 
 
               <li><button><Link to = "/login">Login</Link></button></li>
               <li><button><Link to = "/register">Register</Link></button></li>
@@ -113,9 +106,9 @@ const  Header = (props) => {
               })}
             </div>
           </div>
-          <input type = "text" placeholder = "Search for categories here..." ></input>
 
-          <button className = "not-white" type = "submit">Search</button>    
+          <input type = "text" placeholder = "Search for categories here..." onChange={handleOnChangeCategory}></input>
+          <button className = "not-white" type = "submit" onClick= {handleOnClickCategory}>Search</button> 
 
         </nav2>
 
