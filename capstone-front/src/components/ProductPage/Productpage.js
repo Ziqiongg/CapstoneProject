@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Basket from '../Basket/Basket';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const  ProductPage =  ({AddItems}) => {
@@ -42,6 +43,7 @@ const  ProductPage =  ({AddItems}) => {
   </Card.Body>
 
 </Card>
+<button><Link to="/">Back</Link></button>
 </section>
 {/* Style 2 */}
 
