@@ -46,7 +46,6 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage />} />
         
-
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
           <Route path="/register" element={<Register />} />
@@ -68,7 +67,7 @@ function App() {
       <Footer />
     
     </Router>
-
+  
   );
 }
 
