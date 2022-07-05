@@ -16,6 +16,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { exportName } from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
+import CategoryPage from "./components/CategoryPage/CategoryPage";
 
 
 
@@ -51,17 +52,9 @@ function App() {
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
-              <Route exact path={`/productcategory/${itemLower}`} element={<ProductList 
-          address = {`http://localhost:8080/products/category/${itemLower}`} />} /> 
+              <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
-
-
-        {/* <Route path={`/product/name/${name}`} element = {<ProductList 
-          address = {`http://localhost:8080/products/name/${name}`} setUpName = {handleInputName}/>} />  */}
-          
-         {/* <Route path={`/product/name/hat`} element = {<ProductList 
-          address = {`http://localhost:8080/products/name/hat`}  />} /> */}
 
           <Route path={`/searchname`} element = {<SearchBar />} />
 
@@ -72,6 +65,7 @@ function App() {
       </Routes>
 
      </div>
+     <Footer />
     </Router>
 
   );
