@@ -3,11 +3,10 @@ import { GetIdProducts} from "./Axios/GetProductsAPI"
 import { useParams } from "react-router-dom";
 import Basket from '../Basket/Basket';
 import { Button } from 'react-bootstrap';
-import AddToBasket from '../Basket/AddToBasket';
 import { Card } from 'react-bootstrap';
 
 
-const  ProductPage =  () => {
+const  ProductPage =  ({AddItems}) => {
 
   const params = useParams();
 
@@ -19,7 +18,11 @@ const  ProductPage =  () => {
 
     }, []);
 
-  
+
+    const handleClick = () => {
+
+        AddItems(product)
+    }
    
 
       return (
@@ -37,7 +40,7 @@ const  ProductPage =  () => {
     <Card.Text>
       {product.description}
     </Card.Text>
-    <Button onClick={AddToBasket} value={product.text}>Add to basket</Button>
+    <button onClick={handleClick}>Add to basket</button>
   </Card.Body>
 
 </Card>

@@ -26,7 +26,7 @@ function Header (props) {
     <>
      <div id={openLinks ? "open" : "close"}>
         <header className = "logo">
-        <a href="/"><h1>TITLE</h1></a>
+        <Link to="/"><h1>TITLE</h1></Link>
           <nav className = "Nav">           
             <ul className = "nav-buttons">
             <input type = "text" placeholder = "Search..."></input>

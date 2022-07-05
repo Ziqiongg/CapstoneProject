@@ -23,6 +23,7 @@ function App() {
 
     //get categories
     const [category, setCategory] = useState([]);
+    const [basketItem, setBasketItem] =useState([]);
 
     useEffect(() =>{
   
@@ -35,6 +36,14 @@ function App() {
         .catch(error => {console.log(error)})
       }, [])
 
+      const AddToBasket = (product) => {
+
+        console.log("adding to basket");
+
+        setBasketItem([...basketItem, product])
+
+      }
+
 
   return (
 
@@ -44,7 +53,7 @@ function App() {
      
       <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route exact path={`/products/id/:id`} element={<ProductPage />} />
+          <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
         
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" />} />
@@ -58,7 +67,7 @@ function App() {
           )
           })}
 
-        <Route path="/basket" element={<Basket />} />
+        <Route path="/basket" element={<Basket basketItem={basketItem}/>} />
 
           
           {/* <Route path="/settings" element={<SettingsPage />} /> */}

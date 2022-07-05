@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import { Chip } from '@mui/material';
 import { getBasket, deleteItem} from './Axios/BasketAPI';
 
-const BasketTable = () => {
+const BasketTable = ({basketItem}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
@@ -37,9 +37,9 @@ const BasketTable = () => {
   }
   const [basket, setBasket] = useState([]);
 
-  useEffect(() => {
-    getBasket(setBasket);
-  })
+  // useEffect(() => {
+  //   getBasket(setBasket);
+  // })
 
   function deleteIte(id) {
     deleteItem(setBasket, id);
@@ -55,7 +55,7 @@ const BasketTable = () => {
     return { id, name, category, price, description, deleteButton};
   }
 
-  const rows = basket.map(product => createData(product.id,
+  const rows = basketItem.map(product => createData(product.id,
     product.name,
     product.category,
     product.price,

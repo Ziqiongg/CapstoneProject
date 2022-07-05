@@ -24,6 +24,7 @@ import MediumBoat from './ProductImages/MediumBoat.jpg';
 import NewMoat from './ProductImages/NewMoat.jpg';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 
 const Landing = () => (
 
@@ -37,12 +38,12 @@ const Landing = () => (
   <section className="landing-top-container">
       
       {/* <div className="landing-page-top-row"> */}
-      <a href="/productcategory/goats"><img className="top-row-img" src={GoatHerd} alt="Goat Category"></img><figcaption>GOATS</figcaption></a>
-      <a href="/productcategory/oats"><img className="top-row-img" src={BagofOats} alt="Bag of Oats Category"></img><figcaption>OATS</figcaption></a>
-      <a href="/productcategory/coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></a>
-      <a href="/productcategory/hats"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></a>
-      <a href="/productcategory/boats"><img className="top-row-img" src={BoatPile} alt="Boat Category"></img><figcaption>BOATS</figcaption></a>
-      <a href="/productcategory/moats"> <img className="top-row-img" src={Moats} alt="Moats Category"></img><figcaption>MOATS</figcaption></a>
+      <Link to="/productcategory/goats"><img className="top-row-img" src={GoatHerd} alt="Goat Category"></img><figcaption>GOATS</figcaption></Link>
+      <Link to="/productcategory/oats"><img className="top-row-img" src={BagofOats} alt="Bag of Oats Category"></img><figcaption>OATS</figcaption></Link>
+      <Link to="/productcategory/coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
+      <Link to="/productcategory/hats"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
+      <Link to="/productcategory/boats"><img className="top-row-img" src={BoatPile} alt="Boat Category"></img><figcaption>BOATS</figcaption></Link>
+      <Link to="/productcategory/moats"> <img className="top-row-img" src={Moats} alt="Moats Category"></img><figcaption>MOATS</figcaption></Link>
     
     
   </section>
@@ -55,47 +56,47 @@ const Landing = () => (
 
 <Carousel>
   <div>
-            <a href="/products/id/1"><img className="animated-img" src={BigHat} alt="pingu hat"/></a>
+            <Link to="/products/id/1"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
             {/* <figcaption>Big Boi Hat</figcaption></a> */}
 
             
-            <a href="/products/id/2"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></a>
+            <Link to="/products/id/2"><img className="animated-img" src={LittleBoat} alt="LittleBoat"/></Link>
             {/* <figcaption>Little Boat</figcaption></a> */}
             
-            <a href="/products/id/3"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/></a>
+            <Link to="/products/id/3"><img className="animated-img" src={BiggerBoat} alt="BiggerBoat"/></Link>
             {/* <figcaption>Bigger Boat</figcaption></a> */}
 </div>
 <div>
-            <a href="/products/id/4"><img className="animated-img" src={ThiccOats} alt="ThiccOats"/></a>
+            <Link to="/products/id/4"><img className="animated-img" src={ThiccOats} alt="ThiccOats"/></Link>
             {/* <figcaption>Thicc Oats</figcaption></a> */}
             
-            <a href="/products/id/5"><img className="animated-img" src={SpecialGoat} alt="SpecialGoat"/></a>
+            <Link to="/products/id/5"><img className="animated-img" src={SpecialGoat} alt="SpecialGoat"/></Link>
             {/* <figcaption>Special Goat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></a>
+            <Link to="/"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></Link>
             {/* <figcaption>Avocado Hat</figcaption></a> */}
 </div>
 <div>
-            <a href="/"><img className="animated-img" src={Crown} alt="Crown"/></a>
+            <Link to="/"><img className="animated-img" src={Crown} alt="Crown"/></Link>
             {/* on>Crown</figcaption></a> */}
             
             
-            <a href="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></a>
+            <Link to="/"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></Link>
             {/* <figcaption>Dino Cat</figcaption></a> */}
-            <a href="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/></a>
+            <Link to="/"><img className="animated-img" src={WorldCoat} alt="World Coat"/></Link>
             {/* <figcaption>World Coat</figcaption></a> */}
             </div>
 <div>
-            <a href="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></a>
+            <Link to="/"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></Link>
             {/* <figcaption>Funky Coat Coat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/></a>
+            <Link to="/"><img className="animated-img" src={FrogHat} alt="FrogHat"/></Link>
             {/* <figcaption>Frog Bucket Hat</figcaption></a> */}
 
-            <a href="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/></a>
+            <Link to="/"><img className="animated-img" src={QuakerOats} alt="QuakerCoat"/></Link>
             {/* <figcaption>Quaker Oats</figcaption></a> */}
            
-            <a href="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/></a>
+            <Link to="/"><img className="animated-img" src={MagicCoat} alt="Magic Coat"/></Link>
             {/* <figcaption>Magic Coat</figcaption></a>  */}
             </div>
             </Carousel>     
