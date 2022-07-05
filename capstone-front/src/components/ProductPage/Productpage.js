@@ -40,7 +40,7 @@ const  ProductPage =  ({AddItems}) => {
     <Card.Text>
       {product.description}
     </Card.Text>
-    <button onClick={handleClick}>Add to basket</button>
+    <Button onClick={handleClick}>Add to basket</Button>
   </Card.Body>
 
 </Card>

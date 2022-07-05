@@ -107,9 +107,9 @@ const Landing = () => (
 
     <section>
     <div className="bottom-row-container">
-    <a href="/"><img className="bottom-row-images"src={Stoat} alt="Stoats"/><figcaption>STOAT STUFF</figcaption></a> 
-    <a href="/"><img className="bottom-row-images" src={MediumBoat} alt="Stoats"/><figcaption>BETTER BOATS</figcaption></a> 
-    <a href="/"><img className="bottom-row-images" src={NewMoat} alt="Stoats"/><figcaption>MORE MOATS</figcaption></a> 
+    <Link to="/"><img className="bottom-row-images"src={Stoat} alt="Stoats"/><figcaption>STOAT STUFF</figcaption></Link> 
+    <Link to="/"><img className="bottom-row-images" src={MediumBoat} alt="Boats"/><figcaption>BETTER BOATS</figcaption></Link> 
+    <Link to="/"><img className="bottom-row-images" src={NewMoat} alt="Moats"/><figcaption>MORE MOATS</figcaption></Link> 
     </div>
     <h2 className="bottom-row-text">NEW IN</h2>
     </section>

@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
 import ProductPage from "./components/ProductPage/Productpage";
@@ -16,6 +15,8 @@ import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Basket from "./components/Basket/Basket";
+import Order from "./components/Orders/Orders";
+import { getBasket } from "./components/Basket/Axios/BasketAPI";
 
 
 
@@ -24,27 +25,34 @@ function App() {
     //get categories
     const [category, setCategory] = useState([]);
     const [basketItem, setBasketItem] =useState([]);
+    const [purchases, setPurchases] = useState([]);
 
     useEffect(() =>{
-  
       axios.get('http://localhost:8080/categories')
-        .then(response => {
-       
-          setCategory(response.data);
-    
-        })
-        .catch(error => {console.log(error)})
+      .then(response => {
+      setCategory(response.data);})
+      .catch(error => {console.log(error)})
       }, [])
 
+      // add items to basket
       const AddToBasket = (product) => {
-
         console.log("adding to basket");
+        setBasketItem([...basketItem, product])}
 
-        setBasketItem([...basketItem, product])
-
+    // delete items from basket
+      const DeleteFromBasket = (product) =>{
+        console.log("deleting from basket");
+        let itemToDelete = document.getElementById(product.id)
+        itemToDelete.parentNode.removeChild(itemToDelete);
       }
 
+    // add items from basket to ordered/purchased
+      const PurchaseItems = (basketItem) => {
+        console.log("purchasing basket");
+        // setPurchases([])
 
+}
+    
   return (
 
     <Router>
@@ -67,8 +75,8 @@ function App() {
           )
           })}
 
-        <Route path="/basket" element={<Basket basketItem={basketItem}/>} />
-
+        <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
+          <Route path="/orders" element={<Order basketItem={basketItem} />} />
           
           {/* <Route path="/settings" element={<SettingsPage />} /> */}
       </Routes>

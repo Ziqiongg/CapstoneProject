@@ -36,6 +36,7 @@ function Header (props) {
               <li><button><Link to = "/register">Register</Link></button></li>
               <li><button><Link to = "/settings">Settings</Link></button></li>
               <li><button><Link to = "/basket">Basket</Link></button></li>
+              <li><button><Link to = "/orders">My Orders</Link></button></li>
               <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
             </ul>
           </nav>

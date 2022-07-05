@@ -2,12 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Basket.css';
 import BasketTable from './BasketTable';
+import { Button } from 'react-bootstrap';
 
-function Basket ({basketItem}) {
+function Basket ({basketItem}, {BuyBasket}) {
+
+  const handleClick = () => {
+    BuyBasket({basketItem})
+  }
+
+
   return(
     <>
       <div className = "BasketPage">
         <h1 class = "name">Basket</h1>
+        <Button onClick={handleClick}>Purchase All</Button>
         <BasketTable basketItem={basketItem}/>
       </div>
     </>
