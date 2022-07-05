@@ -67,7 +67,8 @@ const login = () => {
     fetch(SERVER_URL + 'users', {
     headers: {'Authorization': token}}
     )
-    .then(res => console.log(res));
+    .then(res => {
+        console.log(res.data)});
 
 
 

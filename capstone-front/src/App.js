@@ -25,7 +25,8 @@ function App() {
 
     //get categories
     const [category, setCategory] = useState([]);
-//////
+// state of all of these variables is now set here, at the highest level it can be set, so that it can be passed down to all children 
+// components
     const [isAuthenticated, setAuthenticate] = useState(false);
     const [open, setOpen] = useState(false);
     const [user, setUser] = useState({

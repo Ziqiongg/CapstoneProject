@@ -9,15 +9,7 @@ import { Snackbar } from '@mui/material';
 
 
 const Login = () => {
-
-
-// const [user, setUser] = useState({
-//   username: "",
-//   password: ""
-// });
-
-// const [isAuthenticated, setAuthenticate] = useState(false);
-// const [open, setOpen] = useState(false);
+// basically importing all the state so we can set the variables once a user is logged in 
 const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
 
 const handleChange = (event) => {
@@ -49,13 +41,11 @@ const login = () => {
   }).catch(err => console.error(err))
 
 }
-// if the user has logged in successfully, take them to the Landing page
-// if (isAuthenticated){
-//   return <Landing/>
-// }
-// else {
-//   console.log(open);
-// }
+//  if the user has logged in successfully, take them to the Landing page
+ if (isAuthenticated){
+   return <Landing/>
+ }
+ 
 
   const logout = () => {
     sessionStorage.removeItem('jwt');
@@ -67,10 +57,8 @@ const login = () => {
     fetch(SERVER_URL + 'users', {
     headers: {'Authorization': token}}
     )
-    .then(res => console.log(res));
-
-
-
+  .then(response => response.json())
+  .then(data => console.log(data));
   }
 
     
