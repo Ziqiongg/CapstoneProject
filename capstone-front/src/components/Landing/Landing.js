@@ -34,7 +34,7 @@ import petfood from './ProductImages/PetFood/petfood.jpg';
 import instruments from './ProductImages/Instruments/instruments.jpg';
 import pets from './ProductImages/Pets/pets.jpg';
 import Stoat from './ProductImages/Pets/Stoat.jpg';
-
+import { Card, Button } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
@@ -43,32 +43,13 @@ const Landing = () => (
 
 <>
 
+{/* image carousel */}
+
 
 <div>
-  {/* top row images */}
-  <h2 className='category-text'>CATEGORIES</h2>
-  <section className="landing-top-container">
-      
-      {/* <div className="landing-page-top-row"> */}
-
-    
-      <Link to="/productslist"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
-      <Link to="/productslist"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
-      <Link to="/productslist"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-      <Link to="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>Coats</figcaption></Link>
-      <Link to="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>Hats</figcaption></Link>
-      <Link to="/productslist"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
-
-    
-    
-  </section>
-</div>
-
-
-{/* image carousel */}
 <section id="trending-products">
         <div className="landing-page-slide-wrapper">
-
+        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
 <Carousel>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
@@ -97,8 +78,37 @@ const Landing = () => (
             </div>
             </Carousel>     
        </div>
-       <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+       
     </section> <br/>
+
+
+  <h2 className='category-text'>CATEGORIES</h2>
+  <section className="landing-page-slide-wrapper">
+      
+
+  <Carousel>
+  <div>
+  <Link to="/productslist"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
+  <Link to="/productslist"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
+  <Link to="/productslist"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
+            {/* <figcaption>Quaker Oats</figcaption></a> */}
+            
+</div>
+<div>
+<Link to="/productslist"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
+      <Link to="/productslist"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
+      <Link to="/productslist"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
+</div>
+</Carousel>
+
+     
+
+  </section>
+</div>
+
+
+{/* image carousel */}
+
 
 
     <section>
@@ -111,13 +121,13 @@ const Landing = () => (
     </div>
     <h2 className="bottom-row-text">NEW IN</h2>
     </section>
-   
-    
+
 </>
-
-
-
 );
+   
+
+
+
 
  
 

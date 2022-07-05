@@ -64,7 +64,6 @@ return(
           </Card>
         </Col>)})}
     </Row>
-    <Footer />
 
   </>
 
