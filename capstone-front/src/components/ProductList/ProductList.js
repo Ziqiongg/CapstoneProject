@@ -30,8 +30,8 @@ const ProductList = (props) => {
     
   }
 
-  const handleClickToBasketPage = () =>{
-
+  const handleAddToBasket = () =>{
+    // AddItems(product);
   }
 
 return(
@@ -59,7 +59,7 @@ return(
               </Card.Text>
 
               <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>View</Button>
-              <Button variant="primary" className='btn' onClick = {handleClickToBasketPage}>Purchase</Button>
+              <Button variant="primary" className='btn' onClick = {(product) => props.addItems(product)}>Purchase</Button>
             </Card.Body>
           </Card>
         </Col>)})}

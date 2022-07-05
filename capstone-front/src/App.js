@@ -73,7 +73,7 @@ function App() {
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
         
           <Route exact path="/productlist" element={<ProductList 
-          address = "http://localhost:8080/products" />} />
+          address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
 
           {category.map(item => {
