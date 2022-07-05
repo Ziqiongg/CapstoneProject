@@ -4,10 +4,7 @@ import './Header.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
-import { ReactComponent as Menu } from "../../assets/menu.svg";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
-import { ReactComponent as Cart } from "../../assets/cart.svg";
-import { ReactComponent as Place } from "../../assets/place.svg";
 import logo from "../../assets/header-logo.png";
 import { InputGroup, FormControl, Form } from "react-bootstrap";
 import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
