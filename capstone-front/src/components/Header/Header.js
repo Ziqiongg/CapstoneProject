@@ -4,9 +4,14 @@ import './Header.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from 'axios';
-
+import { ReactComponent as Menu } from "../../assets/menu.svg";
+import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
+import { ReactComponent as Cart } from "../../assets/cart.svg";
+import { ReactComponent as Place } from "../../assets/place.svg";
+import logo from "../../assets/header-logo.png";
+import { InputGroup, FormControl, Form } from "react-bootstrap";
 import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
-
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import ProductList from '../ProductList/ProductList';
 
 
@@ -85,27 +90,52 @@ const  Header = (props) => {
   return (
     <>
      <div id={openLinks ? "open" : "close"}>
-        <header className = "logo">
+        <header className = "header">
 
 
-        <Link to="/"><h1 className = "title">Dodgy Amazon</h1></Link>
+        <Link to="/"><h1 className = "title"><img src={logo} alt="logo" /></h1></Link>
+        <div className="header__search">
+        <input className="header__searchInput" type="text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
+        <SearchIcon type = "submit" onClick= {handleOnClickName} className="header__searchIcon "></SearchIcon>
+      </div>
 
-          <nav className = "Nav">           
-            <ul className = "nav-buttons">
-            <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
-            <button className = "not-white" type = "submit" onClick= {handleOnClickName} >Search</button> 
+{/* <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
+            <button className = "not-white" type = "submit" onClick= {handleOnClickName} >Search</button>  */}
 
-              <li><button><Link to = "/login">Login</Link></button></li>
-              <li><button><Link to = "/register">Register</Link></button></li>
-              <li><button><Link to = "/settings">Settings</Link></button></li>
-              <li><button><Link to = "/basket">Basket</Link></button></li>
-              <li><button><Link to = "/orders">My Orders</Link></button></li>
-              <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
-            </ul>
-          </nav>
+<div className="header__nav">
+        
+        <div className="header__option">
+        <button><Link to = "/login"><span className="header__optionLineOne">Login</span></Link></button>
+        </div>
+
+        <div className="header__option">
+        <button><Link to = "/register"><span className="header__optionLineOne">Register</span></Link></button>
+        </div>
+      
+
+      
+        <div className="header__option">
+        <button><Link to = "/orders"><span className="header__optionLineOne">Orders</span>
+        </Link></button>
+        </div>
+      
+      
+
+      <div className="header__option">
+      <button><Link to = "/settings"><span className="header__optionLineOne">Settings</span></Link></button>
+      </div>
+      
+        <div className="header__optionBasket">
+        <button><Link to = "/basket"><ShoppingBasketIcon /></Link></button>
+          <span className="header__optionLineTwo header__basketCount">
+            0
+          </span>
+        </div>
+      
+    </div>
         </header>
 
-        <nav2>
+        <div className = "nav-bar">
           <div className="dropdown">
             <button className="dropbtn">Categories</button>
             <div className="dropdown-content">
@@ -120,11 +150,11 @@ const  Header = (props) => {
               })}
             </div>
           </div>
-
           <input type = "text" placeholder = "Search for categories here..." onChange={handleOnChangeCategory} onClick = {handleOnClickSearchPage}></input>
           <button className = "not-white" type = "submit" onClick= {handleOnClickCategory}>Search</button> 
-
-        </nav2>
+          <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
+        
+        </div>
 
       </div>
 
@@ -135,4 +165,3 @@ const  Header = (props) => {
 
 export default Header;
 export {exportName};
-

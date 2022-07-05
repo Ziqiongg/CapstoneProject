@@ -14,13 +14,13 @@ const Register = () => {
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [country, setCountry] = useState('');
   const [password, setPassword] = useState('');
 
   const handleUserNameChange = event => setUserName(event.target.value);
   const handleFirstNameChange = event => setFirstName(event.target.value);
   const handleLastNameChange = event => setLastName(event.target.value);
-  const handleEmailChange = event => setEmail(event.target.value);
+  const handleCountryChange = event => setCountry(event.target.value);
   const handlePasswordChange = event => setPassword(event.target.value);
 
 
@@ -31,7 +31,7 @@ const Register = () => {
     "userFirstName": firstName,
     "userLastName": lastName,
     "username": userName,
-    "userAddress": email,
+    "country": country,
     "userPassword": password
   }
 
@@ -46,54 +46,64 @@ const result = await RegisterUser(JSON.stringify(newUser));
 
 
   return (
-    <div class = "register-form">
-      <form onSubmit = {handleSubmit}>
 
-      <div class = "user-name">
+    <div className="register-form">
+            <Link to='/'>
+                <img
+                    className="register__logo"
+                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' 
+                />
+            </Link>
+      <form onSubmit = {handleSubmit}>
+      <div className='form-container'>
+      <h1 className = "register-title"> Create account </h1>
+
+      
           <label>
             Enter your username:
             <input type = "text" name = "username" variant = "filled" required onChange = {handleUserNameChange} />
           </label>
-        </div>
+       
 
-        <div class = "first-name">
+        
           <label>
             Enter your first name:
             <input type = "text" name = "userFirstName" variant = "filled" required onChange = {handleFirstNameChange} />
           </label>
-        </div>
+        
 
-        <div class = "last-name">
+        
           <label>
             Enter your last name:
             <input type = "text" name = "userLastName" variant = "filled" required onChange = {handleLastNameChange} />
           </label>
-        </div>
+       
 
-        <div class = "user-email">
+       
           <label>
-            Enter your email:
-            <input type = "email" variant = "filled" required name = "userAddress" onChange = {handleEmailChange} />
+            Enter your Country:
+            <input type = "text" variant = "filled" required name = "country" onChange = {handleCountryChange} />
           </label>
-        </div>
+        
 
-        <div class = "user-password">
+        
           <label>
             Enter your password:
             <input type = "password" variant = "filled" required name = "userPassword" onChange = {handlePasswordChange} />
           </label>
-        </div>
+        
         
         <div class = "check-box">
         <label>
       <input type="checkbox"  name="remember" required></input>
     </label>
-    <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Terms & Conditions</Link></p>
+    <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
         </div>
 
     <div class = "clearfix">
-      <button type = "reset" class = "cancelbtn">Cancel</button>
+      <button class = "signupbtn" type = "reset" >Cancel</button>
     <button class = "signupbtn" type = "submit" onClick = {addUser}>Sign Up</button>
+    </div>
     </div>
       </form>
 

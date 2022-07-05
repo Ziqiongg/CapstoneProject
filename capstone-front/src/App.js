@@ -67,7 +67,7 @@ function App() {
     <Router>
       <div className = "main-wrapper">
       
-     
+     <Header />
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
