@@ -6,6 +6,7 @@ import Landing from '../Landing/Landing';
 import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
 import { Snackbar } from '@mui/material';
+import Header from '../Header/Header';
 
 
 const Login = () => {
@@ -63,6 +64,7 @@ const login = () => {
   return (
 
     <>
+    <Header/>
     <form>
       <label>Username: </label>
       <input

@@ -71,7 +71,7 @@ function App() {
     <Router>
       <div className = "main-wrapper">
       
-     <Header />
+     {/* <Header /> */}
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
@@ -90,6 +90,7 @@ function App() {
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
           <Route path={`/searchname`} element = {<SearchBar />} />
+          <Route path={`/login`} element = {<Login />} />
           {/* <Route path="/settings" element={<SettingsPage />} />
 
           <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />

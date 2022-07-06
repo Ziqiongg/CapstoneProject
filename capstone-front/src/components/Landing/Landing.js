@@ -38,13 +38,15 @@ import { Card, Button } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
+
 
 const Landing = () => (
 
 <>
 
 {/* image carousel */}
-
+<Header/>
 
 <div>
 <section id="trending-products">

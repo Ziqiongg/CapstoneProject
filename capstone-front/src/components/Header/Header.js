@@ -10,6 +10,8 @@ import { InputGroup, FormControl, Form } from "react-bootstrap";
 import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import ProductList from '../ProductList/ProductList';
+import { useContext } from 'react';
+import { UserInfo } from '../../UserContext';
 
 
 let exportName;
@@ -81,7 +83,7 @@ const  Header = (props) => {
   }
 
 
-
+  const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
 
 
 
@@ -103,7 +105,7 @@ const  Header = (props) => {
 <div className="header__nav">
         
         <div className="header__option">
-        <button><Link to = "/login"><span className="header__optionLineOne">Login</span></Link></button>
+        <button><Link to = "/login"><span className="header__optionLineOne">{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
 
         <div className="header__option">
