@@ -105,37 +105,36 @@ const  Header = (props) => {
 {/* <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
             <button className = "not-white" type = "submit" onClick= {handleOnClickName} >Search</button>  */}
 
-<div className="header__nav">
+  <div className="header__nav">
         
         <div className="header__option">
           {/* If the user is Logged in/authenticated, change button to Logout */}
-        <button><Link to = "/login"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
+        <button><Link to = "/login" className = "header__link"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
         
-        {!isAuthenticated &&  
+
         <div className="header__option">
-        <button><Link to = "/register"><span className="header__optionLineOne">Register</span></Link></button>
-        </div>}
+        <button><Link to = {isAuthenticated ? "/Profile" : "/Register"} className = "header__link"><span className="header__optionLineOne">{isAuthenticated ? "Edit Profile" : "Register"}</span></Link></button>
+        </div>
+
       
-        {isAuthenticated &&  
-        
-        <div>
-          <div className="header__option">
-          <button><Link to = "/orders"><span className="header__optionLineOne">Orders</span>
-          </Link></button>
-          </div>
       
-          <div className="header__option">
-          <button><Link to = "/settings"><span className="header__optionLineOne">Settings</span></Link></button>
-          </div>
-        
-          <div className="header__optionBasket">
-            <button><Link to = "/basket"><ShoppingBasketIcon /></Link></button>
-            <span className="header__optionLineTwo header__basketCount">
-              0
-            </span>
-          </div>
-        </div> }
+        <div className="header__option">
+        <button><Link to = "/orders" className = "header__link"><span className="header__optionLineOne">Orders</span></Link></button>
+        </div>
+      
+      
+
+        <div className="header__option">
+          <button><Link to = "/settings" className = "header__link"><span className="header__optionLineOne">Settings</span></Link></button>
+        </div>
+      
+        <div className="header__optionBasket">
+          <button><Link to = "/basket" className = "header__link"><ShoppingBasketIcon /></Link></button>
+          <span className="header__optionLineTwo header__basketCount">
+            0
+          </span>
+        </div>
       
     </div>
         </header>
@@ -156,13 +155,13 @@ const  Header = (props) => {
             </div>
           </div>
           <input type = "text" placeholder = "Search for categories here..." onChange={handleOnChangeCategory} onClick = {handleOnClickSearchPage}></input>
-          <button className = "not-white" type = "submit" onClick= {handleOnClickCategory}>Search</button> 
-          <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "☼": "☾"}</button>
-        
+          <button className = "not-white" type = "submit" onClick= {handleOnClickCategory}>Search</button>
+          <div className = "dark-mode-stuff"> 
+          <button className = "dark-mode-button" onClick = {darkModeButton}>{isOn ? "Light": "Dark"}</button>
+        </div>
         </div>
 
       </div>
-
 
     </>
   )
