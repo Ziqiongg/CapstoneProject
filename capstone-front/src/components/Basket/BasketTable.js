@@ -61,10 +61,9 @@ const BasketTable = ({basketItem}) => {
     product.name,
     product.category,
     product.price,
-     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+    <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+  
      
-    
-
     ))
 
   return (

@@ -2,7 +2,6 @@ body{
   background-color: lightgrey;
 }
 
-
 .home{
   max-width: 1500px;
   margin-left: auto;
@@ -63,8 +62,8 @@ body{
 }
 
 
-/* CSS FOR TOP IMAGE GRID */
 
+/* CSS FOR TOP IMAGE GRID */
 
 .landing-top-container{
     border: 2px solid gray;
@@ -95,37 +94,23 @@ body{
     object-fit: cover;
     display: inline-block;
     
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* For Mobile:
-      max-width:100%
-      max-height: 100%
-    */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin-top:10px;
+    
+
     display: inline-block;
     margin-top:10px; 
 
     /* padding: 10px;  */
+
   }
 
 .top-row-img:hover {
     position:center;
-    /* top:-25px;
-    left:-35px; */
-    /* width:400px; */
-    /* height:auto;
-    display:block;
-    z-index:999; */
-
-    /* transform: scale(1.009);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-     */
+    transform: scale(1.009);
   }
-  
-  /* @media (max-width: 800px) {
-    .landing-page-top-row {
-      flex-direction: column;
-    }
-  } */
-
 
 /* CSS FOR THE CAROUSEL */
 
@@ -134,13 +119,12 @@ body{
 }
 
 .landing-page-slide-wrapper {
-   
-    /* overflow: auto; */
+    
     white-space: nowrap;
-    background-color:white;
-    
-    
+    background-color:lightgrey;
+
   }
+
 .landing-page-slide-wrapper a {
     display: inline-block;
     color: grey;
@@ -151,41 +135,25 @@ body{
     
   }
   
-.landing-page-slide-wrapper a:hover {
-    /* background-color: #777;
-    transform: scale(1.009); */
-    
-  }
  
 .animated-img {
-  float: left;
+  float:left;
   width:  300px;
   height: 300px;
   object-fit: cover;
   display: inline-block;
-  
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-  }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-/* .animated-img:hover {
-    position:center;
-    top:-25px;
-    left:-35px;
-    transform: scale(1.5);
-    display:block;
-    z-index:999;
-  } */
+  }
 
   /* CSS FOR THE BOTTOM IMAGE GRID */
 
 .bottom-row-container{
-    /* border: 2px solid gray;
-    border-radius: 5px; */
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    /* background-color: #FAFAFA; */
     margin: 2rem 10rem;
     margin-top: 200px;
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./stylez.css"
+import Header from "../Header/Header";
 
 function AboutUs(){
 
 
     return(
         <>
+        <Header/>
         <div className="aboutus-container">
         <h1>
             Our Mission!
