@@ -20,12 +20,47 @@ insert into users (user_first_name, user_last_name, username, user_address, user
 insert into users (user_first_name, user_last_name, username, user_address, user_password, wallet) values ('Joseph', 'Sutherland', 'JSU', 'Copford', '$2a$10$e59rGaFvpijWXLh03j0aZOzBYQNrIRIjlB8sGwLvBL35fecblsW1m', 1000);
 insert into users (user_first_name, user_last_name, username, user_address, user_password, wallet) values ('Michelle', 'Tambi', 'MTA', 'London', '$2a$10$e59rGaFvpijWXLh03j0aZOzBYQNrIRIjlB8sGwLvBL35fecblsW1m', 1000);
 
+-- ELECTRONICS
+insert into product (name, category, price, stock, picture_address, description) values ('ASWEE Smart Watch', 'ELECTRONICS', 29.99, 200, 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',' Fitness Tracker with 24/7 Heart Rate, Blood Oxygen, Sleep Monitor, 1.69" Touch Screen IP68 Waterproof Smartwatch');
+insert into product (name, category, price, stock, picture_address, description) values ('Samsung Galaxy Phone A01', 'ELECTRONICS', 140.77, 30, 'https://m.media-amazon.com/images/I/71ZhKH0U6PL._AC_SL1500_.jpg',' A22 5G Smartphone 6.6 Inch SIM Free Android Mobile Phone Grey, (UK Version)');
+insert into product (name, category, price, stock, picture_address, description) values ('Iphone 13 (Random Colour)', 'ELECTRONICS', 613.39, 30,'https://images.macrumors.com/article-new/2021/09/Apple-iPhone-13-colors-lineup-2022.jpg','Iphone 13 1.77 Inch UK SIM Free Feature Phone (Single SIM) – Assortment of colours');
+insert into product (name, category, price, stock, picture_address, description) values ('Red Iphone', 'ELECTRONICS', 513.99, 1000,'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-red-select-2019_GEO_EMEA?wid=470&hei=556&fmt=png-alpha&.v=1567021767076','Iphone 11 - Red');
 
-insert into product (name, category, price, stock, picture_address, description) values ('Big Boi Hat', 'HATS', 99.99, 200, 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','nice');
-insert into product (name, category, price, stock, picture_address, description) values ('Little Boat', 'BOATS', 2590.56, 30, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','nice');
-insert into product (name, category, price, stock, picture_address, description) values ('Bigger Boat', 'BOATS', 25900.56, 3,'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','nice');
-insert into product (name, category, price, stock, picture_address, description) values ('Thicc Oats', 'OATS', 5.99, 1000,'https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','nice');
-insert into product (name, category, price, stock, picture_address, description) values ('Special Goat', 'GOATS', 79.33, 57,'https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60','nice');
+-- insert into product (name, category, price, stock, picture_address, description) values ();
+-- PETFOOD
+insert into product (name, category, price, stock, picture_address, description) values ('Yumy Dog Food', 'PETFOOD', 25.56, 1000,'https://images.unsplash.com/photo-1571873735645-1ae72b963024?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80','Complete Dry Dog Food for Adult Dogs, Rich in Turkey with Peas, 1 pack of 5kg');
+insert into product (name, category, price, stock, picture_address, description) values ('Yumy Cat Food', 'PETFOOD', 25.99, 1000,'https://m.media-amazon.com/images/I/81ROrIhLAbL._AC_SL1500_.jpg','48 x 85g Sheba Selection in Gravy Sauce / Multipack with poultry variety / Suitable for any adult cat');
+insert into product (name, category, price, stock, picture_address, description) values ('Yumy Guinea Pig Food', 'PETFOOD', 19.33, 1000,'https://cdn.shopify.com/s/files/1/0054/2569/2758/products/htons_optimum_guinea_pig_10kg_optimised_1024x1024@2x.jpg?v=1607524131','Supreme Petfoods Selective Naturals Guinea Pig Food, Timothy Hay, Grain Free, ?1.5 kg');
+
+
+-- PETS
+insert into product (name, category, price, stock, picture_address, description) values ('Dog adoption', 'PETS', 10000, 2,'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80','I am cute and i need a home');
+insert into product (name, category, price, stock, picture_address, description) values ('Cat adoption', 'PETS',10000 , 2,'https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80','I am cute and i need a home');
+insert into product (name, category, price, stock, picture_address, description) values ('Guinea pig adoption', 'PETS', 10000, 5,'https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80','I am cute and i need a home');
+
+
+-- COATS
+insert into product (name, category, price, stock, picture_address, description) values ('Hope World Jacket', 'COATS', 17.77, 5, 'https://i.etsystatic.com/29819184/r/il/ca125a/3108332846/il_570xN.3108332846_ipug.jpg', 'Hand painted Hope World Jacket');
+insert into product (name, category, price, stock, picture_address, description) values ('Childrens Dinosaur Coat', 'COATS', 8.22, 3, 'https://i.pinimg.com/originals/fa/99/97/fa999714c79d16cf937dfcd7bf55030e.jpg', 'Childrens Dinosaur jacket complete with all your favourite dinosaurs');
+insert into product (name, category, price, stock, picture_address, description) values ('Green Jacket', 'COATS', 30.66, 100,'https://m.media-amazon.com/images/I/91K1eguAbsL._AC_UL1500_.jpg','Lightweight Water-Resistant Packable Hooded Puffer Jacket');
+insert into product (name, category, price, stock, picture_address, description) values ('Vintage Jacket', 'COATS', 22.99, 123, 'https://www.seasonenterprises.com/wp-content/uploads/2019/01/97d16ae2-79a6-49d6-a257-1e45020bc20c.jpeg', 'One of a king vintage coat');
+insert into product (name, category, price, stock, picture_address, description) values ('Spring Raincoat', 'COATS', 25.99, 1000,'https://m.media-amazon.com/images/I/61OnKmNMF4L._AC_UY879_.jpg','W Victoria Spring Raincoat');
+insert into product (name, category, price, stock, picture_address, description) values ('Winter Jacket', 'COATS', 79.33, 1077,'https://m.media-amazon.com/images/I/71a72-P600L._AC_UY879_.jpg','Mountain Warehouse Fell Mens 3 in 1 Water Resistant Jacket - Adjustable Hood Mens Coat');
+
+-- HATS
+insert into product (name, category, price, stock, picture_address, description) values (' Pingu Hat', 'HATS', 8.99, 250, 'https://m.media-amazon.com/images/I/61sO80diJiL._AC_UL1200_.jpg', 'Pingu Baseball Cap');
+insert into product (name, category, price, stock, picture_address, description) values ('Avocado Hat', 'HATS', 13.99, 1872, 'https://cdn.shopify.com/s/files/1/0417/0288/3487/products/AvocadoBucketHatStacked_800x.jpg?v=1622936423', 'Stylish Avocado Hat');
+insert into product (name, category, price, stock, picture_address, description) values (' Mario Hat', 'HATS', 25.56, 3000,'https://m.media-amazon.com/images/I/71FcWvMYctL._AC_UX679_.jpg','Nintendo Super Mario Kids Red Hat & Moustache Plumber Costume Accessories');
+insert into product (name, category, price, stock, picture_address, description) values ('The Hat Outlet', 'HATS', 15.99, 1000,'https://m.media-amazon.com/images/I/91wYOvxgQlL._AC_UL1500_.jpg','Ladies Wax Waterproof Walking Casual Hat');
+insert into product (name, category, price, stock, picture_address, description) values ('Jeff & Aimy', 'HATS', 29.33, 3000,'https://m.media-amazon.com/images/I/81IbT5Lo8LL._AC_UX679_.jpg','Mens Women Summer Straw Trilby Fedora Vintage Panama Hat Beach');
+
+-- INSTRUMENTS
+insert into product (name, category, price, stock, picture_address, description) values ('Kazoo', 'INSTRUMENTS', 20.99, 3,'https://m.media-amazon.com/images/I/71r5KGtg+6L._AC_SX679_.jpg','Silver Aluminum Alloy with Five Membrane Flute Diaphragm Mouth Kazoos Musical Instruments');
+insert into product (name, category, price, stock, picture_address, description) values ('Violin', 'INSTRUMENTS', 75.99, 1000,'https://m.media-amazon.com/images/I/71ZMgdeC7IL._AC_SL1500_.jpg','Eastar 4/4 Violin Full Size EVA-1 Student Violin Set For Beginner with Hard Case, Shoulder Rest, Bow, Rosin, Clip-on Tuner and Extra Strings');
+insert into product (name, category, price, stock, picture_address, description) values ('49 Key Keyboard Piano', 'INSTRUMENTS', 79.33, 57,'https://m.media-amazon.com/images/I/81ASrNZP2YL._AC_SL1500_.jpg','RockJam 49 Key Keyboard Piano with Power Supply, Sheet Music Stand, Piano Note Stickers & Simply Piano Lessons., Black');
+
+
+
 
 insert into individual_purchase (quantity, purchased, product_id, users_id) values (5, True, 1, 1);
 insert into individual_purchase (quantity, purchased, product_id, users_id) values (5, True, 1, 1);

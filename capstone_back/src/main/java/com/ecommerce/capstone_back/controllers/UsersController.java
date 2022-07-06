@@ -135,6 +135,12 @@ public class UsersController {
         return ResponseEntity.ok().body(newUser);
     }
 
+    @GetMapping("/users/username/{username}")
+    public ResponseEntity<Optional<Users>> findByUsername(@PathVariable String username){
+        Optional<Users> user = usersService.getByUsername(username);
+        return ResponseEntity.ok().body(user);
+    }
+
 
 
 

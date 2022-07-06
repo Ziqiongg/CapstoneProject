@@ -14,14 +14,16 @@ import { useNavigate } from 'react-router-dom';
 import { Chip } from '@mui/material';
 import { getBasket, deleteItem} from './Axios/BasketAPI';
 
-const BasketTable = () => {
+
+const BasketTable = ({basketItem}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
     { id: 'category', label: 'Category', minWidth: 100 },
     { id: 'price', label: 'Price', minWidth: 100 },
-    { id: 'description', label: 'Description', minWidth: 100 },
-    { id: 'deleteButton', minWidth: 100}
+    { id: 'deleteButton', minWidth: 100},
+    {id: 'PurchaseButton', minWidth: 100}
+    // {id: 'subtotal', label: 'Subtotal', minWidth:100}
   ];
 
   const [page, setPage] = React.useState(0);
@@ -36,13 +38,10 @@ const BasketTable = () => {
     setPage(0);
   }
   const [basket, setBasket] = useState([]);
+  const [product, setProduct] = useState({});
 
-  useEffect(() => {
-    getBasket(setBasket);
-  })
-
-  function deleteIte(id) {
-    deleteItem(setBasket, id);
+  const deleteFromBasket = () => {
+    deleteItem(setBasket, product.id)
   }
 
   const navigate = useNavigate();
@@ -51,17 +50,22 @@ const BasketTable = () => {
     navigate("/products/id/" + id)
   }
 
-  function createData(id, name, category, price, description, deleteButton) {
-    return { id, name, category, price, description, deleteButton};
+  function createData(id, name, category, price, deleteButton, purchaseButton) {
+    return { id, name, category, price, deleteButton,purchaseButton};
   }
 
-  const rows = basket.map(product => createData(product.id,
+  /* function subtotal(basketItem) {
+ return basketItem.map(({ price }) => price).reduce((sum, i) => sum + i, 0);} */
+
+  const rows = basketItem.map(product => createData(product.id,
     product.name,
     product.category,
     product.price,
-    product.description,
-     <Chip label="Delete" variant="soft" onDelete={()=>deleteIte(product.id)} />
-     ))
+     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+     
+    
+
+    ))
 
   return (
     <>
@@ -84,6 +88,7 @@ const BasketTable = () => {
           </TableHead>
           <TableBody>
             {rows
+
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
@@ -119,6 +124,4 @@ const BasketTable = () => {
   )
 
 }
-
-
 export default BasketTable;
