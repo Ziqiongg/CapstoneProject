@@ -26,7 +26,7 @@ const  ProductPage =  ({AddItems}) => {
       AddItems(product)
     }
    
-
+// text to re push_
       return (
          
 <section>

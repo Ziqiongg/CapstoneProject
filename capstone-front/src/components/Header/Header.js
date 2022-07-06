@@ -10,6 +10,8 @@ import { InputGroup, FormControl, Form } from "react-bootstrap";
 import placeholder from '../Landing/ProductImages/LogoPlaceholder.jpg'
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import ProductList from '../ProductList/ProductList';
+import { useContext } from 'react';
+import { UserInfo } from '../../UserContext';
 
 
 let exportName;
@@ -19,6 +21,7 @@ const  Header = (props) => {
 
   const [openLinks,setOpenLinks] = useState(false);
   const [isOn, setIsOn] = useState(false);
+
 
   function darkModeButton(){
     
@@ -79,10 +82,7 @@ const  Header = (props) => {
 
   }
 
-
-
-
-
+  const {isAuthenticated} = useContext(UserInfo);
 
   return (
     <>
@@ -102,7 +102,8 @@ const  Header = (props) => {
 <div className="header__nav">
         
         <div className="header__option">
-        <button><Link to = "/login"><span className="header__optionLineOne">Login</span></Link></button>
+          {/* If the user is Logged in/authenticated, change button to Logout */}
+        <button><Link to = "/login"><span className="header__optionLineOne">{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
 
         <div className="header__option">

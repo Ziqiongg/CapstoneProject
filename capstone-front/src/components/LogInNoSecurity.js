@@ -6,12 +6,19 @@ import Landing from '../Landing/Landing';
 import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
 import { Snackbar } from '@mui/material';
-import Header from '../Header/Header';
 
 
-const Login = () => {
-// basically importing all the state so we can set the variables once a user is logged in 
-const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, jwtToken, setToken} = useContext(UserInfo);
+const LoginNoSecurity = () => {
+
+
+// const [user, setUser] = useState({
+//   username: "",
+//   password: ""
+// });
+
+// const [isAuthenticated, setAuthenticate] = useState(false);
+// const [open, setOpen] = useState(false);
+const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
 
 const handleChange = (event) => {
   setUser({... user, [event.target.name] : event.target.value});
@@ -26,9 +33,7 @@ const login = () => {
     body: JSON.stringify(user)
   })
   .then(res => {
-    // get the actual value of the token and store it in this variable: jwtToken
     const jwtToken = res.headers.get
-    // setToken(res.headers.get)
     ('Authorization');
     if (jwtToken != null) {
       // if the user has been authenticated, jwtToken will not be null --> use sessionStorage so if the user refreshes page, they're still
@@ -36,7 +41,7 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
-      console.log(user)
+      console.log("loggedin")
 
     } else {
       setOpen(true)
@@ -44,20 +49,29 @@ const login = () => {
   }).catch(err => console.error(err))
 
 }
-//  if the user has logged in successfully, take them to the Landing page
- if (isAuthenticated){
-   return <Landing/>
-   
- }
- 
+// if the user has logged in successfully, take them to the Landing page
+// if (isAuthenticated){
+//   return <Landing/>
+// }
+// else {
+//   console.log(open);
+// }
+
+  const logout = () => {
+    sessionStorage.removeItem('jwt');
+    setAuthenticate(false);
+  }
 
   const handleButton = () =>{
     const token = sessionStorage.getItem("jwt");
     fetch(SERVER_URL + 'users', {
     headers: {'Authorization': token}}
     )
-  .then(response => response.json())
-  .then(data => console.log(data));
+    .then(res => {
+        console.log(res.data)});
+
+
+
   }
 
     
@@ -66,7 +80,6 @@ const login = () => {
   return (
 
     <>
-    <Header/>
     <form>
       <label>Username: </label>
       <input
@@ -95,16 +108,4 @@ const login = () => {
 
   }
 
-
-
-
-
-
-
-
-
-// Login.propTypes = {};
-
-// Login.defaultProps = {};
-
-export default Login;
+  export default LoginNoSecurity;
