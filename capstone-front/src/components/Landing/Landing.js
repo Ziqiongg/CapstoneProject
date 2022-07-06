@@ -48,8 +48,9 @@ const Landing = () => (
 
 <div>
 <section id="trending-products">
+<h2 className="carousel-text">TRENDING PRODUCTS </h2>  
         <div className="landing-page-slide-wrapper">
-        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+        
 <Carousel>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
