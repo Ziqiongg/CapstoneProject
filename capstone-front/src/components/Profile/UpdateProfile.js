@@ -3,7 +3,6 @@
 const UpdateProfile = async(firstName, lastName, userName, email, password) => {
     if(firstName) await updateSpecific(firstName, "firstName")
     if(lastName) updateSpecific(lastName, "lastname")
-    if(userName) updateSpecific(userName, "username")
     if(email) updateSpecific(email, "email")
     if(password) updateSpecific(password, "password")
 }
