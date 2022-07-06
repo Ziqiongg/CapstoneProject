@@ -38,6 +38,7 @@ import { Card, Button } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const Landing = () => (
 
@@ -45,13 +46,17 @@ const Landing = () => (
 
 {/* image carousel */}
 
+<Header />
+
 
 <div>
+
   <section id="trending-products">
       <div className="landing-page-slide-wrapper">
         <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
 
 <Carousel showArrows={true} showThumbs={false}>
+
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
             <Link to="/products/id/8"><img className="animated-img" src={Doggy} alt="Golden retriever adoption"/></Link>
@@ -101,6 +106,7 @@ const Landing = () => (
       <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
       </div>
     </Carousel>
+
 
   </section>
 </div>

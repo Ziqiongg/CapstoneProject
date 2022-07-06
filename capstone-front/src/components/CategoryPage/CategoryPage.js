@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 
 const CategoryPage = (props) => (
   <div className="CategoryPage">
-    {/* <Header /> */}
+    <Header />
     <ProductList 
           address = {`http://localhost:8080/products/category/${props.itemLower}`} />
-          <button><Link to="/">Back</Link></button>
+          <button className='back-btn'><Link to="/">Back to Home</Link></button>
           
   </div>
 );
