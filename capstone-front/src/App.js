@@ -14,18 +14,13 @@ import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import { exportName } from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import CategoryPage from "./components/CategoryPage/CategoryPage";
-
 import Basket from "./components/Basket/Basket";
 import Order from "./components/Orders/Orders";
-import { getBasket } from "./components/Basket/Axios/BasketAPI";
 import AboutUs from "./components/AboutUs/AboutUs";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
-
-
 
 
 function App() {
@@ -47,12 +42,11 @@ function App() {
         console.log("adding to basket");
         setBasketItem([...basketItem, product])}
 
-    // add items from basket to ordered/purchased
+    // add items from basket to ordered/purchased 
       const PurchaseItems = ([basketItem]) => {
         console.log("purchasing basket");
         setPurchases([...purchases, basketItem])}
         
-
     
   return (
 
@@ -72,8 +66,8 @@ function App() {
               <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
           )
           })}
-        <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} />} />
-          <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
+          <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} />} />
+          <Route path="/orders" element={<Order purchases={[purchases]} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />

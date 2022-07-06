@@ -8,11 +8,10 @@ import { Link } from 'react-router-dom';
 function Basket ({basketItem}, {PurchaseAllItems}) {
 
   const handleClick = () => {
-    PurchaseAllItems();
+    PurchaseAllItems(basketItem);
     console.log("purchasing 2 basket");
 
   }
-
 
   return(
     <>

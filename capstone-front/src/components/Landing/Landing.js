@@ -47,9 +47,10 @@ const Landing = () => (
 
 
 <div>
-<section id="trending-products">
-        <div className="landing-page-slide-wrapper">
+  <section id="trending-products">
+      <div className="landing-page-slide-wrapper">
         <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+
 <Carousel showArrows={true} showThumbs={false}>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
@@ -77,39 +78,32 @@ const Landing = () => (
             
             </div>
             </Carousel>     
-       </div>
+    </div>
        
-    </section> <br/>
+  </section> <br/>
 
 
-  <h2 className='category-text'>CATEGORIES</h2>
-  <section className="landing-page-slide-wrapper">
-      
+    <h2 className='category-text'>CATEGORIES</h2>
+    <section className="landing-page-slide-wrapper">
+        
 
-  <Carousel showArrows={true} showThumbs={false}>
-  <div>
-  <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
-  <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
-  <Link to="/productcategory/pets"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-            {/* <figcaption>Quaker Oats</figcaption></a> */}
-            
-</div>
-<div>
-<Link to="/productcategory/coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
+    <Carousel showArrows={true} showThumbs={false}>
+      <div>
+      <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
+      <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
+      <Link to="/productcategory/pets"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
+              
+                
+      </div>
+      <div>
+      <Link to="/productcategory/coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
       <Link to="/productcategory/hats"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
       <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
-</div>
-</Carousel>
- {/* text so i can repush */}
-     
+      </div>
+    </Carousel>
 
   </section>
 </div>
-
-
-{/* image carousel */}
-
-
 
     <section>
     <div className="bottom-row-container">
