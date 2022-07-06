@@ -62,7 +62,9 @@ return(
               </Card.Text>
 
               <Button variant="primary" className='btn' onClick = {()=> navigate(`/products/id/${product.id}`)}>View</Button>
+
               {/* <Button variant="primary" className='btn' onClick = {(product) => props.addItems(product)}>Purchase</Button> */}
+
             </Card.Body>
           </Card>
         </Col>)})}
