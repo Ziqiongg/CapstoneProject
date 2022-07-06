@@ -82,10 +82,7 @@ const  Header = (props) => {
 
   }
 
-
-  const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
-
-
+  const {isAuthenticated} = useContext(UserInfo);
 
   return (
     <>
@@ -105,6 +102,7 @@ const  Header = (props) => {
 <div className="header__nav">
         
         <div className="header__option">
+          {/* If the user is Logged in/authenticated, change button to Logout */}
         <button><Link to = "/login"><span className="header__optionLineOne">{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
 

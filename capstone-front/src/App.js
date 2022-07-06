@@ -45,6 +45,7 @@ function App() {
     const [users, setUsers] = useState([]);
     const [basketItem, setBasketItem] =useState([]);
     const [purchases, setPurchases] = useState([]);
+    const [jwtToken, setToken] = useState("")
 
     useEffect(() =>{
       axios.get('http://localhost:8080/categories')
@@ -67,7 +68,8 @@ function App() {
 }
     
   return (
-    <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers}}>
+    <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
+    jwtToken, setToken}}>
     <Router>
       <div className = "main-wrapper">
       
