@@ -50,7 +50,7 @@ const Landing = () => (
 <section id="trending-products">
         <div className="landing-page-slide-wrapper">
         <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
-<Carousel>
+<Carousel showArrows={true} showThumbs={false}>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
             <Link to="/products/id/8"><img className="animated-img" src={Doggy} alt="Golden retriever adoption"/></Link>
@@ -86,7 +86,7 @@ const Landing = () => (
   <section className="landing-page-slide-wrapper">
       
 
-  <Carousel>
+  <Carousel showArrows={true} showThumbs={false}>
   <div>
   <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
   <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>

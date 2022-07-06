@@ -5,10 +5,10 @@ import BasketTable from './BasketTable';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Basket ({basketItem}, {BuyBasket}) {
+function Basket ({basketItem}, {PurchaseAllItems}) {
 
   const handleClick = () => {
-    BuyBasket()
+    PurchaseAllItems();
     console.log("purchasing 2 basket");
 
   }
