@@ -1,9 +1,11 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+import logo from "../../assets/header-logo.png";
+import React, { useState } from 'react';
 import UpdateProfile from './UpdateProfile'
 import './Profile.css';
 
 
-const Update = () => {
+const Profile = () => {
 
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -22,9 +24,9 @@ const Update = () => {
     event.preventDefault();  
 };
 
-const updateUser = async() => {
-const result = await UpdateProfile(firstName, lastName, userName, email, password);
-}
+// const updateUser = async() => {
+// const result = await UpdateProfile(firstName, lastName, userName, email, password);
+// }
 
 
 
@@ -35,40 +37,40 @@ const result = await UpdateProfile(firstName, lastName, userName, email, passwor
       <div class = "user-name">
           <label>
             Enter your username:
-            <input type = "text" name = "username" variant = "filled" required onChange = {handleUserNameChange} />
+            <input type = "text" name = "username" variant = "filled" onChange = {handleUserNameChange} />
           </label>
       </div>
 
       <div class = "first-name">
           <label>
             Enter your first name:
-            <input type = "text" name = "userFirstName" variant = "filled" required onChange = {handleFirstNameChange} />
+            <input type = "text" name = "userFirstName" variant = "filled" onChange = {handleFirstNameChange} />
           </label>
       </div>
 
       <div class = "last-name">
           <label>
             Enter your last name:
-            <input type = "text" name = "userLastName" variant = "filled" required onChange = {handleLastNameChange} />
+            <input type = "text" name = "userLastName" variant = "filled" onChange = {handleLastNameChange} />
           </label>
       </div>
 
       <div class = "user-email">
           <label>
             Enter your email:
-            <input type = "email" variant = "filled" required name = "userAddress" onChange = {handleEmailChange} />
+            <input type = "email" variant = "filled" name = "userAddress" onChange = {handleEmailChange} />
           </label>
       </div>
 
       <div class = "user-password">
           <label>
             Enter your password:
-            <input type = "password" variant = "filled" required name = "userPassword" onChange = {handlePasswordChange} />
+            <input type = "password" variant = "filled" name = "userPassword" onChange = {handlePasswordChange} />
           </label>
       </div>
       <div class = "clearfix">
         <button type = "reset" class = "cancelbtn">Cancel</button>
-        <button class = "updatebtn" type = "submit" onClick = {updateUser}>Update Info</button>
+        <button class = "updatebtn" type = "submit" onClick = {UpdateProfile(firstName, lastName, userName, email, password)}>Update Info</button>
       </div>
     </form>
 
