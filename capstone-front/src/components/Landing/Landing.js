@@ -100,7 +100,7 @@ const Landing = () => (
       <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
 </div>
 </Carousel>
-
+ {/* text so i can repush */}
      
 
   </section>

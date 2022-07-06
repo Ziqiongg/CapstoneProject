@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Landing/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Landing/Landing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,6 +77,10 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -87,5 +91,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="java-exception">
+          <condition expression="org.springframeworg.security.authentication.InternalAuthenticationServiceException" language="JAVA" />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

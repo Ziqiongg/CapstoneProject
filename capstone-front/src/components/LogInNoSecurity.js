@@ -8,8 +8,16 @@ import { UserInfo } from '../../UserContext';
 import { Snackbar } from '@mui/material';
 
 
-const Login = () => {
-// basically importing all the state so we can set the variables once a user is logged in 
+const LoginNoSecurity = () => {
+
+
+// const [user, setUser] = useState({
+//   username: "",
+//   password: ""
+// });
+
+// const [isAuthenticated, setAuthenticate] = useState(false);
+// const [open, setOpen] = useState(false);
 const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
 
 const handleChange = (event) => {
@@ -25,7 +33,6 @@ const login = () => {
     body: JSON.stringify(user)
   })
   .then(res => {
-    // get the actual value of the token and store it in this variable: jwtToken
     const jwtToken = res.headers.get
     ('Authorization');
     if (jwtToken != null) {
@@ -42,19 +49,29 @@ const login = () => {
   }).catch(err => console.error(err))
 
 }
-//  if the user has logged in successfully, take them to the Landing page
- if (isAuthenticated){
-   return <Landing/>
- }
- 
+// if the user has logged in successfully, take them to the Landing page
+// if (isAuthenticated){
+//   return <Landing/>
+// }
+// else {
+//   console.log(open);
+// }
+
+  const logout = () => {
+    sessionStorage.removeItem('jwt');
+    setAuthenticate(false);
+  }
 
   const handleButton = () =>{
     const token = sessionStorage.getItem("jwt");
     fetch(SERVER_URL + 'users', {
     headers: {'Authorization': token}}
     )
-  .then(response => response.json())
-  .then(data => console.log(data));
+    .then(res => {
+        console.log(res.data)});
+
+
+
   }
 
     
@@ -91,16 +108,4 @@ const login = () => {
 
   }
 
-
-
-
-
-
-
-
-
-// Login.propTypes = {};
-
-// Login.defaultProps = {};
-
-export default Login;
+  export default LoginNoSecurity;
