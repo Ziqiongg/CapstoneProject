@@ -46,12 +46,14 @@ const Landing = () => (
 <>
 
 {/* image carousel */}
-<Header/>
+
+<Header />
 
 <div>
 <section id="trending-products">
+<h2 className="carousel-text">TRENDING PRODUCTS </h2>  
         <div className="landing-page-slide-wrapper">
-        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+        
 <Carousel>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
@@ -93,7 +95,7 @@ const Landing = () => (
   <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
   <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
   <Link to="/productcategory/pets"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-            {/* <figcaption>Quaker Oats</figcaption></a> */}
+          
             
 </div>
 <div>
@@ -102,7 +104,7 @@ const Landing = () => (
       <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
 </div>
 </Carousel>
- {/* text so i can repush */}
+ 
      
 
   </section>
