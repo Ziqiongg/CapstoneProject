@@ -110,25 +110,25 @@ const  Header = (props) => {
         <button><Link to = "/register"><span className="header__optionLineOne">Register</span></Link></button>
         </div>
       
-
+        {isAuthenticated &&  
+        
+        <div>
+          <div className="header__option">
+          <button><Link to = "/orders"><span className="header__optionLineOne">Orders</span>
+          </Link></button>
+          </div>
       
-        <div className="header__option">
-        <button><Link to = "/orders"><span className="header__optionLineOne">Orders</span>
-        </Link></button>
-        </div>
-      
-      
-
-      <div className="header__option">
-      <button><Link to = "/settings"><span className="header__optionLineOne">Settings</span></Link></button>
-      </div>
-      
-        <div className="header__optionBasket">
-        <button><Link to = "/basket"><ShoppingBasketIcon /></Link></button>
-          <span className="header__optionLineTwo header__basketCount">
-            0
-          </span>
-        </div>
+          <div className="header__option">
+          <button><Link to = "/settings"><span className="header__optionLineOne">Settings</span></Link></button>
+          </div>
+        
+          <div className="header__optionBasket">
+            <button><Link to = "/basket"><ShoppingBasketIcon /></Link></button>
+            <span className="header__optionLineTwo header__basketCount">
+              0
+            </span>
+          </div>
+        </div> }
       
     </div>
         </header>
