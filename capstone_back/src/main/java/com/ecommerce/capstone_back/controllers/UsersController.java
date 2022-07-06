@@ -63,9 +63,9 @@ public class UsersController {
 //        return ResponseEntity.ok().body(users);
 //    }
 
-    @PatchMapping("/users/patch/firstName/{id}")
-    public ResponseEntity<Users> updateUsersFirstName(@PathVariable Long id, @RequestBody String firstName) throws Exception{
-        Users users = usersService.getUsersById(id);
+    @PatchMapping("/users/patch/firstName")
+    public ResponseEntity<Users> updateUsersFirstName(@RequestBody String firstName) throws Exception{
+        Users users = usersService.getUsersByUsername();
         users.setUserFirstName(firstName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);

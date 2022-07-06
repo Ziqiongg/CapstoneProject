@@ -29,6 +29,10 @@ public class UsersService {
                         "User with id " + id + " not found. Please try again."));
     }
 
+    public Users getUsersByUsername(String userName) {
+        return usersRepository.findByUsername(userName);
+    }
+
     public void updateUsers(Users users) {
         usersRepository.save(users);
     }
