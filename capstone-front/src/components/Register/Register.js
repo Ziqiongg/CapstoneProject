@@ -47,7 +47,7 @@ const result = await RegisterUser(JSON.stringify(newUser));
 
 
   return (
-    <><Header />
+    <>
 
     <div className="register-form">
             <Link to='/'>
