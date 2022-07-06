@@ -46,7 +46,7 @@ function App() {
     const [users, setUsers] = useState([]);
     const [basketItem, setBasketItem] =useState([]);
     const [purchases, setPurchases] = useState([]);
-    const [jwtToken, setToken] = useState("")
+    const [userId, setUserId  ] = useState(null)
 
     useEffect(() =>{
       axios.get('http://localhost:8080/categories')
@@ -70,11 +70,9 @@ function App() {
     
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
-    jwtToken, setToken}}>
+    userId, setUserId}}>
     <Router>
       <div className = "main-wrapper">
-      
-     {/* <Header /> */}
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />

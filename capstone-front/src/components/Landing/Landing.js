@@ -45,7 +45,9 @@ const Landing = () => (
 <>
 
 {/* image carousel */}
-<Header/>
+
+<Header />
+
 
 <div>
 <section id="trending-products">
