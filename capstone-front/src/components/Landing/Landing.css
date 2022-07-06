@@ -1,3 +1,68 @@
+body{
+  background-color: lightgrey;
+}
+
+.home{
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shop-by-section {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.shop-by-section__card{
+  height: 350px !important;
+    overflow: hidden;
+}
+
+.card-image{
+  height:auto;
+  width: 200px;
+}
+
+
+.landscape-image{
+  height:200px;
+  width: 350px;
+  padding-right: 30px;
+}
+.landscape-image-recycled{
+  height: 250px;
+  width: 350px;
+}
+.landscape-image-broken{
+  height: 210px;
+  width: 250px;
+}
+
+.landing-image-header{
+  width: 266.67px;
+  font-size: 25px;
+}
+
+.broken-footer{
+  font-size: 12px;
+}
+
+.landscape-image-second{
+  height:200px;
+  width: 350px;
+  padding-right: 30px;
+}
+
+.landscape-image-broken-second{
+  height:150px;
+  width: 250px;
+}
+.broken-footer-second{
+  font-size: 17px;
+}
+
+
+
 /* CSS FOR TOP IMAGE GRID */
 
 .landing-top-container{
@@ -29,17 +94,22 @@
     object-fit: cover;
     display: inline-block;
     
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: inline-block;
     margin-top:10px;
     
+
+    display: inline-block;
+    margin-top:10px; 
+
+    /* padding: 10px;  */
+
   }
 
 .top-row-img:hover {
     position:center;
     transform: scale(1.009);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
   }
 
 /* CSS FOR THE CAROUSEL */
@@ -52,7 +122,7 @@
     
     white-space: nowrap;
     background-color:lightgrey;
-  
+
   }
 
 .landing-page-slide-wrapper a {
@@ -65,11 +135,6 @@
     
   }
   
-.landing-page-slide-wrapper a:hover {
-    background-color: #777;
-    transform: scale(1.009);
-    
-  }
  
 .animated-img {
   float:left;
@@ -78,6 +143,7 @@
   object-fit: cover;
   display: inline-block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
   }
 
   /* CSS FOR THE BOTTOM IMAGE GRID */

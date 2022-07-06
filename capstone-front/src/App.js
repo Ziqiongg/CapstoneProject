@@ -1,20 +1,21 @@
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Redirect,
+  // Redirect,
 } from "react-router-dom";
 import './App.css';
 import ProductList from './components/ProductList/ProductList';
 import ProductPage from "./components/ProductPage/Productpage";
 import Landing from "./components/Landing/Landing";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
+import Profile from "./components/Profile/Profile";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { exportName } from "./components/Header/Header";
+// import { exportName } from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import CategoryPage from "./components/CategoryPage/CategoryPage";
 import Basket from "./components/Basket/Basket";
@@ -23,7 +24,7 @@ import { UserInfo } from "./UserContext";
 import Order from "./components/Orders/Orders";
 import AboutUs from "./components/AboutUs/AboutUs";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
-
+import OurPledge from "./components/OurPledge/OurPledge"
 
 function App() {
 
@@ -65,13 +66,14 @@ function App() {
     userId, setUserId}}>
 
     <Router>
-      <div className = "main-wrapper">
+      <div className = "main-wrapper" >
 
-      <Routes >
+      <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
           <Route exact path="/productlist" element={<ProductList address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
@@ -79,6 +81,7 @@ function App() {
           <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} />} />
           <Route path="/orders" element={<Order purchases={purchases} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
+          <Route path = "/ourpledge" element = {<OurPledge />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
           <Route path={`/searchname`} element = {<SearchBar />} />
