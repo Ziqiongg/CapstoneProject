@@ -6,11 +6,12 @@ import Landing from '../Landing/Landing';
 import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
 import { Snackbar } from '@mui/material';
+import Header from '../Header/Header';
 
 
 const Login = () => {
 // basically importing all the state so we can set the variables once a user is logged in 
-const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate} = useContext(UserInfo);
+const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, jwtToken, setToken} = useContext(UserInfo);
 
 const handleChange = (event) => {
   setUser({... user, [event.target.name] : event.target.value});
@@ -27,6 +28,7 @@ const login = () => {
   .then(res => {
     // get the actual value of the token and store it in this variable: jwtToken
     const jwtToken = res.headers.get
+    // setToken(res.headers.get)
     ('Authorization');
     if (jwtToken != null) {
       // if the user has been authenticated, jwtToken will not be null --> use sessionStorage so if the user refreshes page, they're still
@@ -34,7 +36,7 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
-      console.log("loggedin")
+      console.log(user)
 
     } else {
       setOpen(true)
@@ -45,6 +47,7 @@ const login = () => {
 //  if the user has logged in successfully, take them to the Landing page
  if (isAuthenticated){
    return <Landing/>
+   
  }
  
 
@@ -63,6 +66,7 @@ const login = () => {
   return (
 
     <>
+    <Header/>
     <form>
       <label>Username: </label>
       <input

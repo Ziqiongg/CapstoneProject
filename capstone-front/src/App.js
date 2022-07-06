@@ -45,6 +45,7 @@ function App() {
     const [users, setUsers] = useState([]);
     const [basketItem, setBasketItem] =useState([]);
     const [purchases, setPurchases] = useState([]);
+    const [jwtToken, setToken] = useState("")
 
     useEffect(() =>{
       axios.get('http://localhost:8080/categories')
@@ -67,10 +68,15 @@ function App() {
 }
     
   return (
-    <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers}}>
+    <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
+    jwtToken, setToken}}>
     <Router>
       <div className = "main-wrapper">
       
+<<<<<<< HEAD
+=======
+     {/* <Header /> */}
+>>>>>>> JWT-M
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
@@ -89,6 +95,7 @@ function App() {
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
           <Route path={`/searchname`} element = {<SearchBar />} />
+          <Route path={`/login`} element = {<Login />} />
           {/* <Route path="/settings" element={<SettingsPage />} />
 
           <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} Delete={DeleteFromBasket}/>} />
