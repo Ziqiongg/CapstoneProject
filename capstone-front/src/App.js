@@ -52,25 +52,6 @@ function App() {
       .catch(error => {console.log(error)})
       }, [])
 
-
-
-
-      // const getUser = () => {
-      //   // only do if authenticated
-      //   const token = sessionStorage.getItem("jwt");
-      //   fetch (SERVER_URL + 'users/username/' + user["username"], {
-      //     method: 'GET',
-      //     headers: {'Content-Type': 'application/json',
-      //               'Authorization': token}
-      //   })
-      //   .then(response => response.json())
-      //   .then(data => setUserId(data.id))
-      // }
-      
-
-      
-
-
       // add items to basket
       const AddToBasket = (product) => {
         // only add item to basket if user has logged in

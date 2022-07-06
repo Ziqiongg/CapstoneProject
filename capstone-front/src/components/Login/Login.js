@@ -66,10 +66,6 @@ const login = () => {
   
 
   return (
-
-    
-    
-
     <div className="login-form">
             <Link to='/'>
                 <div

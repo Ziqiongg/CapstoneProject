@@ -8,13 +8,15 @@ import { UserInfo } from '../../UserContext';
 import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
 
-function Basket ({basketItem}, {BuyBasket}) {
+// function Basket ({basketItem}, {BuyBasket}) {
+  function Basket ({basketItem}, {PurchaseAllItems}) {
 
 
   const {user, userId, setUserId, numItems, setNumItems, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
-    BuyBasket()
+    // BuyBasket()
+    PurchaseAllItems()
     console.log("purchasing 2 basket");
 
   }
@@ -47,16 +49,8 @@ function Basket ({basketItem}, {BuyBasket}) {
     .then(response => response.json())
     .then(data => console.log(data));
   }
-
 }
 
-// add item to basket
-const addItemToBasket = () => {
-  const token = sessionStorage.getItem("jwt");
-
-  fetch (SERVER_URL + 'AppUser_basket')
-
-}
 
 
   return(
