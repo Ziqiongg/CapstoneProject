@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class UsersService {
 
-//    private BCryptPasswordEncoder passwordEncoder;
+//    private final BCryptPasswordEncoder passwordEncoder;
     public final UsersRepository usersRepository;
 
     @Autowired
@@ -55,4 +55,9 @@ public class UsersService {
         }
         usersRepository.save(newUser);
     }
+
+    public Optional<Users> getByUsername(String username) {
+        return usersRepository.findByUsername(username);
+    }
+
 }

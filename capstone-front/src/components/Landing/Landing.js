@@ -39,6 +39,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 171cd329e842f1afdd7aa407a6f5261bead6e842
 
 const Landing = () => (
 
@@ -47,10 +51,15 @@ const Landing = () => (
 {/* image carousel */}
 
 <Header />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 171cd329e842f1afdd7aa407a6f5261bead6e842
 <div>
 <section id="trending-products">
+<h2 className="carousel-text">TRENDING PRODUCTS </h2>  
         <div className="landing-page-slide-wrapper">
-        <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+        
 <Carousel>
             <div>
             <Link to="/products/id/17"><img className="animated-img" src={BigHat} alt="pingu hat"/></Link>
@@ -92,7 +101,7 @@ const Landing = () => (
   <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
   <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
   <Link to="/productcategory/pets"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-            {/* <figcaption>Quaker Oats</figcaption></a> */}
+          
             
 </div>
 <div>
@@ -101,7 +110,7 @@ const Landing = () => (
       <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
 </div>
 </Carousel>
-
+ 
      
 
   </section>
