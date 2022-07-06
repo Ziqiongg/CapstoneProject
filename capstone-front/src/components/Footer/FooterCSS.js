@@ -2,7 +2,7 @@ import styled from 'styled-components';
    
 export const FooterBackground = styled.div`
   padding: 0.0001px;
-  background: rgba(0,136,169,1);;
+  background-color: #101522;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -42,12 +42,15 @@ export const Row = styled.div`
 `;
    
 export const Link = styled.a`
-  color: #fff;
-  font-size: 10px;
-  text-decoration: none;
-  &:hover {
-      color: green;
-      transition: 200ms ease-in;
+color: #fff;
+text-decoration: none;
+margin-bottom: 0.5rem;
+font-size: 14px;
+&:hover {
+  color: #cd9042 !important;
+  transition: 0.3s ease-out;
+  text-decoration: none !important;
+
   }
 `;
    
