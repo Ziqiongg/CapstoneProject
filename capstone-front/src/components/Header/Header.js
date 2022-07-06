@@ -108,20 +108,12 @@ const  Header = (props) => {
 <div className="header__nav">
         
         <div className="header__option">
-<<<<<<< HEAD
-        <button><Link to = "/login" className = "header__link"><span className="header__optionLineOne">Login</span></Link></button>
-        </div>
-
-        <div className="header__option">
-        <button><Link to = "/register" className = "header__link"><span className="header__optionLineOne">Register</span></Link></button>
-=======
           {/* If the user is Logged in/authenticated, change button to Logout */}
-        <button><Link to = "/login"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
+        <button><Link to = "/login" className = "header__link"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
 
         <div className="header__option">
-        <button><Link to = {isAuthenticated ? "/Profile" : "/Register"}><span className="header__optionLineOne">{isAuthenticated ? "Edit Profile" : "Register"}</span></Link></button>
->>>>>>> f0597868f7357d2538da66d90e9ddb862ab2897a
+        <button><Link to = {isAuthenticated ? "/Profile" : "/Register"} className = "header__link"><span className="header__optionLineOne">{isAuthenticated ? "Edit Profile" : "Register"}</span></Link></button>
         </div>
       
 

@@ -9,7 +9,7 @@ public enum Category {
     HATS,
     INSTRUMENTS,
     BOOKS,
-    COMPUTERS_AND_ACCESSORIES
+    ACCESSORIES
 };
 
 
