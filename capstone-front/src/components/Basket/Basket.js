@@ -11,7 +11,7 @@ import { SERVER_URL } from '../../constants';
 function Basket ({basketItem}, {BuyBasket}) {
 
 
-  const {user} = useContext(UserInfo);
+  const {user, userId, setUserId} = useContext(UserInfo);
 
   const handleClick = () => {
     BuyBasket()
@@ -19,17 +19,18 @@ function Basket ({basketItem}, {BuyBasket}) {
 
   }
 
-  // const getUser = () => {
-  //   const token = sessionStorage.getItem("jwt");
-  //   // but actually get the username
-  //   fetch (SERVER_URL + 'username' + {user.username}, {
-  //     method: 'GET',
-  //     headers: {'Content-Type': 'application/json',
-  //               'Authorization': token},
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // }
+
+  // get the details of the user that is logged in
+  const getUser = () => {
+    const token = sessionStorage.getItem("jwt");
+    fetch (SERVER_URL + 'users/username/' + user["username"], {
+      method: 'GET',
+      headers: {'Content-Type': 'application/json',
+                'Authorization': token},
+    })
+    .then(response => response.json())
+    .then(data => setUserId(data.id))
+  }
 
 
   return(
@@ -40,7 +41,7 @@ function Basket ({basketItem}, {BuyBasket}) {
         <button><Link to="/">Back</Link></button>
         <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
       </div>
-      {/* <button onClick = {getUser}>GetUser</button> */}
+      <button onClick = {getUser}>GetUser</button>
     </>
   )
 }

@@ -36,7 +36,7 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
-      console.log(user)
+      console.log(user["username"])
 
     } else {
       setOpen(true)

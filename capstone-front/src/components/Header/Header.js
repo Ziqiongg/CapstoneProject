@@ -82,7 +82,13 @@ const  Header = (props) => {
 
   }
 
-  const {isAuthenticated} = useContext(UserInfo);
+  const {isAuthenticated, setAuthenticate} = useContext(UserInfo);
+
+  const logout = () => {
+    sessionStorage.removeItem("jwt");
+    setAuthenticate(false);
+    console.log("loggedout")
+  }
 
   return (
     <>
@@ -103,7 +109,7 @@ const  Header = (props) => {
         
         <div className="header__option">
           {/* If the user is Logged in/authenticated, change button to Logout */}
-        <button><Link to = "/login"><span className="header__optionLineOne">{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
+        <button><Link to = "/login"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
 
         <div className="header__option">
