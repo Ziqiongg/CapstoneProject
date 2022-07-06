@@ -113,7 +113,7 @@ const  Header = (props) => {
         </div>
 
         <div className="header__option">
-        <button><Link to = "/register"><span className="header__optionLineOne">Register</span></Link></button>
+        <button><Link to = {isAuthenticated ? "/Profile" : "/Register"}><span className="header__optionLineOne">{isAuthenticated ? "Edit Profile" : "Register"}</span></Link></button>
         </div>
       
 

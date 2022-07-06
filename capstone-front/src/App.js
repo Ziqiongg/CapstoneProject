@@ -12,6 +12,7 @@ import Landing from "./components/Landing/Landing";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
+import Profile from "./components/Profile/Profile";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -72,13 +73,13 @@ function App() {
     userId, setUserId}}>
     <Router>
       <div className = "main-wrapper">
-
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
           <Route exact path="/productlist" element={<ProductList 
           address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
