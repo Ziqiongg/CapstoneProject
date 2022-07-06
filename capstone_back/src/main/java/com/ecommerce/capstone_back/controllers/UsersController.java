@@ -23,8 +23,6 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-    UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
     @GetMapping({"/users/id/{id}"})
     public ResponseEntity<Users> getUsersById(@PathVariable Long id) throws Exception {
@@ -53,56 +51,67 @@ public class UsersController {
 //        return ResponseEntity.ok().body(users.getWallet());
 //   }
 
-   // Super update all things as needed --- Does not work, keeping as extension later on
-//    @PatchMapping("/users/{id}")
-//    public ResponseEntity<Users> updateUsers(@PathVariable Long id,
-//                                                 @RequestParam Optional<Double> wallet,
-//                                                 @RequestParam Optional<String> firstName,
-//                                                 @RequestParam Optional<String> lastName,
-//                                                 @RequestParam Optional<String> address) throws Exception {
-//        Users users = usersService.getUsersById(id);
-//        wallet.ifPresent(users::setWallet);
-//        firstName.ifPresent(users::setUsersFirstName);
-//        lastName.ifPresent(users::setUsersLastName);
-//        address.ifPresent(users::setUsersAddress);
-//        return ResponseEntity.ok().body(users);
-//    }
+//    Super update all things as needed --- Does not work, keeping as extension later on
+    @PatchMapping("/users")
+    public ResponseEntity<Users> updateUsers(@RequestParam Optional<Double> wallet,
+                                             @RequestParam Optional<String> firstName,
+                                             @RequestParam Optional<String> lastName,
+                                             @RequestParam Optional<String> address) throws Exception {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
+        wallet.ifPresent(users::setWallet);
+        firstName.ifPresent(users::setUserFirstName);
+        lastName.ifPresent(users::setUserLastName);
+        address.ifPresent(users::setUserAddress);
+        return ResponseEntity.ok().body(users);
+    }
 
     @PatchMapping("/users/patch/firstName")
     public ResponseEntity<Users> updateUsersFirstName(@RequestBody String firstName) throws Exception{
-        Users users = usersService.getUsersByUsername(userDetails.getUsername());
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         users.setUserFirstName(firstName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
 
-    @PatchMapping("/users/patch/lastName/{id}")
-    public ResponseEntity<Users> updateUsersLastName(@PathVariable Long id, @RequestBody String lastName) throws Exception{
-        Users users = usersService.getUsersById(id);
+    @PatchMapping("/users/patch/lastName")
+    public ResponseEntity<Users> updateUsersLastName(@RequestBody String lastName) throws Exception{
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         users.setUserLastName(lastName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
 
-    @PatchMapping("/users/patch/address/{id}")
-    public ResponseEntity<Users> updateUsersAddress(@PathVariable Long id, @RequestBody String address) throws Exception{
-        Users users = usersService.getUsersById(id);
+    @PatchMapping("/users/patch/address")
+    public ResponseEntity<Users> updateUsersAddress(@RequestBody String address) throws Exception{
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         users.setUserAddress(address);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
 
-    @PatchMapping("/users/patch/password/{id}")
-    public ResponseEntity<Users> updateUsersPassword(@PathVariable Long id, @RequestBody String password) throws Exception{
-        Users users = usersService.getUsersById(id);
+    @PatchMapping("/users/patch/password")
+    public ResponseEntity<Users> updateUsersPassword(@RequestBody String password) throws Exception{
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         users.setUserPassword(password);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
     }
 
-    @PatchMapping("/users/patch/wallet/{id}")
-    public ResponseEntity<Users> updateUsersWallet(@PathVariable Long id, @RequestBody double wallet) throws Exception{
-        Users users = usersService.getUsersById(id);
+    @PatchMapping("/users/patch/wallet")
+    public ResponseEntity<Users> updateUsersWallet(@RequestBody double wallet) throws Exception{
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         users.setWallet(wallet);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
