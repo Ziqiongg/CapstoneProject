@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { Link, useNavigate } from "react-router-dom";
 
 
 const ProductList = (props) => {
@@ -25,6 +26,8 @@ const ProductList = (props) => {
       })
     }, [props.address])
 
+    let navigate = useNavigate(); 
+    
    
   const handleClickToDetailPage = () => {
     
@@ -49,7 +52,7 @@ return(
 
         <Col key= {product.id}>
         <Card style={{ width: '18rem'}} className = "each-card"  >
-          <Card.Img variant="top" src= {product.pictureAddress} />
+          <Card.Img variant="top" src= {product.pictureAddress} className = "each-img" />
           <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
               <Card.Subtitle>{productCategoryAfter}</Card.Subtitle>
@@ -58,7 +61,7 @@ return(
                 free-delivery
               </Card.Text>
 
-              <Button variant="primary" className='btn' onClick = {handleClickToDetailPage}>View</Button>
+              <Button variant="primary" className='btn' onClick = {()=> navigate(`/products/id/${product.id}`)}>View</Button>
               <Button variant="primary" className='btn' onClick = {(product) => props.addItems(product)}>Purchase</Button>
             </Card.Body>
           </Card>

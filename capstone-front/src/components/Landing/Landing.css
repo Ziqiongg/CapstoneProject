@@ -1,9 +1,6 @@
 
 /* CSS FOR TOP IMAGE GRID */
 
-body {
-  background-color: #00AFDB;
-}
 
 .landing-top-container{
     border: 2px solid gray;
@@ -31,7 +28,10 @@ body {
 .top-row-img {
     height: 200px;
     width: 300px;
-
+    object-fit: cover;
+    display: inline-block;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* For Mobile:
       max-width:100%
       max-height: 100%
@@ -73,7 +73,7 @@ body {
    
     /* overflow: auto; */
     white-space: nowrap;
-    background-color: #00AFDB;
+    background-color:lightgrey;
     
     
   }
