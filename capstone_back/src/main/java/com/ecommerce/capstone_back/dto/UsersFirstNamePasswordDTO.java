@@ -2,23 +2,25 @@ package com.ecommerce.capstone_back.dto;
 
 public class UsersFirstNamePasswordDTO {
 
-    private String userFirstName;
+    private String username;
     private String password;
 
+
     public UsersFirstNamePasswordDTO(String userFirstName, String password){
-        this.userFirstName = userFirstName;
+        this.username = userFirstName;
         this.password = password;
     }
 
-    public String getUserFirstName() {
-        return userFirstName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserFirstName(String firstName) {
-        this.userFirstName = firstName;
+    public void setUsername(String firstName) {
+        this.username = firstName;
     }
 
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
     }
 

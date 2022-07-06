@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class UsersService {
 
-//    private BCryptPasswordEncoder passwordEncoder;
+//    private final BCryptPasswordEncoder passwordEncoder;
     public final UsersRepository usersRepository;
 
     @Autowired
@@ -27,6 +27,10 @@ public class UsersService {
         return usersRepository.findById(id).orElseThrow(
                 () -> new Exception(
                         "User with id " + id + " not found. Please try again."));
+    }
+
+    public Users getUsersByUsername(String userName) {
+        return usersRepository.findByUsername(userName).get();
     }
 
     public void updateUsers(Users users) {
@@ -55,4 +59,9 @@ public class UsersService {
         }
         usersRepository.save(newUser);
     }
+
+    public Optional<Users> getByUsername(String username) {
+        return usersRepository.findByUsername(username);
+    }
+
 }

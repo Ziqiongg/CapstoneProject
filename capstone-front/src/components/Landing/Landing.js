@@ -38,13 +38,20 @@ import { Card, Button } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+=======
+import Header from '../Header/Header';
+
+>>>>>>> f0597868f7357d2538da66d90e9ddb862ab2897a
 const Landing = () => (
 
 <>
 
 {/* image carousel */}
+
+<Header />
 
 
 <div className = "home">
