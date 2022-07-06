@@ -39,14 +39,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 171cd329e842f1afdd7aa407a6f5261bead6e842
-=======
-
->>>>>>> f047063c28efc7e07186d7c314aa1f75b3aac97d
 
 const Landing = () => (
 
@@ -55,14 +48,7 @@ const Landing = () => (
 {/* image carousel */}
 
 <Header />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 171cd329e842f1afdd7aa407a6f5261bead6e842
-=======
-
->>>>>>> f047063c28efc7e07186d7c314aa1f75b3aac97d
 <div>
 <section id="trending-products">
 <h2 className="carousel-text">TRENDING PRODUCTS </h2>  
