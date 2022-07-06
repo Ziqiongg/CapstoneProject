@@ -7,13 +7,11 @@ import './Profile.css';
 
 const Profile = () => {
 
-  const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUserNameChange = event => setUserName(event.target.value);
   const handleFirstNameChange = event => setFirstName(event.target.value);
   const handleLastNameChange = event => setLastName(event.target.value);
   const handleEmailChange = event => setEmail(event.target.value);
@@ -25,7 +23,7 @@ const Profile = () => {
 };
 
 const updateUser = async() => {
-const result = await UpdateProfile(firstName, lastName, userName, email, password);
+const result = await UpdateProfile(firstName, lastName, email, password);
 }
 
 
@@ -33,13 +31,6 @@ const result = await UpdateProfile(firstName, lastName, userName, email, passwor
   return (
     <div class = "update-form">
       <form onSubmit = {handleSubmit}>
-
-      <div class = "user-name">
-          <label>
-            Enter your username:
-            <input type = "text" name = "username" variant = "filled" onChange = {handleUserNameChange} />
-          </label>
-      </div>
 
       <div class = "first-name">
           <label>
