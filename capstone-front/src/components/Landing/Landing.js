@@ -65,14 +65,14 @@ const Landing = () => (
             </div>
             <div>
                       
-            <Link to="/products/id/14"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></Link>
-            <Link to="/products/id/18"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></Link>
+            <Link to="/products/id/18"><img className="animated-img" src={AvocadoHat} alt="Avocado Hat"/></Link>
+            <Link to="/products/id/12"><img className="animated-img" src={DinoCoat} alt="Dino Coat"/></Link>
             <Link to="/products/id/11"><img className="animated-img" src={WorldCoat} alt="World Coat"/></Link>
           
             </div>
             <div>
             <Link to="/products/id/14"><img className="animated-img" src={FunkyCoat} alt="Funky Coat"/></Link>
-            <Link to="/products/id/15"><img className="animated-img" src={MarioHat} alt="Mario Hat"/></Link>
+            <Link to="/products/id/19"><img className="animated-img" src={MarioHat} alt="Mario Hat"/></Link>
             <Link to="/products/id/15"><img className="animated-img" src={Raincoat} alt="White Rain Coat"/></Link>
             
             </div>
