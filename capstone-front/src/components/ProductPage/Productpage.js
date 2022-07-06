@@ -5,6 +5,8 @@ import Basket from '../Basket/Basket';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
+import '../ProductPage/Productpage.css'
 
 
 const  ProductPage =  ({AddItems}) => {
@@ -24,12 +26,12 @@ const  ProductPage =  ({AddItems}) => {
       AddItems(product)
     }
    
-
+// text to re push_
       return (
          
 <section>
 <div>
-
+<Header />
 <section>
 <Card className="text-center">
 <Card.Header>{product.name}</Card.Header>
@@ -43,7 +45,7 @@ const  ProductPage =  ({AddItems}) => {
   </Card.Body>
 
 </Card>
-<button><Link to="/">Back</Link></button>
+<button className='back-btn'><Link to="/">Back to Home</Link></button>
 </section>
 {/* Style 2 */}
 

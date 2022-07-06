@@ -71,12 +71,11 @@ function App() {
     <Router>
       <div className = "main-wrapper">
       
-     <Header />
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
           <Route exact path="/productlist" element={<ProductList 
-          address = "http://localhost:8080/products" />} />
+          address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
           {category.map(item => {
             let itemLower = item.toLowerCase();
@@ -106,7 +105,6 @@ function App() {
           <Route path="/feedPage" element={<FeedPage />} /> */}
 
       </Routes>
-
 
      </div>
      <Footer />
