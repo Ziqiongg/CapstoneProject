@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Basket.css';
 import BasketTable from './BasketTable';
 import { Button } from 'react-bootstrap';
