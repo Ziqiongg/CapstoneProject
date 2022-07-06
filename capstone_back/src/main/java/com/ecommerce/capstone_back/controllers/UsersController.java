@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class UsersController {
     public final UsersService usersService;
@@ -133,6 +133,12 @@ public class UsersController {
     public ResponseEntity<Users> createUser(@RequestBody Users newUser){
         usersService.addUser(newUser);
         return ResponseEntity.ok().body(newUser);
+    }
+
+    @GetMapping("/users/username/{username}")
+    public ResponseEntity<Optional<Users>> findByUsername(@PathVariable String username){
+        Optional<Users> user = usersService.getByUsername(username);
+        return ResponseEntity.ok().body(user);
     }
 
 
