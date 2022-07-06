@@ -7,6 +7,6 @@ export const UserInfo = createContext({
     user: null, setUser: () =>{},
     isAuthenticated: false, setAuthenticate: () => {},
     open: false, setOpen: () => {},
-    users: null, setUsers: () =>{},
-    jwtToken: null, setToken: () => {}
+    users: null, setUsers: () => {},
+    userId: null, setUserId: () => {}
 });
