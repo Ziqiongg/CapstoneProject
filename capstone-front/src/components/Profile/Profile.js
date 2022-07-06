@@ -24,9 +24,9 @@ const Profile = () => {
     event.preventDefault();  
 };
 
-// const updateUser = async() => {
-// const result = await UpdateProfile(firstName, lastName, userName, email, password);
-// }
+const updateUser = async() => {
+const result = await UpdateProfile(firstName, lastName, userName, email, password);
+}
 
 
 
@@ -70,7 +70,7 @@ const Profile = () => {
       </div>
       <div class = "clearfix">
         <button type = "reset" class = "cancelbtn">Cancel</button>
-        <button class = "updatebtn" type = "submit" onClick = {UpdateProfile(firstName, lastName, userName, email, password)}>Update Info</button>
+        <button class = "updatebtn" type = "submit" onClick = {updateUser}>Update Info</button>
       </div>
     </form>
 

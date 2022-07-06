@@ -1,14 +1,20 @@
 
 
 const UpdateProfile = async(firstName, lastName, userName, email, password) => {
-    if(firstName) updateSpecific(firstName)
-    if(lastName) updateSpecific(lastName)
-    if(userName) updateSpecific(userName)
-    if(email) updateSpecific(email)
-    if(password) updateSpecific(password)
+    if(firstName) await updateSpecific(firstName, "firstName")
+    if(lastName) updateSpecific(lastName, "lastname")
+    if(userName) updateSpecific(userName, "username")
+    if(email) updateSpecific(email, "email")
+    if(password) updateSpecific(password, "password")
 }
 
-const updateSpecific = (item) => fetch(`http://localhost:8080/users/patch/${item}`, {
+const updateSpecific = (item, type) => {
+    const token = sessionStorage.getItem("jwt");
+    fetch(`http://localhost:8080/users/patch/${type}`, {
     method: 'PATCH',
-    body: item
-}).catch((error) => {console.error(error)});
+    headers: {'Content-Type': 'application/json',
+              'Authorization': token},
+    body: item,
+}).catch((error) => {console.error(error)});}
+
+export default UpdateProfile
