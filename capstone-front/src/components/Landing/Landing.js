@@ -38,8 +38,13 @@ import { Card, Button } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+=======
 import Header from '../Header/Header';
 
+>>>>>>> f0597868f7357d2538da66d90e9ddb862ab2897a
 const Landing = () => (
 
 <>
@@ -49,9 +54,13 @@ const Landing = () => (
 <Header />
 
 
+<div className = "home">
+  <br></br>
 <div>
+    <h2>TrendingProducts</h2>
+  </div>
 <section id="trending-products">
-<h2 className="carousel-text">TRENDING PRODUCTS </h2>  
+
         <div className="landing-page-slide-wrapper">
         
 <Carousel>
@@ -85,30 +94,254 @@ const Landing = () => (
        
     </section> <br/>
 
+<Row xs={1} xl = {4} sm = {2} md={3} className="landing-products">
+    <div className="shop-by-section">
+      <Link to="/ourpledge">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Discover more-sustainable products</h2></div>
+            <Card.Img
+            className = "landscape-image"
+              variant="top"
+              src = "https://images-eu.ssl-images-amazon.com/images/G/02/ES-hq/2022/img/Brand_Truths/XCM_CUTTLE_1444269_2429296_379x304_1X_tr_TR._SY304_CB634020827_.jpg" class="landscape-image" data-a-hires="https://images-eu.ssl-images-amazon.com/images/G/02/ES-hq/2022/img/Brand_Truths/XCM_CUTTLE_1444269_2429296_758x608_2X_tr_TR._SY608_CB634020827_.jpg"
+                          
+                          />
+                          <div class="a-cardui-footer"><Button variant="link">Discover now</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
 
-  <h2 className='category-text'>CATEGORIES</h2>
+      <div className="shop-by-section">
+      <Link to="/productcategory/electronics">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Amazon Recycled Products</h2></div>
+            <Card.Img
+            className = "landscape-image-recycled"
+              variant="top"
+              src = "https://images-eu.ssl-images-amazon.com/images/G/02/UK-hq/2022/img/Certified_Refurbished/XCM_Manual_2352952_4700418_379x304_1X_en_GB._SY304_CB636729320_.jpg" class="landscape-image" data-a-hires="https://images-eu.ssl-images-amazon.com/images/G/02/UK-hq/2022/img/Certified_Refurbished/XCM_Manual_2352952_4700418_758x608_2X_en_GB._SY608_CB636729320_.jpg"
+
+                          />
+                          
+                          <div class="a-cardui-footer"><Button variant="link">See more</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+
+      <div className="shop-by-section">
+      <Link to="/productcategory/petfood">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Top Deals</h2></div>
+            <Card.Img
+            className = "landscape-image-broken"
+              variant="top"
+              src = "https://m.media-amazon.com/images/I/31X+P6MZaOL._AC_SY230_.jpg"
+                          />
+                          <div class="broken-footer">
+                            <p>Up to £200 off!
+                            
+                            </p>
+                            <Button variant="link">See more deals!</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+
+      <div className="shop-by-section">
+      <Link to="/products/id/17">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Special Edition Items!</h2></div>
+            <Card.Img
+            className = "landscape-image-broken-second"
+              variant="top"
+              src = "https://m.media-amazon.com/images/I/61sO80diJiL._AC_UL1200_.jpg"
+                          />
+                          <div class="broken-footer-second">
+                            <p>Get your Pingu Hat now! Limited Offer!
+                            </p>
+                            <Button variant="link">See more deals!</Button></div>
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+      </Row>
+    
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div>
+    <h2>Most Searched Categories</h2>
+  </div>
+
+
+  <Row xs={1} xl = {4} sm = {2} md={3} className="landing-products">
+    <div className="shop-by-section">
+      <Link to="/productcategory/electronics">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Electronics</h2></div>
+            <Card.Img
+            className = "landscape-image-second"
+              variant="top"
+              src = {electronics}
+                          
+                          />
+                          <div class="a-cardui-footer"><Button variant="link">View</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+
+      <div className="shop-by-section">
+      <Link to="/productcategory/petfood">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Pet Food</h2></div>
+            <Card.Img
+            className = "landscape-image-second"
+              variant="top"
+              src = {petfood}
+
+                          />
+                          <div class="a-cardui-footer"><Button variant="link">View</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+
+      <div className="shop-by-section">
+      <Link to="/productcategory/pets">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Pets</h2></div>
+            <Card.Img
+            className = "landscape-image-second"
+              variant="top"
+              src = {pets}
+                          />
+                          <div class="broken-footer">
+                            <Button variant="link">View</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+
+      <div className="shop-by-section">
+      <Link to="/productcategory/instruments">
+        <Card className='shop-by-section__card'>
+          <Card.Body>
+          <div><h2 class="landing-image-header">Instruments</h2></div>
+            <Card.Img
+            className = "landscape-image-second"
+              variant="top"
+              src = {instruments}
+                          />
+                          <div class="broken-footer">
+                            <Button variant="link">View</Button></div>
+            
+          </Card.Body>
+        </Card>
+      </Link>
+      </div>
+    
+
+      </Row>
+
+      <br></br>
+      <br></br>
+      <br></br>
+
+
+  <div>
+    <h2>Best Selling Books</h2>
+  </div>
   <section className="landing-page-slide-wrapper">
       
 
   <Carousel>
   <div>
-  <Link to="/productcategory/electronics"><img className="top-row-img" src={electronics} alt="Phone Category"></img><figcaption>Phones</figcaption></Link>
-  <Link to="/productcategory/petfood"><img className="top-row-img" src={petfood} alt="Pet Food Category"></img><figcaption>Pet Food</figcaption></Link>
-  <Link to="/productcategory/pets"><img className="top-row-img" src={pets} alt="Pet Category"></img><figcaption>Pets</figcaption></Link>
-          
-            
-</div>
-<div>
-<Link to="/productcategory/coats"><img className="top-row-img" src={CoatPile} alt="Coats Category"></img><figcaption>COATS</figcaption></Link>
-      <Link to="/productcategory/hats"> <img className="top-row-img" src={HatPile} alt="Hat Category"></img><figcaption>HATS</figcaption></Link>
-      <Link to="/productcategory/instruments"> <img className="top-row-img" src={instruments} alt="Instruments Category"></img><figcaption>Instruments</figcaption></Link>
-</div>
+  <Link to="/productcategory/books"><img className="top-row-img" src="https://m.media-amazon.com/images/I/71ZDoj3jYrL._AC_SY200_.jpg"alt="Book1"></img></Link>
+  <Link to="/productcategory/books"><img className="top-row-img" src="https://m.media-amazon.com/images/I/81PdOsc95OL._AC_SY200_.jpg" alt="Book2"></img></Link>
+  <Link to="/productcategory/books"><img className="top-row-img" src="https://m.media-amazon.com/images/I/71FXfPs-iyL._AC_SY200_.jpg" alt="Book3"></img></Link>
+  <Link to="/productcategory/books"><img className="top-row-img" src="https://m.media-amazon.com/images/I/71gwdjwLMPL._AC_SY200_.jpg" alt="Book4"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61vpLGF61XL._AC_SY200_.jpg" alt="Book5"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81qz88X-X2L._AC_SY200_.jpg" alt="Book6"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81a1hKsCKbL._AC_SY200_.jpg" alt="Book7"></img></Link>
+
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/71-IAaCJ21L._AC_SY200_.jpg" alt="Book8"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/91bYsX41DVL._AC_SY200_.jpg" alt="Book9"></img></Link>
+  </div>
+  <div>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81RJ4FlpbFL._AC_SY200_.jpg" alt="Book10"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/71p+rKfcNKL._AC_SY200_.jpg" alt="Book11"></img></Link>
+
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61TGDPQr+YL._AC_SY200_.jpg" alt="Book12"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/71jte84ADvL._AC_SY200_.jpg" alt="Book13"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/715WPdBM2yL._AC_SY200_.jpg" alt="Book14"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81JArrdJUeL._AC_SY200_.jpg" alt="Book15"></img></Link>
+  <Link to="/productcategory/books"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81BBAyv-CJL._AC_SY200_.jpg" alt="Book16"></img></Link>
+
+  </div>
 </Carousel>
- 
+  </section>
+
+
+  <br></br>
+  <br></br>
+
+  <div>
+    <h2>Best Sellers in Computers & Accessories</h2>
+  </div>
+  <section className="landing-page-slide-wrapper">
+      
+
+  <Carousel>
+  <div>
+  <Link to="/productcategory/computeracces"><img className="top-row-img" src="https://m.media-amazon.com/images/I/41D+fmjH7KS._AC_SY200_.jpg"alt="computeracces1"></img></Link>
+  <Link to="/productcategory/computeracces"><img className="top-row-img" src="https://m.media-amazon.com/images/I/71pVtSXBjnL._AC_SY200_.jpg" alt="computeracces2"></img></Link>
+  <Link to="/productcategory/computeracces"><img className="top-row-img" src="https://m.media-amazon.com/images/I/61SKSov8rHL._AC_SY200_.jpg" alt="computeracces3"></img></Link>
+  <Link to="/productcategory/computeracces"><img className="top-row-img" src="https://m.media-amazon.com/images/I/61rCyL-CuCL._AC_SY200_.jpg" alt="computeracces4"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61jhzv9AQRL._AC_SY200_.jpg" alt="computeracces7"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/81pGNKhsxiL._AC_SY200_.jpg" alt="computeracces5"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61s6SXAMuqL._AC_SY200_.jpg" alt="computeracces6"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61CpaftEHuL._AC_SY200_.jpg" alt="computeracces7"></img></Link>
+
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61d0uTjKbkL._AC_SY200_.jpg" alt="computeracces8"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/716bhKVOTfL._AC_SY200_.jpg" alt="computeracces9"></img></Link>
+  </div>
+  <div>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/717GmyTdpbS._AC_SY200_.jpg" alt="computeracces10"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61qqUIC65qL._AC_SY200_.jpg" alt="computeracces11"></img></Link>
+
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61pUul1oDlL._AC_SY200_.jpg" alt="computeracces12"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/61T85CGI4ZL._AC_SY200_.jpg" alt="computeracces13"></img></Link>
+  <Link to="/productcategory/computeracces"> <img className="top-row-img" src="https://m.media-amazon.com/images/I/51a1nqFl8YL._AC_SY200_.jpg" alt="computeracces14"></img></Link>
+  </div>
+</Carousel>
+
+
+
      
 
   </section>
+
+
 </div>
+
+
 
 
 {/* image carousel */}

@@ -7,7 +7,9 @@ public enum Category {
     PETS,
     COATS,
     HATS,
-    INSTRUMENTS
+    INSTRUMENTS,
+    BOOKS,
+    COMPUTERS_AND_ACCESSORIES
 };
 
 

@@ -27,7 +27,7 @@ import Order from "./components/Orders/Orders";
 import { getBasket } from "./components/Basket/Axios/BasketAPI";
 import AboutUs from "./components/AboutUs/AboutUs";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
-
+import OurPledge from "./components/OurPledge/OurPledge"
 
 
 
@@ -89,6 +89,7 @@ function App() {
         <Route path="/basket" element={<Basket basketItem={basketItem} BuyBasket={PurchaseItems} />} />
           <Route path="/orders" element={<Order basketItem={[basketItem]} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
+          <Route path = "/ourpledge" element = {<OurPledge />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
           <Route path={`/searchname`} element = {<SearchBar />} />
