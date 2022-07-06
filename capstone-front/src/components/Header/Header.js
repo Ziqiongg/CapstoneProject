@@ -111,10 +111,11 @@ const  Header = (props) => {
           {/* If the user is Logged in/authenticated, change button to Logout */}
         <button><Link to = "/login"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
         </div>
-
+        
+        {!isAuthenticated &&  
         <div className="header__option">
         <button><Link to = "/register"><span className="header__optionLineOne">Register</span></Link></button>
-        </div>
+        </div>}
       
         {isAuthenticated &&  
         
