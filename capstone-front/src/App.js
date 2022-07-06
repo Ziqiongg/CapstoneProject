@@ -63,23 +63,21 @@ function App() {
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
     userId, setUserId}}>
+
     <Router>
       <div className = "main-wrapper">
 
       <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
-          <Route exact path="/productlist" element={<ProductList 
-          address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
+          <Route exact path="/productlist" element={<ProductList address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
           {category.map(item => {
             let itemLower = item.toLowerCase();
             return (  
-              <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> 
-          )
-          })}
+          <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> )})}
           <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} />} />
-          <Route path="/orders" element={<Order purchases={[purchases]} />} />
+          <Route path="/orders" element={<Order purchases={purchases} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path="/basket" element={<Basket />} />
@@ -88,10 +86,10 @@ function App() {
           
       </Routes>
 
-
      </div>
      <Footer />
     </Router>
+
     </UserInfo.Provider>
   
   );

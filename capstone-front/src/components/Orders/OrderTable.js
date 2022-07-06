@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import { Chip } from '@mui/material';
 
 
-const OrderTable = ({}) => {
+const OrderTable = ({purchases}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
@@ -34,13 +34,6 @@ const OrderTable = ({}) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   }
-  const [basket, setBasket] = useState([]);
-
- 
-
-  const handleClick = {
-
-  }
   
   const navigate = useNavigate();
 
@@ -52,13 +45,14 @@ const OrderTable = ({}) => {
     return { id, name, category, price, reorderButton};
   }
 
-  const rows = basket.map(product => createData(product.id,
+  const rows = purchases.map(product => createData(product.id,
     product.name,
     product.category,
     product.price,
-
-    <Chip label="Reorder Item" variant="soft" onClick={handleClick} />
+// reorder bttn will return user to indiv product page
+    <Chip label="Reorder Item" variant="soft" onClick={goToIte} />
      ))
+
 
   return (
     <>

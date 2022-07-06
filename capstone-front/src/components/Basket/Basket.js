@@ -9,15 +9,13 @@ import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
 import Header from '../Header/Header';
 
-function Basket ({basketItem}, {PurchaseAllItems}) {
+function Basket ({basketItem , PurchaseAllItems}) {
 
 
   const {user, userId, setUserId} = useContext(UserInfo);
 
   const handleClick = () => {
     PurchaseAllItems(basketItem);
-    console.log("purchasing 2 basket");
-
   }
 
   // get the details of the user that is logged in

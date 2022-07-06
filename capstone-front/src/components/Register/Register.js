@@ -94,11 +94,11 @@ const result = await RegisterUser(JSON.stringify(newUser));
           </label>
         
         
-        <div class = "check-box">
+        <div className = "check-box">
         <label>
       <input type="checkbox"  name="remember" required></input>
     </label>
-    <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
+    <p className = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
         </div>
 
     <div className = "clearfix">

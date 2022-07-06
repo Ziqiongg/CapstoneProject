@@ -1,6 +1,4 @@
-
 /* CSS FOR TOP IMAGE GRID */
-
 
 .landing-top-container{
     border: 2px solid gray;
@@ -32,36 +30,17 @@
     display: inline-block;
     
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* For Mobile:
-      max-width:100%
-      max-height: 100%
-    */
     display: inline-block;
     margin-top:10px;
-
-    /* padding: 10px;  */
+    
   }
 
 .top-row-img:hover {
     position:center;
-    /* top:-25px;
-    left:-35px; */
-    /* width:400px; */
-    /* height:auto;
-    display:block;
-    z-index:999; */
-
     transform: scale(1.009);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
   }
-  
-  /* @media (max-width: 800px) {
-    .landing-page-top-row {
-      flex-direction: column;
-    }
-  } */
-
 
 /* CSS FOR THE CAROUSEL */
 
@@ -70,13 +49,12 @@
 }
 
 .landing-page-slide-wrapper {
-   
-    /* overflow: auto; */
+    
     white-space: nowrap;
     background-color:lightgrey;
-    
-    
+  
   }
+
 .landing-page-slide-wrapper a {
     display: inline-block;
     color: grey;
@@ -94,34 +72,22 @@
   }
  
 .animated-img {
-  float: left;
+  float:left;
   width:  300px;
   height: 300px;
   object-fit: cover;
   display: inline-block;
-  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-
-/* .animated-img:hover {
-    position:center;
-    top:-25px;
-    left:-35px;
-    transform: scale(1.5);
-    display:block;
-    z-index:999;
-  } */
 
   /* CSS FOR THE BOTTOM IMAGE GRID */
 
 .bottom-row-container{
-    /* border: 2px solid gray;
-    border-radius: 5px; */
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    /* background-color: #FAFAFA; */
     margin: 2rem 10rem;
     margin-top: 200px;
 }
