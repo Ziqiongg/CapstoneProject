@@ -30,7 +30,7 @@ public class UsersService {
     }
 
     public Users getUsersByUsername(String userName) {
-        return usersRepository.findByUsername(userName);
+        return usersRepository.findByUsername(userName).get();
     }
 
     public void updateUsers(Users users) {

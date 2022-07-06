@@ -6,6 +6,9 @@ import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.service.UsersService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +23,8 @@ public class UsersController {
         this.usersService = usersService;
     }
 
+    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
     @GetMapping({"/users/id/{id}"})
     public ResponseEntity<Users> getUsersById(@PathVariable Long id) throws Exception {
@@ -65,7 +70,7 @@ public class UsersController {
 
     @PatchMapping("/users/patch/firstName")
     public ResponseEntity<Users> updateUsersFirstName(@RequestBody String firstName) throws Exception{
-        Users users = usersService.getUsersByUsername();
+        Users users = usersService.getUsersByUsername(userDetails.getUsername());
         users.setUserFirstName(firstName);
         usersService.updateUsers(users);
         return ResponseEntity.ok().body(users);
