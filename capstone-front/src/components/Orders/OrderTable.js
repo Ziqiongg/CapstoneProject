@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
@@ -45,12 +43,12 @@ const OrderTable = ({purchases}) => {
     return { id, name, category, price, reorderButton};
   }
 
-  const rows = purchases.map(product => createData(product.id,
-    product.name,
-    product.category,
-    product.price,
-// reorder bttn will return user to indiv product page
-    <Chip label="Reorder Item" variant="soft" onClick={goToIte} />
+  const rows = purchases.map(purchase => createData(purchase.id,
+    purchase.name,
+    purchase.category,
+    purchase.price,
+// reorder button will return user to individual product page
+    <Chip label="Reorder" variant="soft" onClick={goToIte} />
      ))
 
 
