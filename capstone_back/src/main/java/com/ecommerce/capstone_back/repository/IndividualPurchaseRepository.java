@@ -57,7 +57,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     @Modifying
     @Transactional
     @Query(
-            value = "DELETE FROM individual_purchase WHERE app_user_id = ?1 AND product_id = ?2",
+            value = "DELETE FROM individual_purchase WHERE users_id = ?1 AND product_id = ?2",
             nativeQuery = true)
     Integer deleteBasketById(Long AppUserId, Long ProductId);
 
@@ -66,7 +66,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     @Modifying
     @Transactional
     @Query(
-            value = "UPDATE individual_purchase " + " SET quantity = quantity + ?1 " + " WHERE app_user_id = ?2 AND product_id = ?3",
+            value = "UPDATE individual_purchase " + " SET quantity = quantity + ?1 " + " WHERE users_id = ?2 AND product_id = ?3",
             nativeQuery = true)
     Integer updateChangeToBasket(Integer Quantity, Long AppUserId, Long ProductId);
 // need to add arguments being passed through ^^

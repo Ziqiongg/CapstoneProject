@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/UserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Basket/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Basket/Basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/ProductPage/Productpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/ProductPage/Productpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/controllers/IndividualPurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/repository/IndividualPurchaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/IndividualPurchaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/AppUserControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/test/java/com/ecommerce/capstone_back/AppUserControllerTests/UsersControllerTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
+        <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="JUnit.UsersControllerTests" />
         <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />
