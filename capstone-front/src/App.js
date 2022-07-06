@@ -24,7 +24,8 @@ import { UserInfo } from "./UserContext";
 import Order from "./components/Orders/Orders";
 import AboutUs from "./components/AboutUs/AboutUs";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
-import OurPledge from "./components/OurPledge/OurPledge"
+import OurPledge from "./components/OurPledge/OurPledge";
+import { SERVER_URL } from "./constants";
 
 function App() {
 
@@ -51,16 +52,47 @@ function App() {
       .catch(error => {console.log(error)})
       }, [])
 
+
+
+
+      // const getUser = () => {
+      //   // only do if authenticated
+      //   const token = sessionStorage.getItem("jwt");
+      //   fetch (SERVER_URL + 'users/username/' + user["username"], {
+      //     method: 'GET',
+      //     headers: {'Content-Type': 'application/json',
+      //               'Authorization': token}
+      //   })
+      //   .then(response => response.json())
+      //   .then(data => setUserId(data.id))
+      // }
+      
+
+      
+
+
       // add items to basket
       const AddToBasket = (product) => {
         // only add item to basket if user has logged in
+        const token = sessionStorage.getItem("jwt");
+        // here we store the params for the post method in the variable called data
+        const data = {ProductId : product.id, quantity: 1}
         if (isAuthenticated){
-        console.log("adding to basket");
+          fetch (SERVER_URL + 'AppUser_basket/additem/' + userId + '?ProductId=' + product.id + '&quantity=' + 1, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json',
+                      'Authorization': token
+                    },
+                    // we send the params in the body of the request
+            body: JSON.stringify({data})
+          })
+          .then(res => console.log("yay"))
+          .catch(err =>console.err);
+        
+        console.log("adding to basket" + product.id);
         setBasketItem([...basketItem, product])
         }
       }
-
-
 
     // add items from basket to ordered/purchased 
       const PurchaseItems = ([basketItem]) => {
@@ -70,18 +102,17 @@ function App() {
     
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
-<<<<<<< HEAD
     userId, setUserId, numItems, setNumItems}}>
-=======
-    userId, setUserId}}>
+  
 
->>>>>>> 6a28e1bda4db0c754e18d8d9a5c6f196be5bc894
     <Router>
       <div className = "main-wrapper" >
 
       <Routes>
           <Route exact path="/" element={<Landing />} />
+          {/* rendered after we've clicked in the search bar on Landing page, then decide to view a product */}
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
+          {/* passing the url to products as address and passing the addToBasket function */}
           <Route exact path="/productlist" element={<ProductList address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />

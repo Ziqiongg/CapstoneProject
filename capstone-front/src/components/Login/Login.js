@@ -119,18 +119,7 @@ const login = () => {
     </form>
     </div>
   )
-  
-
-
   }
-
-
-
-
-
-
-
-
 
 // Login.propTypes = {};
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Basket.css';
 import BasketTable from './BasketTable';
 import { Button } from 'react-bootstrap';
@@ -6,16 +7,18 @@ import { Link } from 'react-router-dom';
 import { UserInfo } from '../../UserContext';
 import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
-import Header from '../Header/Header';
 
-function Basket ({basketItem , PurchaseAllItems}) {
+function Basket ({basketItem}, {BuyBasket}) {
 
 
   const {user, userId, setUserId, numItems, setNumItems, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
-    PurchaseAllItems(basketItem);
+    BuyBasket()
+    console.log("purchasing 2 basket");
+
   }
+
 
   // get the details of the user that is logged in
   const getUser = () => {
@@ -30,7 +33,6 @@ function Basket ({basketItem , PurchaseAllItems}) {
     .then(data => setUserId(data.id))
   }
 
-<<<<<<< HEAD
   // get the user's basket
   async function getBasket() {
 // only do if authenticated
@@ -44,32 +46,23 @@ function Basket ({basketItem , PurchaseAllItems}) {
     })
     .then(response => response.json())
     .then(data => console.log(data));
-    console.log("You have " + numItems + " in basket");
   }
 
 }
 
 // add item to basket
+const addItemToBasket = () => {
+  const token = sessionStorage.getItem("jwt");
+
+  fetch (SERVER_URL + 'AppUser_basket')
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 6a28e1bda4db0c754e18d8d9a5c6f196be5bc894
   return(
     <>
-    <Header />
       <div className = "BasketPage">
-        <h1 className = "name">Basket</h1>
+        <h1 class = "name">Basket</h1>
         <BasketTable basketItem={basketItem}/>
         <button><Link to="/">Back</Link></button>
         <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
