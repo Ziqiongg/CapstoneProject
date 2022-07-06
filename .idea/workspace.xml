@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/capstone-front/src/components/Landing/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/capstone-front/src/components/Landing/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstone_back/src/main/java/com/ecommerce/capstone_back/service/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
