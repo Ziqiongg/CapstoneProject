@@ -19,7 +19,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
     @Query(
 
-            value="SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = FALSE",
+            value="SELECT * FROM individual_purchase WHERE users_id = ?1 AND purchased = FALSE",
             nativeQuery = true
     )
      List<IndividualPurchase> getBasketById(Long AppUserId);
@@ -27,7 +27,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
 
 // Get purchases
     @Query(
-            value = "SELECT * FROM individual_purchase WHERE app_user_id = ?1 AND purchased = TRUE",
+            value = "SELECT * FROM individual_purchase WHERE users_id = ?1 AND purchased = TRUE",
             nativeQuery = true)
     List<IndividualPurchase> viewPurchaseById(Long AppUser_Id);
 
@@ -37,10 +37,10 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     @Modifying
     @Transactional
     @Query(
-            value = "INSERT into individual_purchase (app_user_id, product_id, quantity, purchased) VALUES (:appuserid, :productid, :quantity, FALSE)",
+            value = "INSERT into individual_purchase (users_id, product_id, quantity, purchased) VALUES (:users_id, :productid, :quantity, FALSE)",
             nativeQuery = true)
-
-    void addItemToBasket(@Param("appuserid") Long appuserid, @Param("productid") Long productid, @Param("quantity") Integer quantity);
+//    quantity, purchased, product_id, users_id
+    void addItemToBasket(@Param("users_id") Long appuserid, @Param("productid") Long productid, @Param("quantity") Integer quantity);
 
 //    value =
 //    "insert into Users (name, age, email, status) values (:name, :age, :email, :status)",

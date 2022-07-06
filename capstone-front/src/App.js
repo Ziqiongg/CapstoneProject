@@ -41,7 +41,8 @@ function App() {
     const [users, setUsers] = useState([]);
     const [basketItem, setBasketItem] =useState([]);
     const [purchases, setPurchases] = useState([]);
-    const [userId, setUserId  ] = useState(null)
+    const [userId, setUserId] = useState(null)
+    const [numItems, setNumItems] = useState(null);
 
     useEffect(() =>{
       axios.get('http://localhost:8080/categories')
@@ -52,8 +53,14 @@ function App() {
 
       // add items to basket
       const AddToBasket = (product) => {
+        // only add item to basket if user has logged in
+        if (isAuthenticated){
         console.log("adding to basket");
-        setBasketItem([...basketItem, product])}
+        setBasketItem([...basketItem, product])
+        }
+      }
+
+
 
     // add items from basket to ordered/purchased 
       const PurchaseItems = ([basketItem]) => {
@@ -63,8 +70,12 @@ function App() {
     
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
+<<<<<<< HEAD
+    userId, setUserId, numItems, setNumItems}}>
+=======
     userId, setUserId}}>
 
+>>>>>>> 6a28e1bda4db0c754e18d8d9a5c6f196be5bc894
     <Router>
       <div className = "main-wrapper" >
 
