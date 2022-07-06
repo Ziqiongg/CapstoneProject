@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { GetIdProducts} from "./Axios/GetProductsAPI"
 import { useParams } from "react-router-dom";
 import Basket from '../Basket/Basket';
@@ -6,7 +6,8 @@ import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
-import '../ProductPage/Productpage.css'
+import '../ProductPage/Productpage.css';
+import { UserInfo } from '../../UserContext';
 
 
 const  ProductPage =  ({AddItems}) => {
@@ -25,6 +26,9 @@ const  ProductPage =  ({AddItems}) => {
     const handleClick = () => {
       AddItems(product)
     }
+
+
+    const {isAuthenticated, setAuthenticate} = useContext(UserInfo);
    
 // text to re push_
       return (
@@ -41,7 +45,7 @@ const  ProductPage =  ({AddItems}) => {
     <Card.Text>
       {product.description}
     </Card.Text>
-    <Button onClick={handleClick}>Add to basket</Button>
+    <Button onClick={handleClick}>{isAuthenticated ? "Add to basket" : "Log in to add to basket"}</Button>
   </Card.Body>
 
 </Card>
