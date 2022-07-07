@@ -5,6 +5,7 @@ import logo from "../../assets/header-logo.png";
 import React, { useState } from 'react';
 import axios from 'axios';
 import RegisterUser from './RegisterUser';
+import Header from '../Header/Header';
 
 
 
@@ -46,6 +47,7 @@ const result = await RegisterUser(JSON.stringify(newUser));
 
 
   return (
+    <>
 
     <div className="register-form">
             <Link to='/'>
@@ -92,22 +94,23 @@ const result = await RegisterUser(JSON.stringify(newUser));
           </label>
         
         
-        <div class = "check-box">
+        <div className = "check-box">
         <label>
       <input type="checkbox"  name="remember" required></input>
     </label>
-    <p class = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
+    <p className = "terms-conditions"><Link to = "/conditions">By creating an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
         </div>
 
-    <div class = "clearfix">
-      <button class = "signupbtn" type = "reset" >Cancel</button>
-    <button class = "signupbtn" type = "submit" onClick = {addUser}>Sign Up</button>
+    <div className = "clearfix">
+      <button className = "signupbtn" type = "reset" >Cancel</button>
+    <button className = "signupbtn" type = "submit" onClick = {addUser}>Sign Up</button>
     </div>
     </div>
       </form>
 
 
     </div>
+    </>
    
   );
 };

@@ -8,5 +8,6 @@ export const UserInfo = createContext({
     isAuthenticated: false, setAuthenticate: () => {},
     open: false, setOpen: () => {},
     users: null, setUsers: () => {},
-    userId: null, setUserId: () => {}
+    userId: null, setUserId: () => {},
+    numItems: null, setNumItems: () => {}
 });
