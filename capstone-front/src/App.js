@@ -52,6 +52,22 @@ function App() {
       .catch(error => {console.log(error)})
       }, [])
 
+
+      const getUser = () => {
+        // only do if authenticated
+        const token = sessionStorage.getItem("jwt");
+        fetch (SERVER_URL + 'users/username/' + user["username"], {
+          method: 'GET',
+          headers: {'Content-Type': 'application/json',
+                    'Authorization': token}
+        })
+        .then(response => response.json())
+        .then(data => setUserId(data.id));
+        console.log(userId);
+      }
+
+
+
       // add items to basket
       const AddToBasket = (product) => {
         // only add item to basket if user has logged in
@@ -99,13 +115,13 @@ function App() {
             let itemLower = item.toLowerCase();
             return (  
           <Route exact path={`/productcategory/${itemLower}`} element={<CategoryPage itemLower = {itemLower}/> } /> )})}
-          <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} />} />
+          <Route path="/basket" element={<Basket basketItem={basketItem} PurchaseAllItems={PurchaseItems} setBasketItem={setBasketItem}/>} />
           <Route path="/orders" element={<Order purchases={purchases} />} />
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/ourpledge" element = {<OurPledge />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
           <Route path={`/searchname`} element = {<SearchBar />} />
-          <Route path={`/login`} element = {<Login />} />
+          <Route path={`/login`} element = {<Login getTheUser = {getUser}/>} />
           
       </Routes>
 

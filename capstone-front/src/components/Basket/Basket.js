@@ -7,12 +7,13 @@ import { Link } from 'react-router-dom';
 import { UserInfo } from '../../UserContext';
 import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
+import Header from '../Header/Header';
 
 // function Basket ({basketItem}, {BuyBasket}) {
-  function Basket ({basketItem}, {BuyBasket}) {
+  function Basket ({basketItem, BuyBasket, setBasketItem}) {
 
 
-  const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
+  //const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
     BuyBasket()
@@ -22,18 +23,18 @@ import { SERVER_URL } from '../../constants';
   }
 
   // get the details of the user that is logged in
-  const getUser = () => {
-    // only do if authenticated
-    const token = sessionStorage.getItem("jwt");
-    fetch (SERVER_URL + 'users/username/' + user["username"], {
-      method: 'GET',
-      headers: {'Content-Type': 'application/json',
-                'Authorization': token}
-    })
-    .then(response => response.json())
-    .then(data => setUserId(data.id));
-    console.log(userId);
-  }
+  // const getUser = () => {
+  //   // only do if authenticated
+  //   const token = sessionStorage.getItem("jwt");
+  //   fetch (SERVER_URL + 'users/username/' + user["username"], {
+  //     method: 'GET',
+  //     headers: {'Content-Type': 'application/json',
+  //               'Authorization': token}
+  //   })
+  //   .then(response => response.json())
+  //   .then(data => setUserId(data.id));
+  //   console.log(userId);
+  // }
 
 //   // get the user's basket
 //   async function getBasket() {
@@ -56,14 +57,15 @@ import { SERVER_URL } from '../../constants';
 
   return(
     <>
+    <Header/>
       <div className = "BasketPage">
         <h1 class = "name">Basket</h1>
-        <BasketTable basketItem={basketItem}/>
+        <BasketTable basketItem={basketItem} setBasketItem = {setBasketItem}/>
         <button><Link to="/">Back</Link></button>
         <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
       </div>
       {/* <button onClick = {getUser}>GetUser</button> */}
-      {/* <button onClick = {getBasket}>Basky</button> */}
+      {/* <button onClick = {getBasket}>Basket</button> */}
     </>
   )
 }

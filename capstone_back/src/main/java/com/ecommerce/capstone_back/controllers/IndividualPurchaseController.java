@@ -3,9 +3,12 @@ package com.ecommerce.capstone_back.controllers;
 import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.model.IndividualPurchase;
 import com.ecommerce.capstone_back.service.IndividualPurchaseService;
+import com.ecommerce.capstone_back.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,19 +19,27 @@ public class IndividualPurchaseController {
     @Autowired
     IndividualPurchaseService individualPurchaseService;
 
+    @Autowired
+    UsersService usersService;
+
 //            constructors
     public IndividualPurchaseController() {}
 
-    public IndividualPurchaseController(IndividualPurchaseService individualPurchaseService) {
+    public IndividualPurchaseController(IndividualPurchaseService individualPurchaseService, UsersService
+                                        usersService) {
         this.individualPurchaseService = individualPurchaseService;
+        this.usersService = usersService;
     }
 
 //  Get basket
 
-    @GetMapping("/AppUser/get_basket/{users_id}")
-    public ResponseEntity getCustomerBasket(@PathVariable Long users_id) {
+    @GetMapping("/AppUser/get_basket")
+    public ResponseEntity getCustomerBasket() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
         try {
-            List<IndividualPurchase> basket = individualPurchaseService.getBasket(users_id);
+            List<IndividualPurchase> basket = individualPurchaseService.getBasket(users.getId());
             return ResponseEntity.status(HttpStatus.OK).body(basket);
         } catch (RuntimeException re) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(re.getMessage());
@@ -62,9 +73,13 @@ public ResponseEntity addToBasket(@PathVariable Long users_id, @RequestParam Int
 // Remove item from basket
 // need to get user id, product id
 
-    @DeleteMapping("/AppUser_basket/{users_id}/{product_id}")
-    public void deleteCustomerBasket(@PathVariable Long users_id, Long ProductId) {
-        individualPurchaseService.deleteById(users_id, ProductId);
+    @DeleteMapping("/AppUser_basket/{product_id}")
+//    error if the path variable does not match line 73
+    public void deleteCustomerBasket(@PathVariable (name = "product_id") Long ProductId) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Users users = usersService.getUsersByUsername(username);
+        individualPurchaseService.deleteById(users.getId(), ProductId);
 
     }
 

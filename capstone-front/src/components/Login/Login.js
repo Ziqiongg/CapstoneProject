@@ -5,12 +5,13 @@ import { SERVER_URL } from '../../constants';
 import Landing from '../Landing/Landing';
 import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
-import { Snackbar } from '@mui/material';
+import { getListSubheaderUtilityClass, Snackbar } from '@mui/material';
 import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 import logo from "../../assets/header-logo.png";
+import Basket from '../Basket/Basket';
 
-const Login = () => {
+const Login = ({getTheUser}) => {
 // basically importing all the state so we can set the variables once a user is logged in 
 const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, userId, setUserId} = useContext(UserInfo);
 
@@ -37,6 +38,8 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
+      getTheUser();
+      
       console.log(user["username"]);
     } else {
       setOpen(true)
