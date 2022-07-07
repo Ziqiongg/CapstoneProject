@@ -17,10 +17,7 @@ import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
 
 
-const BasketTable = ({basketItem}) => {
-
-  const {userId} = useContext(UserInfo);
-
+const BasketTable = ({basketItem, setBasketItem}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
@@ -45,8 +42,8 @@ const BasketTable = ({basketItem}) => {
   const [basket, setBasket] = useState([]);
   const [product, setProduct] = useState({});
  
-  const deleteFromBasket = () => {
-    deleteItem(setBasket, userId, product.id);
+  const deleteFromBasket = (productId) => {
+    deleteItem(setBasket, productId);
     console.log(product.id);
   }
 
@@ -57,7 +54,7 @@ const BasketTable = ({basketItem}) => {
   }
 
   function createData(id, name, category, price, deleteButton, purchaseButton) {
-    return { id, name, category, price, deleteButton,purchaseButton};
+    return { id, name, category, price, deleteButton, purchaseButton};
   }
 
   /* function subtotal(basketItem) {
@@ -67,7 +64,7 @@ const BasketTable = ({basketItem}) => {
     product.name,
     product.category,
     product.price,
-    <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+    <Chip label="Remove" variant="soft" onDelete={()=>(deleteFromBasket(product.id), getBasket({setBasketItem}))} />
   
      
     ))
