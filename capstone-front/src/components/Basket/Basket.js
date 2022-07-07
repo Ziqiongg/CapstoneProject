@@ -7,17 +7,17 @@ import { Link } from 'react-router-dom';
 import { UserInfo } from '../../UserContext';
 import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
+import Header from '../Header/Header';
 
-// function Basket ({basketItem}, {BuyBasket}) {
-  function Basket ({basketItem}, {BuyBasket}) {
+  function Basket ({basketItem, PurchaseAllItems}) {
 
 
   const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
-    BuyBasket()
-    // PurchaseAllItems()
-    console.log("purchasing 2 basket");
+   
+    PurchaseAllItems(basketItem);
+    
 
   }
 
@@ -56,6 +56,7 @@ import { SERVER_URL } from '../../constants';
 
   return(
     <>
+    <Header />
       <div className = "BasketPage">
         <h1 class = "name">Basket</h1>
         <BasketTable basketItem={basketItem}/>
