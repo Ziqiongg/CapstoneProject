@@ -59,7 +59,7 @@ public interface IndividualPurchaseRepository extends  JpaRepository<IndividualP
     @Query(
             value = "DELETE FROM individual_purchase WHERE users_id = ?1 AND product_id = ?2",
             nativeQuery = true)
-    Integer deleteBasketById(Long AppUserId, Long ProductId);
+    Integer deleteBasketById(Long users_Id, Long ProductId);
 
 
     // update basket quantity query
