@@ -4,7 +4,7 @@ import com.ecommerce.capstone_back.model.Users;
 import com.ecommerce.capstone_back.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,14 +12,13 @@ import java.util.Optional;
 
 @Service
 public class UsersService {
-
-//    private final BCryptPasswordEncoder passwordEncoder;
+    private final BCryptPasswordEncoder passwordEncoder;
     public final UsersRepository usersRepository;
 
     @Autowired
-    public UsersService(UsersRepository usersRepository) {
+    public UsersService(UsersRepository usersRepository, BCryptPasswordEncoder passwordEncoder) {
         this.usersRepository = usersRepository;
-//        this.passwordEncoder = passwordEncoder;
+        this.passwordEncoder = passwordEncoder;
     }
 //    , BCryptPasswordEncoder passwordEncoder
 
@@ -27,6 +26,10 @@ public class UsersService {
         return usersRepository.findById(id).orElseThrow(
                 () -> new Exception(
                         "User with id " + id + " not found. Please try again."));
+    }
+
+    public Users getUsersByUsername(String userName) {
+        return usersRepository.findByUsername(userName).get();
     }
 
     public void updateUsers(Users users) {
@@ -46,9 +49,9 @@ public class UsersService {
 
     public void addUser(Users newUser) throws DataIntegrityViolationException {
 //        Encode the password the new user has input
-//        String encodedPassword = passwordEncoder.encode(newUser.getUserPassword());
+        String encodedPassword = passwordEncoder.encode(newUser.getUserPassword());
 ////        Set the password in the database to be this encoded password
-//        newUser.setUserPassword(encodedPassword);
+        newUser.setUserPassword(encodedPassword);
         boolean exists = this.getAllUsers().contains(newUser);
         if(exists) {
             throw new DataIntegrityViolationException("User already exists");

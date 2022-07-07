@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
@@ -11,11 +10,14 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { useNavigate } from 'react-router-dom';
-import { Chip } from '@mui/material';
+import { Chip, useRadioGroup } from '@mui/material';
 import { getBasket, deleteItem} from './Axios/BasketAPI';
+import { SERVER_URL } from '../../constants';
+import { useContext } from 'react';
+import { UserInfo } from '../../UserContext';
 
 
-const BasketTable = ({basketItem}) => {
+const BasketTable = ({basketItem, setBasketItem}) => {
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
@@ -53,7 +55,7 @@ const BasketTable = ({basketItem}) => {
   }
 
   function createData(id, name, category, price, deleteButton, purchaseButton) {
-    return { id, name, category, price, deleteButton,purchaseButton};
+    return { id, name, category, price, deleteButton, purchaseButton};
   }
 
   /* function subtotal(basketItem) {
@@ -63,10 +65,9 @@ const BasketTable = ({basketItem}) => {
     product.name,
     product.category,
     product.price,
-     <Chip label="Remove" variant="soft" onDelete={()=>deleteFromBasket(product.id)} />
+    <Chip label="Remove" variant="soft" onDelete={()=>(deleteFromBasket(product.id), getBasket({setBasketItem}))} />
+  
      
-    
-
     ))
 
   return (

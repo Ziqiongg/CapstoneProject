@@ -1,22 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./stylez.css"
-import Header from "../Header/Header";
 
-function AboutUs(){
+function OurPledge(){
 
 
     return(
         <>
-        <Header/>
         <div className="aboutus-container">
         <h1>
-            Our Mission!
+            Our Environmental Pledge!
         </h1>
-            <p>To definitely not be an Amazon rip off...</p>
+            <p>To do Absolutely NOTHING!</p>
             </div>
         </>
     )
 }
 
-export default AboutUs;
+export default OurPledge;

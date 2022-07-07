@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-
+.header__link {
+  color: white;
+  text-decoration: none;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -129,6 +132,10 @@ li, a, button {
         top: 0;
         z-index: -1;
 }
+.dark-mode-stuff{
+  
+  margin-left: 50px;
+}
 
 @media(max-width: 700px){
     .logo{
@@ -136,7 +143,7 @@ li, a, button {
     }
 
 }
-
+/* 
 button{
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
@@ -144,6 +151,16 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+} */
+
+button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  
 }
 
 .drop-button:hover{
@@ -155,7 +172,7 @@ button:hover{
 }
 
 .dropbtn {
-    background-color: rgba(0,136,169,1);
+    background-color: transparent;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -191,7 +208,7 @@ button:hover{
   }
   
   .dropdown:hover .dropbtn {
-    background-color: rgba(0,136,169,1);
+    background-color: #cd9042;
   }
 
 

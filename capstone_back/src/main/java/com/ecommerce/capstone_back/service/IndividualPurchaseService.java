@@ -20,7 +20,7 @@ public class IndividualPurchaseService {
     public IndividualPurchaseService(IndividualPurchaseRepository individualPurchaseRepository) {
         this.individualPurchaseRepository = individualPurchaseRepository;
     }
-
+//
 //    public List<IndividualPurchase> getBasket(Long AppUserId) {
 //
 //        return IndividualPurchaseRepository.getBasket(AppUserId);
@@ -30,8 +30,6 @@ public class IndividualPurchaseService {
     // get customer basket
 
     public List<IndividualPurchase> getBasket(Long AppUserId) {
-
-
         return individualPurchaseRepository.getBasketById(AppUserId);
     }
 
@@ -44,15 +42,15 @@ public class IndividualPurchaseService {
 //    add to user basket,
     // needs to check wallet, check price, check stock and adjust
 
-    public void addToUserBasket(Long AppUserId, Long ProductId, Integer quantity){
-        individualPurchaseRepository.addItemToBasket(AppUserId, ProductId, quantity);
+    public void addToUserBasket(Long users_id, Long ProductId, Integer quantity){
+        individualPurchaseRepository.addItemToBasket(users_id, ProductId, quantity);
 
     }
 
 
 // delete customer basket
-    public void deleteById (Long AppUserId, Long ProductId){
-     individualPurchaseRepository.deleteBasketById(AppUserId, ProductId);
+    public void deleteById (Long users_id, Long ProductId){
+     individualPurchaseRepository.deleteBasketById(users_id, ProductId);
         }
 
 

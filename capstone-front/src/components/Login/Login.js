@@ -5,13 +5,15 @@ import { SERVER_URL } from '../../constants';
 import Landing from '../Landing/Landing';
 import { useContext } from 'react';
 import { UserInfo } from '../../UserContext';
-import { Snackbar } from '@mui/material';
+import { getListSubheaderUtilityClass, Snackbar } from '@mui/material';
 import Header from '../Header/Header';
+import { Link } from "react-router-dom";
+import logo from "../../assets/header-logo.png";
+import Basket from '../Basket/Basket';
 
-
-const Login = () => {
+const Login = ({getTheUser}) => {
 // basically importing all the state so we can set the variables once a user is logged in 
-const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, jwtToken, setToken} = useContext(UserInfo);
+const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, userId, setUserId} = useContext(UserInfo);
 
 const handleChange = (event) => {
   setUser({... user, [event.target.name] : event.target.value});
@@ -36,8 +38,9 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
-      console.log(user["username"])
-
+      getTheUser();
+      
+      console.log(user["username"]);
     } else {
       setOpen(true)
     }
@@ -64,22 +67,43 @@ const login = () => {
   
 
   return (
-
-    <>
-    <Header/>
+    <div className="login-form">
+            <Link to='/'>
+                <div
+                    className = "title"><img src={logo} alt="logo"></img></div>
+               
+            </Link>
     <form>
-      <label>Username: </label>
+    <div className='form-container'>
+    <h1 className = "login-title"> Log In </h1>
+      <label>Enter Your Username:
       <input
       name = "username"
       type = "text"
+      variant = "filled"
+      required
       onChange = {handleChange}/>
-      <label>Password</label>
+       </label>
+      <label>Enter Your Password
       <input
       name = "password"
-      type = "text"
+      type = "password"
+      variant = "filled"
+      required
       onChange = {handleChange}/>
-    </form>
-    <button onClick = {login}>LogIn</button>
+      </label>
+
+      <div className = "check-box">
+        <label>
+      <input type="checkbox"  name="remember" variant = "filled" required></input>
+    </label>
+    <p className = "terms-conditions"><Link to = "/conditions">By signing into an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
+        </div>
+      
+    <div className = "clearfix">
+    
+    <button className = "signupbtn" onClick = {handleButton}>Cancel</button>
+    <button className = "signupbtn" onClick = {login}>Log In</button>
     <Snackbar
     // if the login attempt fails, message pops up relaying this.
     open = {open}
@@ -87,21 +111,12 @@ const login = () => {
     onClose ={() => setOpen(false)}
     message = "Login attempt failed. Please try again."
     />
-    <button onClick = {handleButton}>Clciky</button>
-    </>
+    </div>
+    </div>
+    </form>
+    </div>
   )
-  
-
-
   }
-
-
-
-
-
-
-
-
 
 // Login.propTypes = {};
 

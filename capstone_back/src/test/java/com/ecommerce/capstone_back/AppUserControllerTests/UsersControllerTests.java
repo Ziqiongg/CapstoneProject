@@ -1,14 +1,11 @@
-package com.ecommerce.capstone_back.UsersControllerTests;
+package com.ecommerce.capstone_back.AppUserControllerTests;
 
 import com.ecommerce.capstone_back.model.Users;
-import com.ecommerce.capstone_back.model.Product;
 import com.ecommerce.capstone_back.repository.UsersRepository;
-import com.ecommerce.capstone_back.controllers.UsersController;
-import com.ecommerce.capstone_back.service.UsersService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import java.util.List;
+
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
