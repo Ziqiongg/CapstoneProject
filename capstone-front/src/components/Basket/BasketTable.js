@@ -41,8 +41,10 @@ const BasketTable = ({basketItem}) => {
   const [product, setProduct] = useState({});
 
   const deleteFromBasket = () => {
-    deleteItem(setBasket, product.id)
+    deleteItem(...basketItem.pop(product));
+    console.log(product.id);
   }
+
 
   const navigate = useNavigate();
 
