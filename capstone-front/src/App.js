@@ -61,11 +61,11 @@ function App() {
       }
 
 
-
     // add items from basket to ordered/purchased 
-      const PurchaseItems = ([basketItem]) => {
+      const PurchaseItems = (basketItem) => {
         console.log("purchasing basket");
-        setPurchases([...purchases, basketItem])}
+        
+         setPurchases([...purchases, ...basketItem])}
         
     
   return (
