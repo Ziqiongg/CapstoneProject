@@ -67,9 +67,7 @@ function App() {
                     // we send the params in the body of the request
             body: JSON.stringify({data})
           })
-          .then(res => console.log("yay"))
           .catch(err =>console.err);
-        
         console.log("adding to basket" + product.id);
         setBasketItem([...basketItem, product])
         }

@@ -9,18 +9,17 @@ import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
 
 // function Basket ({basketItem}, {BuyBasket}) {
-  function Basket ({basketItem}, {PurchaseAllItems}) {
+  function Basket ({basketItem}, {BuyBasket}) {
 
 
-  const {user, userId, setUserId, numItems, setNumItems, isAuthenticated} = useContext(UserInfo);
+  const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
-    // BuyBasket()
-    PurchaseAllItems()
+    BuyBasket()
+    // PurchaseAllItems()
     console.log("purchasing 2 basket");
 
   }
-
 
   // get the details of the user that is logged in
   const getUser = () => {
@@ -32,24 +31,26 @@ import { SERVER_URL } from '../../constants';
                 'Authorization': token}
     })
     .then(response => response.json())
-    .then(data => setUserId(data.id))
+    .then(data => setUserId(data.id));
+    console.log(userId);
   }
 
-  // get the user's basket
-  async function getBasket() {
-// only do if authenticated
-    if (isAuthenticated) {
-      await getUser();
-    const token = sessionStorage.getItem("jwt");
-    fetch (SERVER_URL + 'AppUser/get_basket/' + userId, {
-      method: 'GET',
-      headers: {'Content-Type': 'application/json',
-                'Authorization': token}
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));
-  }
-}
+//   // get the user's basket
+//   async function getBasket() {
+// // only do if authenticated
+//     if (isAuthenticated) {
+//       await getUser();
+//     const token = sessionStorage.getItem("jwt");
+//     fetch (SERVER_URL + 'AppUser/get_basket/' + userId, {
+//       method: 'GET',
+//       headers: {'Content-Type': 'application/json',
+//                 'Authorization': token}
+//     })
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+//   }
+// }
+// getBasket();
 
 
 
@@ -61,8 +62,8 @@ import { SERVER_URL } from '../../constants';
         <button><Link to="/">Back</Link></button>
         <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
       </div>
-      <button onClick = {getUser}>GetUser</button>
-      <button onClick = {getBasket}>Basky</button>
+      {/* <button onClick = {getUser}>GetUser</button> */}
+      {/* <button onClick = {getBasket}>Basky</button> */}
     </>
   )
 }
