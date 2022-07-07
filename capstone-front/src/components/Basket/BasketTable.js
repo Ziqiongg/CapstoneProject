@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
@@ -11,11 +10,17 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { useNavigate } from 'react-router-dom';
-import { Chip } from '@mui/material';
+import { Chip, useRadioGroup } from '@mui/material';
 import { getBasket, deleteItem} from './Axios/BasketAPI';
+import { SERVER_URL } from '../../constants';
+import { useContext } from 'react';
+import { UserInfo } from '../../UserContext';
 
 
 const BasketTable = ({basketItem}) => {
+
+  const {userId} = useContext(UserInfo);
+
 
   const columns = [
     { id: 'name', label: 'Name', minWidth: 170 },
@@ -39,9 +44,10 @@ const BasketTable = ({basketItem}) => {
   }
   const [basket, setBasket] = useState([]);
   const [product, setProduct] = useState({});
-
+ 
   const deleteFromBasket = () => {
-    deleteItem(setBasket, product.id)
+    deleteItem(setBasket, userId, product.id);
+    console.log(product.id);
   }
 
   const navigate = useNavigate();

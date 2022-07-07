@@ -24,7 +24,8 @@ import { UserInfo } from "./UserContext";
 import Order from "./components/Orders/Orders";
 import AboutUs from "./components/AboutUs/AboutUs";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
-import OurPledge from "./components/OurPledge/OurPledge"
+import OurPledge from "./components/OurPledge/OurPledge";
+import { SERVER_URL } from "./constants";
 
 function App() {
 
@@ -54,31 +55,44 @@ function App() {
       // add items to basket
       const AddToBasket = (product) => {
         // only add item to basket if user has logged in
+        const token = sessionStorage.getItem("jwt");
+        // here we store the params for the post method in the variable called data
+        const data = {ProductId : product.id, quantity: 1}
         if (isAuthenticated){
-        console.log("adding to basket");
+          fetch (SERVER_URL + 'AppUser_basket/additem/' + userId + '?ProductId=' + product.id + '&quantity=' + 1, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json',
+                      'Authorization': token
+                    },
+                    // we send the params in the body of the request
+            body: JSON.stringify({data})
+          })
+          .catch(err =>console.err);
+        console.log("adding to basket" + product.id);
         setBasketItem([...basketItem, product])
         }
       }
 
-
-
     // add items from basket to ordered/purchased 
-      const PurchaseItems = ([basketItem]) => {
+      const PurchaseItems = (basketItem) => {
         console.log("purchasing basket");
-        setPurchases([...purchases, basketItem])}
+        
+         setPurchases([...purchases, ...basketItem])}
         
     
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
-
     userId, setUserId, numItems, setNumItems}}>
+  
 
     <Router>
       <div className = "main-wrapper" >
 
       <Routes>
           <Route exact path="/" element={<Landing />} />
+          {/* rendered after we've clicked in the search bar on Landing page, then decide to view a product */}
           <Route exact path={`/products/id/:id`} element={<ProductPage AddItems={AddToBasket}/>} />
+          {/* passing the url to products as address and passing the addToBasket function */}
           <Route exact path="/productlist" element={<ProductList address = "http://localhost:8080/products" addItems={AddToBasket}/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />

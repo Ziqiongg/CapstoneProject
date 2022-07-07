@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Basket.css';
 import BasketTable from './BasketTable';
 import { Button } from 'react-bootstrap';
@@ -8,13 +9,16 @@ import {useContext} from 'react';
 import { SERVER_URL } from '../../constants';
 import Header from '../Header/Header';
 
-function Basket ({basketItem , PurchaseAllItems}) {
+  function Basket ({basketItem, PurchaseAllItems}) {
 
 
-  const {user, userId, setUserId, numItems, setNumItems, isAuthenticated} = useContext(UserInfo);
+  const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
+   
     PurchaseAllItems(basketItem);
+    
+
   }
 
   // get the details of the user that is logged in
@@ -27,32 +31,26 @@ function Basket ({basketItem , PurchaseAllItems}) {
                 'Authorization': token}
     })
     .then(response => response.json())
-    .then(data => setUserId(data.id))
+    .then(data => setUserId(data.id));
+    console.log(userId);
   }
 
-
-  // get the user's basket
-  async function getBasket() {
-// only do if authenticated
-    if (isAuthenticated) {
-      await getUser();
-    const token = sessionStorage.getItem("jwt");
-    fetch (SERVER_URL + 'AppUser/get_basket/' + userId, {
-      method: 'GET',
-      headers: {'Content-Type': 'application/json',
-                'Authorization': token}
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));
-    console.log("You have " + numItems + " in basket");
-  }
-
-}
-
-// add item to basket
-
-
-
+//   // get the user's basket
+//   async function getBasket() {
+// // only do if authenticated
+//     if (isAuthenticated) {
+//       await getUser();
+//     const token = sessionStorage.getItem("jwt");
+//     fetch (SERVER_URL + 'AppUser/get_basket/' + userId, {
+//       method: 'GET',
+//       headers: {'Content-Type': 'application/json',
+//                 'Authorization': token}
+//     })
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+//   }
+// }
+// getBasket();
 
 
 
@@ -60,13 +58,13 @@ function Basket ({basketItem , PurchaseAllItems}) {
     <>
     <Header />
       <div className = "BasketPage">
-        <h1 className = "name">Basket</h1>
+        <h1 class = "name">Basket</h1>
         <BasketTable basketItem={basketItem}/>
         <button><Link to="/">Back</Link></button>
         <Button onClick={handleClick} className="purchase-btn">Purchase All</Button>
       </div>
-      <button onClick = {getUser}>GetUser</button>
-      <button onClick = {getBasket}>Basky</button>
+      {/* <button onClick = {getUser}>GetUser</button> */}
+      {/* <button onClick = {getBasket}>Basky</button> */}
     </>
   )
 }

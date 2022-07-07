@@ -20,7 +20,7 @@ From Java's perspective, it contains three components:
 - Products
 - Individual Purchases
 
-<img src="./methods/uml_diagram.png" alt="uml_diagram" />
+<img src="./methods/UML.png" alt="uml_diagram" />
 
 
 From Spring boot perspective, it has 4 layers, presentation layer, business layer, persistence layer, and database layer. It contains controller, repository, model and SQL database to allow users to send and receive requests in JSON format.
