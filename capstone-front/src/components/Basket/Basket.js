@@ -10,7 +10,7 @@ import { SERVER_URL } from '../../constants';
 import Header from '../Header/Header';
 
 // function Basket ({basketItem}, {BuyBasket}) {
-  function Basket ({basketItem, BuyBasket, setBasketItem}) {
+  function Basket ({basketItem, PurchaseAllItems, setBasketItem}) {
 
 
   //const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
