@@ -10,10 +10,9 @@ import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 import logo from "../../assets/header-logo.png";
 
-
 const Login = () => {
 // basically importing all the state so we can set the variables once a user is logged in 
-const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, jwtToken, setToken} = useContext(UserInfo);
+const {user, setUser, open, setOpen, isAuthenticated, setAuthenticate, userId, setUserId} = useContext(UserInfo);
 
 const handleChange = (event) => {
   setUser({... user, [event.target.name] : event.target.value});
@@ -38,8 +37,7 @@ const login = () => {
       sessionStorage.setItem('jwt', jwtToken);
       // if the login is sucessful, change isAuthenticated to true
       setAuthenticate(true);
-      console.log(user["username"])
-
+      console.log(user["username"]);
     } else {
       setOpen(true)
     }
@@ -66,10 +64,6 @@ const login = () => {
   
 
   return (
-
-    
-    
-
     <div className="login-form">
             <Link to='/'>
                 <div
@@ -119,18 +113,7 @@ const login = () => {
     </form>
     </div>
   )
-  
-
-
   }
-
-
-
-
-
-
-
-
 
 // Login.propTypes = {};
 

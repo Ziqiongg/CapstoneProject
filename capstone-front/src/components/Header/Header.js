@@ -105,32 +105,29 @@ const  Header = (props) => {
 {/* <input type = "text" placeholder = "Search by name here..." onChange={handleOnChangeName} onClick = {handleOnClickSearchPage}></input>
             <button className = "not-white" type = "submit" onClick= {handleOnClickName} >Search</button>  */}
 
-<div className="header__nav">
+      <div className="header__nav">
         
         <div className="header__option">
-          {/* If the user is Logged in/authenticated, change button to Logout */}
-        <button><Link to = "/login" className = "header__link"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
-        </div>
 
+          {/* If the user is Logged in/authenticated, change button to Logout */}
+        <button><Link to = {isAuthenticated ? "/" : "/login"} className = "header__link"><span className="header__optionLineOne" onDoubleClick={logout}>{isAuthenticated ? "Logout" : "Login"}</span></Link></button>
+        </div>
+        
+            {/* edit profile or register */}
         <div className="header__option">
         <button><Link to = {isAuthenticated ? "/Profile" : "/Register"} className = "header__link"><span className="header__optionLineOne">{isAuthenticated ? "Edit Profile" : "Register"}</span></Link></button>
         </div>
-      
 
       
+        {/* orders , login = true */}
+        
         <div className="header__option">
-        <button><Link to = "/orders" className = "header__link"><span className="header__optionLineOne">Orders</span>
-        </Link></button>
+        <button><Link to = {isAuthenticated ? "/orders" : "/login"} className = "header__link"><span className="header__optionLineOne">Orders</span></Link></button>
         </div>
       
-      
-
-      <div className="header__option">
-      <button><Link to = "/settings" className = "header__link"><span className="header__optionLineOne">Settings</span></Link></button>
-      </div>
-      
+    
         <div className="header__optionBasket">
-        <button><Link to = "/basket" className = "header__link"><ShoppingBasketIcon /></Link></button>
+          <button><Link  to = {isAuthenticated ? "/basket" : "/login"}  className = "header__link"><ShoppingBasketIcon /></Link></button>
           <span className="header__optionLineTwo header__basketCount">
             0
           </span>
@@ -162,7 +159,6 @@ const  Header = (props) => {
         </div>
 
       </div>
-
 
     </>
   )

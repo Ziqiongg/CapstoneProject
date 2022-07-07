@@ -62,9 +62,9 @@ public ResponseEntity addToBasket(@PathVariable Long users_id, @RequestParam Int
 // Remove item from basket
 // need to get user id, product id
 
-    @DeleteMapping("/AppUser_basket/{user_id}/{product_id}")
-    public void deleteCustomerBasket(@PathVariable Long AppUserId, Long ProductId) {
-        individualPurchaseService.deleteById(AppUserId, ProductId);
+    @DeleteMapping("/AppUser_basket/{users_id}/{product_id}")
+    public void deleteCustomerBasket(@PathVariable Long users_id, Long ProductId) {
+        individualPurchaseService.deleteById(users_id, ProductId);
 
     }
 

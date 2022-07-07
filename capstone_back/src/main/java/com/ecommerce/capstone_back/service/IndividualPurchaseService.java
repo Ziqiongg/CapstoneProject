@@ -49,8 +49,8 @@ public class IndividualPurchaseService {
 
 
 // delete customer basket
-    public void deleteById (Long AppUserId, Long ProductId){
-     individualPurchaseRepository.deleteBasketById(AppUserId, ProductId);
+    public void deleteById (Long users_id, Long ProductId){
+     individualPurchaseRepository.deleteBasketById(users_id, ProductId);
         }
 
 
