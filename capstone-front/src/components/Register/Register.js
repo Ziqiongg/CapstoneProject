@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RegisterUser from './RegisterUser';
 import Header from '../Header/Header';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -41,15 +42,17 @@ const Register = () => {
   
 };
 
-const addUser = async() => {
-const result = await RegisterUser(JSON.stringify(newUser));
-}
+  let navigate = useNavigate();
+  const addUser = async() => {
+    const result = await RegisterUser(JSON.stringify(newUser));
+    navigate(`/`);
+  }
 
 
 
   return (
     <>
-
+    <Header />
     <div className="register-form">
             <Link to='/'>
                 <div
