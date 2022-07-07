@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="" />
+    <list default="true" id="4e98a7e2-f04e-4d53-9773-e8c985476693" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.IndividualPurchaseControllerTest">
+  <component name="RunManager" selected="Application.CapstoneBackApplication">
     <configuration name="CapstoneBackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ecommerce.capstone_back.CapstoneBackApplication" />
       <module name="capstone_back" />
@@ -88,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
         <item itemvalue="Application.CapstoneBackApplication" />
+        <item itemvalue="JUnit.IndividualPurchaseControllerTest" />
         <item itemvalue="JUnit.UsersControllerTests" />
         <item itemvalue="Application.CapstoneBackApplication" />
         <item itemvalue="Application.CapstoneBackApplication" />

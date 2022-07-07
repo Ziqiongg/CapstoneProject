@@ -104,7 +104,6 @@ function App() {
           <Route path = "/ourmissionpage" element = {<AboutUs />}/>
           <Route path = "/ourpledge" element = {<OurPledge />}/>
           <Route path = "/conditions" element = {<TermsConditions />}/>
-          <Route path="/basket" element={<Basket />} />
           <Route path={`/searchname`} element = {<SearchBar />} />
           <Route path={`/login`} element = {<Login />} />
           
