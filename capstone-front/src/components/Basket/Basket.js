@@ -16,9 +16,9 @@ import Header from '../Header/Header';
   //const {user, userId, setUserId, isAuthenticated} = useContext(UserInfo);
 
   const handleClick = () => {
-    BuyBasket()
-    // PurchaseAllItems()
-    console.log("purchasing 2 basket");
+   
+    PurchaseAllItems(basketItem);
+    
 
   }
 
@@ -57,7 +57,11 @@ import Header from '../Header/Header';
 
   return(
     <>
+<<<<<<< HEAD
     <Header/>
+=======
+    <Header />
+>>>>>>> e3dcaa55f0946e9142db9b56d2f45d3f9dfb164b
       <div className = "BasketPage">
         <h1 class = "name">Basket</h1>
         <BasketTable basketItem={basketItem} setBasketItem = {setBasketItem}/>

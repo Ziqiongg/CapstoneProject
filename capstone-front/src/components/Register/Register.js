@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RegisterUser from './RegisterUser';
 import Header from '../Header/Header';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -15,13 +16,14 @@ const Register = () => {
   const [userName, setUserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [country, setCountry] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleUserNameChange = event => setUserName(event.target.value);
   const handleFirstNameChange = event => setFirstName(event.target.value);
   const handleLastNameChange = event => setLastName(event.target.value);
-  const handleCountryChange = event => setCountry(event.target.value);
+  const handleEmailChange = event => setEmail(event.target.value);
+
   const handlePasswordChange = event => setPassword(event.target.value);
 
 
@@ -32,7 +34,7 @@ const Register = () => {
     "userFirstName": firstName,
     "userLastName": lastName,
     "username": userName,
-    "country": country,
+    "userAddress": email,
     "userPassword": password
   }
 
@@ -40,15 +42,17 @@ const Register = () => {
   
 };
 
-const addUser = async() => {
-const result = await RegisterUser(JSON.stringify(newUser));
-}
+  let navigate = useNavigate();
+  const addUser = async() => {
+    const result = await RegisterUser(JSON.stringify(newUser));
+    navigate(`/`);
+  }
 
 
 
   return (
     <>
-
+    <Header />
     <div className="register-form">
             <Link to='/'>
                 <div
@@ -83,7 +87,7 @@ const result = await RegisterUser(JSON.stringify(newUser));
        
           <label>
             Enter your Country:
-            <input type = "text" variant = "filled" required name = "country" onChange = {handleCountryChange} />
+            <input type = "text" variant = "filled" required name = "userAddress" onChange = {handleEmailChange} />
           </label>
         
 
