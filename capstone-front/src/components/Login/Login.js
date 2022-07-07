@@ -90,17 +90,17 @@ const login = () => {
       onChange = {handleChange}/>
       </label>
 
-      <div class = "check-box">
+      <div className = "check-box">
         <label>
       <input type="checkbox"  name="remember" variant = "filled" required></input>
     </label>
-    <p class = "terms-conditions"><Link to = "/conditions">By signing into an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
+    <p className = "terms-conditions"><Link to = "/conditions">By signing into an account you agree to our Conditions of Use and Privacy Notice that we are NOT amazon</Link></p>
         </div>
       
-    <div class = "clearfix">
+    <div className = "clearfix">
     
-    <button class = "signupbtn" onClick = {handleButton}>Cancel</button>
-    <button class = "signupbtn" onClick = {login}>Log In</button>
+    <button className = "signupbtn" onClick = {handleButton}>Cancel</button>
+    <button className = "signupbtn" onClick = {login}>Log In</button>
     <Snackbar
     // if the login attempt fails, message pops up relaying this.
     open = {open}
