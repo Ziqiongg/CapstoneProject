@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Capstone Project - Amazon Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of contents:
 
-## Available Scripts
+1. [ Project Description. ](#project_description)
+    - [ Features. ](#booking_movies)
+2. [ Getting started. ](#getting_started)
+3. [ Running the project ](#running)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Project Description <a name="project_description"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a clone of the popluar e-commerce website Amazon. This project uses Reactjs Frontend and Java/Spring Backend.
 
-### `npm run build`
+From Java's perspective, it contains three components:
+- Users
+- Products
+- Individual Purchases
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="./methods/uml_diagram.png" alt="uml_diagram" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+From Spring boot perspective, it has 4 layers, presentation layer, business layer, persistence layer, and database layer. It contains controller, repository, model and SQL database to allow users to send and receive requests in JSON format.
 
-### `npm run eject`
+### Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Sign In and Sign Out functionality
+- User Authentication
+- Add/Delete from basket
+- Purchase Items
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Getting started <a name="getting_started"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend Technologies used:
+1) [Intellij (Java)](https://www.jetbrains.com/idea/download/#section=mac)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2) [PostgreSQL](https://www.postgresql.org/download/)
 
-## Learn More
+3) [Postman](https://www.postman.com)
+4) [Spring Boot](https://start.spring.io/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Frontend Technologies used:
+1) [VSCode (Javascript/HTML/CSS)](https://code.visualstudio.com/download)
+2) [React](https://react-bootstrap.github.io/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Running the Project: <a name="running"></a>
 
-### Code Splitting
+1) Clone the project: https://github.com/Ziqiongg/CapstoneProject.git
+    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2) type `createdb capstoneproject` into terminal
+    
 
-### Analyzing the Bundle Size
+3) Install Frontend Dependencies:
+     
+        npm install
+        npm install axios
+        npm install --force styled-components
+        npm install react-bootstrap bootstrap
+        npm install --force react-responsive-carousel
+        npm install --force @react-navigation/native
+        npm install --force @material-ui/icons
+4) type `npm start` into terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# Acknowledgements <a name="acknowledgements"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Alexander Leaver Hernandez](https://github.com/alh40)
+- [Carol Li](https://github.com/Ziqiongg)
+- [Joseph Sutherland](https://github.com/Lambert-Simnel)
+- [Michelle Tambi](https://github.com/michelletambi)
+- [Peace Akib](https://github.com/pe-a-ce)
+    
