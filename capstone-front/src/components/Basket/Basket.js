@@ -30,7 +30,7 @@ function Basket ({basketItem , PurchaseAllItems}) {
     .then(data => setUserId(data.id))
   }
 
-<<<<<<< HEAD
+
   // get the user's basket
   async function getBasket() {
 // only do if authenticated
@@ -56,15 +56,6 @@ function Basket ({basketItem , PurchaseAllItems}) {
 
 
 
-
-
-
-
-
-
-
-=======
->>>>>>> 6a28e1bda4db0c754e18d8d9a5c6f196be5bc894
   return(
     <>
     <Header />

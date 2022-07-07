@@ -70,12 +70,9 @@ function App() {
     
   return (
     <UserInfo.Provider value = {{user, setUser, open, setOpen, isAuthenticated, setAuthenticate, users, setUsers,
-<<<<<<< HEAD
-    userId, setUserId, numItems, setNumItems}}>
-=======
-    userId, setUserId}}>
 
->>>>>>> 6a28e1bda4db0c754e18d8d9a5c6f196be5bc894
+    userId, setUserId, numItems, setNumItems}}>
+
     <Router>
       <div className = "main-wrapper" >
 
